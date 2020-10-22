@@ -2,6 +2,10 @@
 #!desc=自定义广告去除。
 #!system=ios
 
+[General]
+
+[Rule]
+
 #K
 # > 快电
 URL-REGEX,^https?+:\/\/cdn-app\.nio\.com\/PE\/,REJECT
