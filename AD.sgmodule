@@ -1,0 +1,11 @@
+#!name=AD  By . Linus
+#!desc=自定义广告去除。
+#!system=ios
+
+#K
+# > 快电
+URL-REGEX,^https?+:\/\/cdn-app\.nio\.com\/PE\/,REJECT
+URL-REGEX,^https?+:\/\/app\.nio\.com\/pe\/app\/act\/v1\/poster,REJECT
+
+[MITM]
+hostname = cdn-app.nio.com, app.nio.com
