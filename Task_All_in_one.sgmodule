@@ -1,0 +1,76 @@
+#!name=Task - All in one By nzw9314
+#!desc=该模块适用于定时签到:集成全部: NobyDa、Chavy以及个人收集常用签到脚本。建议本地安装以便自定义修改签到时间。
+#!system=ios
+
+# Task配置 By nzw9314
+# GitHub主页(https://github.com/nzw9314)
+# TG通知频道 (https://t.me/nzw9314News)
+# 定时脚本
+
+[Script]
+
+# > App价格版本监控
+App价格版本监控 = type=cron,cronexp=0 0 * * * *,script-path=https://raw.githubusercontent.com/evilbutcher/Quantumult_X/master/check_in/appstore/AppMonitor.js,script-update-interval=0
+
+# 可更改出发地、目的地、出发时间及列车车次
+12306 = type=cron,cronexp=0 0 8 * * *,script-path=https://raw.githubusercontent.com/Sunert/Scripts/master/Task/trainquery.js
+
+# > GitHub监控(By Peng-YM)
+# name: "",//填写仓库名称，可自定义
+# file_names:[],//可选参数。若需要监控具体文件或目录，请填写路径
+GitHub监控= type=cron,cronexp=8 0 * * *,script-path=https://raw.githubusercontent.com/Peng-YM/QuanX/master/Tasks/github.js
+
+# > 京东价格提醒(By toulanboy)
+京东价格提醒 = type=cron,cronexp=5 0 * * *,script-path=https://raw.githubusercontent.com/toulanboy/scripts/master/jd_price_detect/jd_price_detect.js
+
+# > 哔哩哔哩番剧监控 (By @lowking0415)
+哔哩哔哩番剧监控 = type=cron,cronexp="0 0 0,1 * * ?",wake-system=1,script-path=https://raw.githubusercontent.com/lowking/Scripts/master/bilibili/bangumiMonitor.js
+
+# 签到脚本
+
+#  NobyDa
+# > 京东
+京东 = type=cron,cronexp=0 0 0 * * *,script-path=https://raw.githubusercontent.com/NobyDa/Script/master/JD-DailyBonus/JD_DailyBonus.js,script-update-interval=0
+# > 爱奇艺
+爱奇艺 = type=cron,cronexp=5 0 0 * * *,script-path=https://raw.githubusercontent.com/NobyDa/Script/master/iQIYI-DailyBonus/iQIYI.js,script-update-interval=0
+# > 吾爱破解
+吾爱破解 = type=cron,cronexp=10 0 0 * * *,script-path=https://raw.githubusercontent.com/NobyDa/Script/master/52pojie-DailyBonus/52pojie.js,script-update-interval=0
+# > 哔哩哔哩漫画
+哔哩哔哩漫画 = type=cron,cronexp=15 0 0 * *,script-path=https://raw.githubusercontent.com/NobyDa/Script/master/Bilibili-DailyBonus/Manga.js,script-update-interval=0
+
+# @chavyleung
+
+# bilibili
+# 打开浏览器访问: https://www.bilibili.com 或 https://live.bilibili.com
+哔哩哔哩 = type=cron,cronexp=35 0 0 * * *,script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/bilibili/bilibili.js,script-update-interval=0
+# 如需银瓜子转硬币，取消下方注释
+瓜子转硬币 = type=cron,cronexp=40 0 0 * * *,script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/bilibili/bilibili.silver2coin.js,script-update-interval=0
+# 打开 APP, 访问下`个人中心`
+飞客茶馆 = type=cron,cronexp=55 0 0 * * *,script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/flyertea/flyertea.js,script-update-interval=0
+# 人人视频
+# 打开 APP, 访问下`个人中心`
+人人视频 = type=cron,cronexp=15 1 0 * * *,script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/rrtv/rrtv.js,script-update-interval=0
+# 什么值得买
+# 浏览器访问并登录: https://zhiyou.smzdm.com/user/login
+什么值得买 = type=cron,cronexp=25 1 0 * * *,script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/smzdm/smzdm.js,script-update-interval=0
+# 腾讯视频
+# 1.手机浏览器访问并登录: https://film.qq.com/
+腾讯视频 = type=cron,cronexp=35 1 0 * * *,script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/videoqq/videoqq.js,script-update-interval=0
+# 中国联通
+# 1打开 APP , 进入签到页面, 系统提示: `获取刷新链接: 成功`,然后手动签到 1 次
+# 2首页>天天抽奖, 系统提示 `2` 次: `获取Cookie: 成功 (登录抽奖)` 和 `获取Cookie: 成功 (抽奖次数)`
+中国联通 = type=cron,cronexp=20 2 0 * * *,script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/10010/10010.js,script-update-interval=0
+# 网易考拉
+# 打开 APP 手动签到一次: 访问下右下角 `我的考拉` > `领考拉豆` > `签到`
+网易考拉 = type=cron,cronexp=30 3 0 * * *,script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/wykl/wykl.js,script-update-interval=0
+# 苏宁易购
+# 首页 > 签到有礼
+# 首页 > 领取红包
+# 首页  > 天天低价
+苏宁易购 = type=cron,cronexp=50 3 0 * * *,script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/suning/suning.js,script-update-interval=0
+# > 招行信用卡(公众号) (By @iNotification)
+# 招商银行信用卡微信公众号：”领cron “0 0 0 * * *” script-path
+招行信用卡(公众号) = type=cron,cronexp=5 5 0 * * *,script-path=https://raw.githubusercontent.com/nzw9314/QuantumultX/master/Task/cmbchina.js,script-update-interval=0
+# > 奈雪 (By @zZPiglet)
+# 进入"奈雪点单"小程序，若弹出"首次写入奈雪の茶 Token 成功"
+奈雪 =type=cron,cronexp=35 5 0 * * *,script-path=https://raw.githubusercontent.com/zZPiglet/Task/master/Naixue/Naixue.js,wake-system=1
