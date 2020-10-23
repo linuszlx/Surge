@@ -6,10 +6,14 @@
 
 [Rule]
 
+# F
+# > 飞客茶馆
+URL-REGEX,^https?+:\/\/www\.flyertea\.com\/source\/plugin\/mobile\/mobile\.php\?module=advis,REJECT
+
 #K
 # > 快电
 URL-REGEX,^https?+:\/\/cdn-app\.nio\.com\/PE\/,REJECT
 URL-REGEX,^https?+:\/\/app\.nio\.com\/pe\/app\/act\/v1\/poster,REJECT
 
 [MITM]
-hostname = cdn-app.nio.com, app.nio.com
+hostname = cdn-app.nio.com, app.nio.com, www.flyertea.com
