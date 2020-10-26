@@ -20,11 +20,12 @@ App价格版本监控 = type=cron,cronexp=0 0 * * * *,script-path=https://raw.gi
 # file_names:[],//可选参数。若需要监控具体文件或目录，请填写路径
 GitHub监控= type=cron,cronexp=8 0 * * *,script-path=https://raw.githubusercontent.com/Peng-YM/QuanX/master/Tasks/github.js
 
+# > 机场流量查询(By Peng-YM)
+GitHub监控= type=cron,cronexp=0 9 * * *,script-path=https://raw.githubusercontent.com/Peng-YM/QuanX/master/Tasks/flow.js
+
 # > 京东价格提醒(By toulanboy)
 京东价格提醒 = type=cron,cronexp=5 0 * * *,script-path=https://raw.githubusercontent.com/toulanboy/scripts/master/jd_price_detect/jd_price_detect.js
 
-# > 哔哩哔哩番剧监控 (By @lowking0415)
-哔哩哔哩番剧监控 = type=cron,cronexp="0 0 0,1 * * ?",wake-system=1,script-path=https://raw.githubusercontent.com/lowking/Scripts/master/bilibili/bangumiMonitor.js
 
 # 签到脚本
 
@@ -33,8 +34,6 @@ GitHub监控= type=cron,cronexp=8 0 * * *,script-path=https://raw.githubusercont
 京东 = type=cron,cronexp=0 0 0 * * *,script-path=https://raw.githubusercontent.com/NobyDa/Script/master/JD-DailyBonus/JD_DailyBonus.js,script-update-interval=0
 # > 爱奇艺
 爱奇艺 = type=cron,cronexp=5 0 0 * * *,script-path=https://raw.githubusercontent.com/NobyDa/Script/master/iQIYI-DailyBonus/iQIYI.js,script-update-interval=0
-# > 吾爱破解
-吾爱破解 = type=cron,cronexp=10 0 0 * * *,script-path=https://raw.githubusercontent.com/NobyDa/Script/master/52pojie-DailyBonus/52pojie.js,script-update-interval=0
 # > 哔哩哔哩漫画
 哔哩哔哩漫画 = type=cron,cronexp=15 0 0 * *,script-path=https://raw.githubusercontent.com/NobyDa/Script/master/Bilibili-DailyBonus/Manga.js,script-update-interval=0
 
