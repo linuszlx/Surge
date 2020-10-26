@@ -35,7 +35,7 @@ suning.cookie.js = script-path=https://raw.githubusercontent.com/chavyleung/scri
 suning.cookie.js = script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/suning/suning.cookie.js,type=http-request,pattern=^https:\/\/sign.suning.com\/sign-web\/m\/promotion\/sign\/doSign.do
 suning.cookie.js = script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/suning/suning.cookie.js,type=http-request,pattern=^https:\/\/gameapi.suning.com\/sngame-web\/(api\/signin\/private\/customerSignOperation.do|gateway\/api\/queryPrize.do)
 # > 招行信用卡公众号 (By @iNotification)
-cmbchina.js = script-path=https://raw.githubusercontent.com/nzw9314/QuantumultX/master/Task/cmbchina.js,type=http-request,pattern=https://weclub\.ccc\.cmbchina.com/SCRMCustomActivityFront/checkin/request/get-home-data\.json\?activityCode=checkin
+cmbchina.js = script-path=https://raw.githubusercontent.com/cyqlegend/Breaker/master/script/cmb/cmbchina.js,type=http-request,pattern=https://weclub\.ccc\.cmbchina.com/SCRMCustomActivityFront/checkin/request/get-home-data\.json\?activityCode=checkin
 # > 奈雪 (By @zZPiglet)
 奈雪cookie = script-path=https://raw.githubusercontent.com/zZPiglet/Task/master/Naixue/Naixue.js,type=http-request,pattern=^https:\/\/webapi\.qmai\.cn\/web\/cy\/v\d\/store\/template-scene
 # > 京东价格提醒(By toulanboy)
