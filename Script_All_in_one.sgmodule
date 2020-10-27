@@ -30,10 +30,7 @@ AND,((USER-AGENT,PUClient*), (NOT,((DOMAIN-SUFFIX,rr.tv)))),REJECT
 URL-REGEX,^https?:\/\/api\.rr\.tv\/(?:ad\/getAll$|storage/business/rootName/app/homePage),REJECT
 # > 优酷 去广告
 URL-REGEX,^http:\/\/vali\.cp31\.ott\.cibntv\.net\/youku\/,REJECT-TINYGIF
-# > 爱美剧 去广告
-URL-REGEX,^http(s)://api.bjxkhc.com/index.php/app/ios/pay/ok$ ,REJECT-TINYGIF
-URL-REGEX,^http(s)://api.bjxkhc.com/index.php/app/ios/ver/index_ios$,REJECT
-URL-REGEX,^http(s)://api.bjxkhc.com/index.php/app/ios/ads/index,REJECT-TINYGIF
+
 [URL Rewrite]
 # > TikTok 解锁
 (?<=_region=)CN(?=&) JP 307
@@ -53,9 +50,6 @@ URL-REGEX,^http(s)://api.bjxkhc.com/index.php/app/ios/ads/index,REJECT-TINYGIF
 # 访问: http://boxjs.com管理
 Rewrite: BoxJs = type=http-request,pattern=^https?://boxjs.com(/api|/home|/sub|/my|/app|/log|/revert)?($|\/),script-path=https://gitee.com/chavyleung/scripts/raw/master/chavy.box.js, requires-body=true, timeout=120
 
-# > yichahucha
-# > 京东比价
-jd_price.js = type=http-response,pattern=https?://api\.m\.jd\.com/client\.action\?functionId=(wareBusiness|serverConfig|basicConfig),requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/yichahucha/surge/master/jd_price.js,script-update-interval=0
 
 # > Choler
 # > 抖音 & TikTok Remove Ad & Logo
@@ -83,16 +77,8 @@ bilibili view = type=http-response,requires-body=1,max-size=0,pattern=https://ap
 bilibili reply = type=http-response,requires-body=1,max-size=0,pattern=https://api.bilibili.com/x/v2/reply/main\?access_key,script-path=https://raw.githubusercontent.com/onewayticket255/Surge-Script/master/surge%20bilibili%20reply.js
 bilibili live = type=http-response,requires-body=1,max-size=0,pattern=https://api.live.bilibili.com/xlive/app-room/v1/index/getInfoByRoom\?access_key,script-path=https://raw.githubusercontent.com/onewayticket255/Surge-Script/master/surge%20bilibili%20live.js
 # > NobyDa
-# > 小小影视  去广告(By Eric)
-小小影视 = type=http-response,pattern=https:\/\/.*\/getGlobalData,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/Alex0510/Eric/master/surge/Script/xxysad.js,script-update-interval=0
-# > 爱美剧Vip (by huihui）(官网：app.meiju2018.com)
-aimeiju.js = requires-body=1,script-path=https://raw.githubusercontent.com/NobyDa/Script/master/QuantumultX/File/aimeiju.js,type=http-response,pattern=^https?:\/\/api.bjxkhc.com\/index\.php\/app\/ios\/(vod\/show|(user|vod|topic|type)\/index)
-# > 91短视频
-91.js = requires-body=1,script-path=https://raw.githubusercontent.com/NobyDa/Script/master/QuantumultX/File/91.js,type=http-response,pattern=“^https?:\/\/.+\.(my10api|(.*91.*))\.(com|tips|app|xyz)(:\d{2,5})?\/api.php$”
-# > 香蕉视频VIP
-xjsp.js = requires-body=1,script-path=https://raw.githubusercontent.com/NobyDa/Script/master/QuantumultX/File/xjsp.js,type=http-response,pattern=^https?:\/\/.*\.(lago|fuli|xiang(jiao|xiang))apps\.com\/(ucp\/index|getGlobalData|.+\/reqplay\/)
 # > 人人视频 解锁AI原画 (by@george Jiang & R)
 rrtv.js = requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/nzw9314/QuantumultX/master/Script/rrtv.js,type=http-response,pattern=^https:\/\/api\.rr\.tv(\/user\/privilege\/list|\/ad\/getAll|\/rrtv-video\/v4plus\/season\/detail)
 
 [MITM]
-hostname = %APPEND% greasyfork.org, openuserjs.org, 8.8.8.8, 1.1.1.1, *.googlevideo.com, trade-acs.m.taobao.com, bea.sportq.com, api.meiyan.com, pwaapi.gao1gps.cn, avoscloud.com, app.flashdown365.com, m.samh.xndm.tech, mob2015.kekenet.com, api.m.jd.com, ios.prod.ftl.netflix.com, vipapi.jxedt.com, api.interpreter.caiyunai.com, pocketlists.com, book.haitunwallet.com, mubu.com, app.xunjiepdf.com, miaow.yiyongcad.com, api.lennou.com, api.gkocr.com, vira.llsapp.com, commerce-.*api.faceu.mobi, commerce-api.faceu.mobi, pan.baidu.com, api.revenuecat.com, api.rr.tv, editorapi.115.com, api.lakecoloring.com, ctrl.playcvn.com, dict.eudic.net, m.client.10010.com, api.wakamoment.ga, *.bh3.com, api.diyidan.net, api.flexibits.com, api.jiaonizuocai.com, api.sololearn.com, tncj.hortorgames.com, bkcd.b-cdn.net, souhu.mett.me, ayk.tmdidi.com, m.pearkin.com, www.baidu.com2.club, claritywallpaper.com, bookapi.ihuman.com, rest.zhibo.tv, note.youdao.com, billing.peakcloud.org, api.ithome.com, www.xmind.cn, *.arten.cn, api.weiqire.com, api.shimo.im, pay.wecut.com, *.videostarapp.com, app.api.versa-ai.com, *.bjxkhc.com, api.591master.com, jdytv.cn, user.shywck.com, *.xunjie*.com, api.psy-1.com, snailsleep.net, api.weibo.cn, mapi.weibo.com, *.uve.weibo.com, mp.weixin.qq.com, www.zhihu.com, api.zhihu.com, link.zhihu.com, 118.89.204.198, app.bilibili.com, api.bilibili.com, api.live.bilibili.com, *.amemv.com, aweme*.snssdk.com, *.kuwo.cn, vip1.kuwo.cn, *.xiaoxiao*.com, *.tiktokv.com, *.musical.ly, p.du.163.com, getuserinfo.321mh.com, getuserinfo-globalapi.zymk.cn, ios.fuliapps.com, vsco.co, api.vnision.com, *.my10api.com, sp.kaola.com, r.inews.qq.com, apple.fuliapps.com, newdrugs.dxy.cn, app101.avictown.cc, api.hlo.xyz, api.ijo.xyz, www.luqijianggushi.com, account.wps.*, u.kanghuayun.com, api.gyrosco.pe, api1.dobenge.cn, api.mvmtv.com, mitaoapp.yeduapp.com, origin-prod-phoenix.jibjab.com, www.3ivf.com, pay.guoing.com, api.termius.com, api.bjxkhc.com, viva.v21xy.com, biz.caiyunapp.com, api.gotokeep.com, ap*.intsig.net, mp.bybutter.com, api.vuevideo.net, api.picsart.c*, api.meiease.c*, splice.oracle.*.com, api.gamer.com.tw, ios.xiangjiaoapps.com, apple.xiangjiaoapps.com, *.lagoapps.com, api.gamer.com.tw, *.xiangxiangapps.com, avatar-nct.nixcdn.com, spclient.wg.spotify.com, oa.zalo.me, origin-prod-phoenix.jibjab.com, api.meiease.c*, api.unfold.app, viva-asia1.vvbrd.com, graph.nhaccuatui.com, api.memrise.com , api.sync.me, pool.elsanow.io, lambda.us-east-1.amazonaws.com, api.mondlylanguages.com, api.busuu.com, owa.videoshowiosglobalserver.com:0, accounts.elevateapp.net, purchases.ws.pho.to, api-intl.mr.meitu.com, bmall.camera360.com, api.tv.zing.vn, api.calm.com, www.calm.com, api.global.mp3.zing.vn, apimboom2.globaldelight.net, photos.adobe.io, license.pdfexpert.com, subs.platforms.team, apic.musixmatch.com, api.getmimo.com, api.revenuecat.com, engbright.com, api.lingokids.com, www.peacefulsoundsapp.com, duolingo-leaderboards-prod.duolingo.com, mobile-api.adguard.com, api.blinkist.com, api-kinemaster-assetstore.*, api.pushover.net, ap*.intsig.net, api.overhq.com, receipt-validator.herewetest.com, lcs-mobile-cops.adobe.io, education.github.com, backend.getdrafts.com, ssl-api.itranslateapp.com, sk.ulysses.app, dayone.me, license.enpass.io, mp.bybutter.com, *.grammarly.com, splice.oracle.*.com, api.keepkeep.com, planner5d.com, secure.istreamer.com, www.api.monkeyuni.net, api.textnow.me, api.madewithfaded.com, nomo.dafork.com
+hostname = %APPEND% greasyfork.org, openuserjs.org, 8.8.8.8, 1.1.1.1, *.googlevideo.com, trade-acs.m.taobao.com, api.m.jd.com, www.zhihu.com, api.zhihu.com, link.zhihu.com, 118.89.204.198, app.bilibili.com, api.bilibili.com, api.live.bilibili.com, *.amemv.com, aweme*.snssdk.com,  *.tiktokv.com, *.musical.ly, mp.weixin.qq.com, api.rr.tv, sp.kaola.com, vali.cp31.ott.cibntv.net
