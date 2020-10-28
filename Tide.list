@@ -100,6 +100,10 @@ URL-REGEX,^https?+:\/\/api\.daydaycook\.com\.cn\/daydaycook\/server\/ad\/
 URL-REGEX,^https?+:\/\/cms\.daydaycook\.com\.cn\/api\/cms\/advertisement\/
 
 # S
+# > 什么值得买
+URL-REGEX,^https?+:\/\/api\.smzdm\.com\/v\d\/util\/loading
+URL-REGEX,^https?+:\/\/app-api\.smzdm\.com\/util\/loading
+URL-REGEX,^https?+:\/\/s\d\.zdmimg\.com\/www\/api\/v\d\/api\/thirdAd\.php
 # > 苏宁
 URL-REGEX,^https?+:\/\/image\.suning\.cn\/uimg\/ma\/ad\/
 
