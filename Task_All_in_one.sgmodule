@@ -73,3 +73,7 @@ GitHub监控= type=cron,cronexp=0 9 * * *,script-path=https://raw.githubusercont
 # > 奈雪 (By @zZPiglet)
 # 进入"奈雪点单"小程序，若弹出"首次写入奈雪の茶 Token 成功"
 奈雪 =type=cron,cronexp=35 5 0 * * *,script-path=https://raw.githubusercontent.com/zZPiglet/Task/master/Naixue/Naixue.js,wake-system=1
+
+# > 微信小程序-同程艺龙 (By @barrymchen)
+微信小程序-同程艺龙 = type=cron,cronexp=20 5 0 * * *,script-path=https://raw.githubusercontent.com/barrym-chen/Script/master/tongc/tongc_sign.js,script-update-interval=0
+微信小程序-同程艺龙info.js = type=cron,cronexp=20 5 0 * * *,script-path=https://raw.githubusercontent.com/barrym-chen/Script/master/tongc/tongc_info.js,script-update-interval=0
