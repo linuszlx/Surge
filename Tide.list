@@ -48,10 +48,6 @@ URL-REGEX,^https?+:\/\/e\.dangdang\.com\/.+?getDeviceStartPage
 # > 丁香医生
 URL-REGEX,^https?+:\/\/dxy\.com\/app\/i\/ask\/biz\/feed\/launch
 
-# F
-# > 飞客茶馆
-URL-REGEX,^https?+:\/\/www\.flyertea\.com\/source\/plugin\/mobile\/mobile\.php\?module=advis
-
 # G
 # > Google
 # >> Youtube
@@ -99,19 +95,11 @@ URL-REGEX,^https?+:\/\/open\.qyer\.com\/qyer\/config\/get
 URL-REGEX,^https?+:\/\/media\.qyer\.com\/ad\/
 
 # R
-# > 人人视频
-URL-REGEX,^https?+:\/\/msspjh\.emarbox\.com\/getAdConfig
-URL-REGEX,^https?+:\/\/api\.videozhishi\.com\/api\/getAdvertising
-URL-REGEX,^https?+:\/\/api\.rr\.tv\/ad\/
 # > 日日煮
 URL-REGEX,^https?+:\/\/api\.daydaycook\.com\.cn\/daydaycook\/server\/ad\/
 URL-REGEX,^https?+:\/\/cms\.daydaycook\.com\.cn\/api\/cms\/advertisement\/
 
 # S
-# > 什么值得买
-URL-REGEX,^https?+:\/\/api\.smzdm\.com\/v\d\/util\/loading
-URL-REGEX,^https?+:\/\/app-api\.smzdm\.com\/util\/loading
-URL-REGEX,^https?+:\/\/s\d\.zdmimg\.com\/www\/api\/v\d\/api\/thirdAd\.php
 # > 苏宁
 URL-REGEX,^https?+:\/\/image\.suning\.cn\/uimg\/ma\/ad\/
 
@@ -126,12 +114,8 @@ IP-CIDR,111.30.159.168/32,no-resolve
 IP-CIDR,111.30.176.111/32,no-resolve
 URL-REGEX,^https?+:\/\/vv\.video\.qq\.com\/getvmind\?
 URL-REGEX,^https?+:\/\/(?:(?:25[0-5]|2[0-4]\d|1\d{2}|[1-9]?\d)\.){3}(?:25[0-5]|2[0-4]\d|1\d{2}|[1-9]?\d)\/.+?\.tc\.qq\.com\/.+?p201\.1\.mp4\?
-# >> 微信
-URL-REGEX,^https?+:\/\/mp\.weixin\.qq\.com\/mp\/(?>ad_|advertisement|getappmsgad)
 # > 澎湃新闻
 URL-REGEX,^https?+:\/\/adpai\.thepaper\.cn\/.+?&ad=
-# > 途牛
-URL-REGEX,^https?+:\/\/m\.tuniu\.com\/api\/operation\/splash\/
 
 # W
 # > 网易
