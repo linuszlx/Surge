@@ -9,17 +9,6 @@
 
 [Script]
 
-# > App价格版本监控
-App价格版本监控 = type=cron,cronexp=0 0 * * * *,script-path=https://raw.githubusercontent.com/evilbutcher/Quantumult_X/master/check_in/appstore/AppMonitor.js,script-update-interval=0
-
-# 可更改出发地、目的地、出发时间及列车车次
-12306 = type=cron,cronexp=0 0 8 * * *,script-path=https://raw.githubusercontent.com/Sunert/Scripts/master/Task/trainquery.js
-
-# > GitHub监控(By Peng-YM)
-# name: "",//填写仓库名称，可自定义
-# file_names:[],//可选参数。若需要监控具体文件或目录，请填写路径
-GitHub监控= type=cron,cronexp=8 0 * * *,script-path=https://raw.githubusercontent.com/Peng-YM/QuanX/master/Tasks/github.js
-
 # > 机场流量查询(By Peng-YM)
 GitHub监控= type=cron,cronexp=0 9 * * *,script-path=https://raw.githubusercontent.com/Peng-YM/QuanX/master/Tasks/flow.js
 
