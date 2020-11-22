@@ -1,0 +1,11 @@
+#!name=考拉
+#!desc=考拉去广告
+
+[Rule]
+
+
+[Script]
+wykaola.js = requires-body=1,script-path=https://raw.githubusercontent.com/NobyDa/Script/master/QuantumultX/File/wykaola.js,type=http-response,pattern=^https://sp\.kaola\.com/api/openad$
+
+[MITM]
+hostname = sp.kaola.com
