@@ -48,13 +48,6 @@ URL-REGEX,^https?+:\/\/e\.dangdang\.com\/.+?getDeviceStartPage
 # > 丁香医生
 URL-REGEX,^https?+:\/\/dxy\.com\/app\/i\/ask\/biz\/feed\/launch
 
-# G
-# > Google
-# >> Youtube
-URL-REGEX,^https?+:\/\/.+?\.googlevideo\.com\/.+?(?>&oad|ctier)
-URL-REGEX,^https?+:\/\/\w+?\.youtube\.com\/api\/.+?ad
-URL-REGEX,^https?+:\/\/\w+?\.youtube\.com\/p(?>agead|tracking)
-URL-REGEX,^https?+:\/\/youtubei\.googleapis\.com\/youtubei\/.+?(?>ad|log)_
 
 # J
 # > 京东
