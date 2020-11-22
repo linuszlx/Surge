@@ -15,10 +15,8 @@ URL-REGEX,https://api.bilibili.com/x/v2/dm/ad,REJECT
 //SOME MCN INFO MAY BE USEFUL
 //URL-REGEX,https://www.zhihu.com/api/v4/mcn/,REJECT
 DOMAIN,appcloud2.zhihu.com,REJECT
-
 //DO NOT GET CDN-BASED IP
 DOMAIN,118.89.204.198,REJECT
-
 USER-AGENT,AVOS*,REJECT
 URL-REGEX,https://api.zhihu.com/(ad|drama|fringe|commercial|market/popover|search/(top|preset|tab)|.*featured-comment-ad),REJECT
 AND,((USER-AGENT,ZhihuHybrid*), (URL-REGEX,.*recommend)),REJECT
@@ -54,11 +52,6 @@ http-response ^https?://api\.m\.jd\.com/client\.action\?functionId=(wareBusiness
 # > Choler
 # > 抖音 & TikTok Remove Ad & Logo
 douyin_ad = type=http-response,pattern=^https?:\/\/aweme\.snssdk\.com\/aweme\/v1\/(feed|aweme\/post|follow\/feed|nearby\/feed|search\/item|general\/search\/single|hot\/search\/video\/list)\/,requires-body=1,max-size=-1,script-path=https://Choler.github.io/Surge/Script/douyin.js
-
-# > 微信公众号
-WeChat.js = script-path=https://Choler.github.io/Surge/Script/WeChat.js,type=http-request,pattern=^https://mp\.weixin\.qq\.com/mp/getappmsgad
-# > YouTube
-//YouTube.js = script-path=https://Choler.github.io/Surge/Script/YouTube.js,type=http-request,pattern=^https://[\s\S]*\.googlevideo\.com/.*&(oad|ctier)
 
 # > 人人视频 去广告
 rrsp_video = type=http-response,requires-body=true,pattern=^https?:\/\/api\.rr\.tv\/watch\/v\d\/get_movie_info,script-path=https://Choler.github.io/Surge/Script/rrsp.js
