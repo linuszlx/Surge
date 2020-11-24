@@ -10,6 +10,11 @@
 # > 飞客茶馆
 URL-REGEX,^https?+:\/\/www\.flyertea\.com\/source\/plugin\/mobile\/mobile\.php\?module=advis,REJECT
 
+# N
+# > 南瓜电影
+URL-REGEX,^http://pumpkin-online-resource.oss-cn-beijing.aliyuncs.com ,REJECT
+
+
 #K
 # > 快电
 URL-REGEX,^https?+:\/\/cdn-app\.nio\.com\/PE\/,REJECT
