@@ -99,6 +99,15 @@ URL-REGEX,^https?+:\/\/app-api\.smzdm\.com\/util\/loading
 URL-REGEX,^https?+:\/\/s\d\.zdmimg\.com\/www\/api\/v\d\/api\/thirdAd\.php
 # > 苏宁
 URL-REGEX,^https?+:\/\/image\.suning\.cn\/uimg\/ma\/ad\/
+URL-REGEX,^http://image.suning.cn/uimg/MPCS/QRCODELOGO/
+URL-REGEX,^http://image1.suning.cn/uimg/MPCS/QRCODELOGO/
+URL-REGEX,^http://image2.suning.cn/uimg/MPCS/QRCODELOGO/
+URL-REGEX,^http://image3.suning.cn/uimg/MPCS/QRCODELOGO/
+URL-REGEX,^http://image4.suning.cn/uimg/MPCS/QRCODELOGO/
+URL-REGEX,^http://image5.suning.cn/uimg/MPCS/QRCODELOGO/
+URL-REGEX,^http://oss.suning.com/mpcs/mpcs_video/
+URL-REGEX,^https?+:\/\/mpcs\.suning\.com\/mpcs\/dm
+
 
 # T
 # > 腾讯
