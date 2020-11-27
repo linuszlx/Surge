@@ -127,6 +127,7 @@ URL-REGEX,^https?+:\/\/adpai\.thepaper\.cn\/.+?&ad=
 # > 网易
 # >> 网易考拉
 URL-REGEX,^https?+:\/\/kaola-haitao\.oss\.kaolacdn.com\/.+?_\d{3,4}+_\d{4}\.jpg\?x-oss-process=image\/resize,m_mfit,w_\d{3,4}+,h_\d{4}\/format,webp\/quality,Q_85
+URL-REGEX,^https?+:\/\/kaola-haitao\.oss\.kaolacdn.com\/.+?_\d{3,4}+_\d{4}\.png\?x-oss-process=image\/resize,m_mfit,w_\d{3,4}+,h_\d{4}\/format,webp\/quality,Q_85
 URL-REGEX,^http://kaola-haitao.oss-cn-zhangjiakou.aliyuncs.com
 URL-REGEX,^https?:\/\/gw\.kaola.com\/gw\/dgmobile\/appStartRouter
 # >> 网易蜗牛读书
