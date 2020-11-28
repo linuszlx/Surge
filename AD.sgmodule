@@ -12,7 +12,9 @@ URL-REGEX,^https?+:\/\/www\.flyertea\.com\/source\/plugin\/mobile\/mobile\.php\?
 
 # N
 # > 南瓜电影
-URL-REGEX,^http://pumpkin-online-resource.oss-cn-beijing.aliyuncs.com ,REJECT
+URL-REGEX,^http://pumpkin-online-resource.oss-cn-beijing.aliyuncs.com,REJECT
+URL-REGEX,^https?+:\/\/splash\.vcinema\.cn\/,REJECT
+
 
 
 #K
@@ -21,4 +23,5 @@ URL-REGEX,^https?+:\/\/cdn-app\.nio\.com\/PE\/,REJECT
 URL-REGEX,^https?+:\/\/app\.nio\.com\/pe\/app\/act\/v1\/poster,REJECT
 
 [MITM]
-hostname = cdn-app.nio.com, app.nio.com, www.flyertea.com
+hostname = cdn-app.nio.com, app.nio.com, www.flyertea.com, splash.vcinema.cn
+
