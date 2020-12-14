@@ -114,6 +114,10 @@ URL-REGEX,^https?+:\/\/4gimg\.map\.qq\.com\/mwaSplash\/
 # >> 腾讯视频
 IP-CIDR,111.30.159.168/32,no-resolve
 IP-CIDR,111.30.176.111/32,no-resolve
+IP-CIDR,49.82.41.27/32,no-resolve
+IP-CIDR,49.82.41.19/32,no-resolve
+IP-CIDR,58.215.146.142/32,no-resolve
+IP-CIDR,58.211.84.84/32,no-resolve
 URL-REGEX,^https?+:\/\/vv\.video\.qq\.com\/getvmind\?
 URL-REGEX,^https?+:\/\/(?:(?:25[0-5]|2[0-4]\d|1\d{2}|[1-9]?\d)\.){3}(?:25[0-5]|2[0-4]\d|1\d{2}|[1-9]?\d)\/.+?\.tc\.qq\.com\/.+?p201\.1\.mp4\?
 # > 澎湃新闻
