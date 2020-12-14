@@ -44,9 +44,6 @@ GitHub监控= type=cron,cronexp=0 9 * * *,script-path=https://raw.githubusercont
 # 腾讯视频
 # 1.手机浏览器访问并登录: https://film.qq.com/
 腾讯视频 = type=cron,cronexp=35 1 0 * * *,script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/videoqq/videoqq.js,script-update-interval=0
-# 网易考拉
-# 打开 APP 手动签到一次: 访问下右下角 `我的考拉` > `领考拉豆` > `签到`
-网易考拉 = type=cron,cronexp=30 3 0 * * *,script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/wykl/wykl.js,script-update-interval=0
 # 苏宁易购
 # 首页 > 签到有礼
 # 首页 > 领取红包
