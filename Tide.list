@@ -160,3 +160,10 @@ URL-REGEX,^https?+:\/\/.+?\.(?>amemv|musical|snssdk|tiktokv)\.(?>com|ly)\/(?>api
 URL-REGEX,^https?+:\/\/dsp\.toutiao\.com\/api\/xunfei\/ads\/
 URL-REGEX,^https?+:\/\/.+?\.snssdk\.com\/motor\/operation\/activity\/display\/config\/V2\/
 URL-REGEX,^https?+:\/\/.+?\/img\/ad\.union\.api\/
+# > 中国银行
+URL-REGEX,^https?+:\/\/mlife\.jf365\.boc\.cn\/AppPrj\/FirstPic\.do\?
+# > 中国招商银行
+URL-REGEX,^https?+:\/\/pic1cdn\.cmbchina\.com\/appinitads\/
+# > 中国广发银行
+URL-REGEX,^https?+:\/\/mps\.95508\.com\/mps\/club\/cardPortals\/adv\/.{25}\.jpg
+
