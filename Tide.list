@@ -165,7 +165,7 @@ URL-REGEX,^https?+:\/\/mlife\.jf365\.boc\.cn\/AppPrj\/FirstPic\.do\?
 # > 中国招商银行
 URL-REGEX,^https?+:\/\/pic1cdn\.cmbchina\.com\/appinitads\/
 # > 中国广发银行
-URL-REGEX,^https?+:\/\/mps\.95508\.com\/mps\/club\/cardPortals\/adv\/.{25}\.jpg
+URL-REGEX,^https?+:\/\/static\.95508\.com\/mmg\/images\/ads\/
 # > 中国中信银行
 URL-REGEX,^https?+:\/\/m\.citiccardcdn\.citicbank\.com\/citiccard\/mbk\/dkkjv4\/
 
