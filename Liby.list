@@ -113,11 +113,6 @@ IP-CIDR,39.107.15.115/32,no-resolve
 IP-CIDR,47.89.59.182/32,no-resolve
 IP-CIDR,103.49.209.27/32,no-resolve
 IP-CIDR,123.56.152.96/32,no-resolve
-# > Tencent V
-IP-CIDR,49.82.41.27/32,no-resolve
-IP-CIDR,58.215.146.142/32,no-resolve
-IP-CIDR,58.211.84.84/32,no-resolve
-IP-CIDR,49.82.41.19/32,no-resolve
 # > ChinaTelecom
 IP-CIDR,61.160.200.223/32,no-resolve
 IP-CIDR,61.160.200.242/32,no-resolve
