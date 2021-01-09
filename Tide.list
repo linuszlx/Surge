@@ -104,7 +104,6 @@ URL-REGEX,^http://image5.suning.cn/uimg/MPCS/QRCODELOGO/
 URL-REGEX,^http://oss.suning.com/mpcs/mpcs_video/
 URL-REGEX,^https?+:\/\/mpcs\.suning\.com\/mpcs\/dm
 
-
 # T
 # > 腾讯
 # >> 腾讯地图
@@ -118,6 +117,7 @@ IP-CIDR,49.82.41.27/32,no-resolve
 IP-CIDR,49.82.41.19/32,no-resolve
 IP-CIDR,58.215.146.142/32,no-resolve
 IP-CIDR,58.211.84.84/32,no-resolve
+URL-REGEX,^http:\/\/.+?\/variety.tc.qq.com\/
 URL-REGEX,^https?+:\/\/vv\.video\.qq\.com\/getvmind\?
 URL-REGEX,^https?+:\/\/(?:(?:25[0-5]|2[0-4]\d|1\d{2}|[1-9]?\d)\.){3}(?:25[0-5]|2[0-4]\d|1\d{2}|[1-9]?\d)\/.+?\.tc\.qq\.com\/.+?p201\.1\.mp4\?
 # > 澎湃新闻
