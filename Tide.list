@@ -4,8 +4,6 @@
 # > 21经济
 URL-REGEX,^https?+:\/\/api\.21jingji\.com\/ad\/
 # A
-# > 爱思助手
-URL-REGEX,^https?+:\/\/list-app-m\.i4\.cn\/getopfstadinfo\.xhtml
 # >> 1688
 URL-REGEX,^https?+:\/\/acs\.m\.taobao\.com\/gw\/mtop\.alibaba\.advertisementservice\.getadv
 # >> 飞猪
@@ -17,6 +15,10 @@ URL-REGEX,^https?+:\/\/acs\.m\.taobao\.com\/gw\/mtop\.o2o\.ad\.gateway\.get\/
 URL-REGEX,^https?+:\/\/(?>heic|gw)\.alicdn\.com\/tfs\/TB1.+?-\d{4}-\d{4}\.jpg_1200x1200q90\.jpg_\.\w{3,4}+$
 URL-REGEX,^https?+:\/\/heic\.alicdn\.com\/tps\/i4\/.+?\.jpg_1200x1200q90\.jpg_\.heic$
 URL-REGEX,^https?+:\/\/gw\.alicdn\.com\/tfs\/.+?\d{4}-\d{4}\/[a-z]{3}$
+URL-REGEX,^https?+:\/\/heic\.alicdn.com\/tps\/i4 
+URL-REGEX,^https?+:\/\/heic\.alicdn.com\/tfs 
+URL-REGEX,^https?+:\/\/heic\.alicdn.com\/imgextra
+
 # >> 淘票票
 URL-REGEX,^https?+:\/\/acs\.m\.taobao\.com\/gw\/mtop\.film\.mtopadvertiseapi\.queryadvertise\/
 # >> 优酷
