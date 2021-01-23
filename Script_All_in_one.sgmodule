@@ -76,4 +76,4 @@ bilibili live = type=http-response,requires-body=1,max-size=0,pattern=https://ap
 rrtv.js = requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/nzw9314/QuantumultX/master/Script/rrtv.js,type=http-response,pattern=^https:\/\/api\.rr\.tv(\/user\/privilege\/list|\/ad\/getAll|\/rrtv-video\/v4plus\/season\/detail)
 
 [MITM]
-hostname = %APPEND% greasyfork.org, openuserjs.org, 8.8.8.8, 1.1.1.1, *.googlevideo.com, trade-acs.m.taobao.com, api.m.jd.com, www.zhihu.com, api.zhihu.com, link.zhihu.com, 118.89.204.198, app.bilibili.com, api.bilibili.com, api.live.bilibili.com, *.amemv.com, aweme*.snssdk.com,  *.tiktokv.com, *.musical.ly, mp.weixin.qq.com, api.rr.tv, sp.kaola.com, vali.cp31.ott.cibntv.net
+hostname = %APPEND% greasyfork.org, openuserjs.org, 8.8.8.8, 1.1.1.1, *.googlevideo.com, api.m.jd.com, www.zhihu.com, api.zhihu.com, link.zhihu.com, 118.89.204.198, app.bilibili.com, api.bilibili.com, api.live.bilibili.com, *.amemv.com, aweme*.snssdk.com,  *.tiktokv.com, *.musical.ly, mp.weixin.qq.com, api.rr.tv, sp.kaola.com, vali.cp31.ott.cibntv.net
