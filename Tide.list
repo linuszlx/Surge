@@ -163,12 +163,8 @@ URL-REGEX,^https?+:\/\/.+?\.snssdk\.com\/motor\/operation\/activity\/display\/co
 URL-REGEX,^https?+:\/\/.+?\/img\/ad\.union\.api\/
 # > 中国银行
 URL-REGEX,^https?+:\/\/mlife\.jf365\.boc\.cn\/AppPrj\/FirstPic\.do\?
-# > 中国招商银行
-URL-REGEX,^https?+:\/\/pic1cdn\.cmbchina\.com\/appinitads\/
-URL-REGEX,^https?+:\/\/res\.cc\.cmbimg\.com\/fsp\/File\/ClientFacePublic\/.+?\.gif
-URL-REGEX,^https?+:\/\/res\.cc\.cmbimg\.com\/fsp\/File\/ClientFacePublic\/.+?\.jpg
 # > 中国广发银行
 URL-REGEX,^https?+:\/\/static\.95508\.com\/mmg\/images\/ads\/
 # > 中国中信银行
-URL-REGEX,^https?+:\/\/m\.citiccardcdn\.citicbank\.com\/citiccard\/mbk\/dkkjv4\/appsapace-img\/icon\/.+?\.jpg
+URL-REGEX,^https?+:\/\/m\.citiccardcdn\.citicbank\.com\/citiccard\/mbk\/dkkjv4\/appspace-img\/icon\/.+?\.jpg
 
