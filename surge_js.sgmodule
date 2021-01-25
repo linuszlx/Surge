@@ -1,5 +1,5 @@
 #!name=JD、Taobao比价脚本
-#!desc=历史比价、去广告等重写脚本  @w37fhy
+#!desc=历史比价、去广告等重写脚本
 
 [MITM]
 hostname = trade-acs.m.taobao.com, api.m.jd.com, mp.weixin.qq.com
