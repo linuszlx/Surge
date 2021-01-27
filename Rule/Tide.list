@@ -58,6 +58,11 @@ URL-REGEX,^https?+:\/\/ms\.jr\.jd\.com\/gw\/generic\/aladdin\/na\/m\/getLoadingP
 # > 界面新闻
 URL-REGEX,^https?+:\/\/img\.jiemian\.com\/ads\/
 
+# K
+# > 快电
+URL-REGEX,^https?+:\/\/cdn-app\.nio\.com\/PE\/
+URL-REGEX,^https?+:\/\/app\.nio\.com\/pe\/app\/act\/v1\/poster
+
 # M
 # > 小米
 URL-REGEX,^https?+:\/\/api\.m\.mi\.com\/v\d\/app\/start
