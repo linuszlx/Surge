@@ -45,6 +45,9 @@ URL-REGEX,^https?+:\/\/e\.dangdang\.com\/.+?getDeviceStartPage
 # > 丁香医生
 URL-REGEX,^https?+:\/\/dxy\.com\/app\/i\/ask\/biz\/feed\/launch
 
+# F
+# > 飞客茶馆
+URL-REGEX,^https?+:\/\/www\.flyertea\.com\/source\/plugin\/mobile\/mobile\.php\?module=advis
 
 # J
 # > 京东
@@ -54,7 +57,6 @@ URL-REGEX,^https?+:\/\/ms\.jr\.jd\.com\/gw\/generic\/base\/na\/m\/adInfo
 URL-REGEX,^https?+:\/\/ms\.jr\.jd\.com\/gw\/generic\/aladdin\/na\/m\/getLoadingPicture
 # > 界面新闻
 URL-REGEX,^https?+:\/\/img\.jiemian\.com\/ads\/
-
 
 # M
 # > 小米
@@ -70,6 +72,10 @@ URL-REGEX,^https?+:\/\/s3plus\.meituan\.net\/.+?\/linglong\/.+?\.(?>gif|jpg|mp4)
 # > 马蜂窝
 URL-REGEX,^https?+:\/\/mapi\.mafengwo\.cn\/ad\/
 URL-REGEX,^https?+:\/\/mapi\.mafengwo\.cn\/travelguide\/ad\/
+
+# N
+# > 南瓜
+URL-REGEX,^https?+:\/\/splash\.vcinema\.cn\/
 
 # P
 # > 拼多多
