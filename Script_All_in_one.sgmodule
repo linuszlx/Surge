@@ -8,16 +8,16 @@ force-http-engine-hosts = %APPEND% vali.cp31.ott.cibntv.net
 [Rule]
 
 # > 京东  去启动广告
-URL-REGEX,^https?:\/\/api\.m\.jd\.com\/client\.action\?functionId=start$,REJECT-TINYGIF
-URL-REGEX,^https?+:\/\/b?dsp-x\.jd\.com\/adx\/
-URL-REGEX,^https?+:\/\/ms\.jr\.jd\.com\/gw\/generic\/base\/na\/m\/adInfo
-URL-REGEX,^https?+:\/\/ms\.jr\.jd\.com\/gw\/generic\/aladdin\/na\/m\/getLoadingPicture
+URL-REGEX,^https:\/\/api\.m\.jd\.com\/client\.action\?functionId=start$,REJECT-TINYGIF
+URL-REGEX,^https:\/\/b?dsp-x\.jd\.com\/adx\/
+URL-REGEX,^https:\/\/ms\.jr\.jd\.com\/gw\/generic\/base\/na\/m\/adInfo
+URL-REGEX,^https:\/\/ms\.jr\.jd\.com\/gw\/generic\/aladdin\/na\/m\/getLoadingPicture
 
 # > 哔哩哔哩 去广告 
-URL-REGEX,^https?+:\/\/app\.bilibili\.com\/x\/v\d\/splash\/
-URL-REGEX,^https?+:\/\/manga\.bilibili\.com\/twirp\/comic\.v\d\.Comic\/Flash
-URL-REGEX,https://app.bilibili.com/x/v2/(splash|search/(defaultword|square)),REJECT
-URL-REGEX,https://api.bilibili.com/x/v2/dm/ad,REJECT
+URL-REGEX,^https:\/\/app\.bilibili\.com\/x\/v\d\/splash\/
+URL-REGEX,^https:\/\/manga\.bilibili\.com\/twirp\/comic\.v\d\.Comic\/Flash
+URL-REGEX,^https:\/\/app\.bilibili\.com/x/v2/(splash|search/(defaultword|square)),REJECT
+URL-REGEX,^https:\/\/api\.bilibili\.com/x/v2/dm/ad,REJECT
 
 # > 知乎 去广告
 //SOME MCN INFO MAY BE USEFUL
@@ -28,21 +28,21 @@ DOMAIN,118.89.204.198,REJECT
 USER-AGENT,AVOS*,REJECT
 URL-REGEX,https://api.zhihu.com/(ad|drama|fringe|commercial|market/popover|search/(top|preset|tab)|.*featured-comment-ad),REJECT
 AND,((USER-AGENT,ZhihuHybrid*), (URL-REGEX,.*recommend)),REJECT
-URL-REGEX,^https?+:\/\/api\.zhihu\.com\/(?>launch|real_time)
-URL-REGEX,^https?+:\/\/api\.zhihu\.com\/commercial_api\/(?>launch|real_time)
-URL-REGEX,^https?+:\/\/api\.zhihu\.com\/fringe\/ad
-URL-REGEX,^https?+:\/\/api\.zhihu\.com\/(?>ab|adx|xen|drama|zst|ad-style-service|market\/popover|search\/(?>top|tab|preset)|.*?(?>guide|recommendations|extended|featured-comment-ad))
-URL-REGEX,^https?+:\/\/www\.zhihu\.com\/api\/v4\/community-ad
+URL-REGEX,^https?:\/\/api\.zhihu\.com\/(?>launch|real_time)
+URL-REGEX,^https?:\/\/api\.zhihu\.com\/commercial_api\/(?>launch|real_time)
+URL-REGEX,^https?:\/\/api\.zhihu\.com\/fringe\/ad
+URL-REGEX,^https?:\/\/api\.zhihu\.com\/(?>ab|adx|xen|drama|zst|ad-style-service|market\/popover|search\/(?>top|tab|preset)|.*?(?>guide|recommendations|extended|featured-comment-ad))
+URL-REGEX,^https?:\/\/www\.zhihu\.com\/api\/v4\/community-ad
 
 # > 人人视频 去广告
 AND,((USER-AGENT,PUClient*), (NOT,((DOMAIN-SUFFIX,rr.tv)))),REJECT
-URL-REGEX,^https?:\/\/api\.rr\.tv\/(?:ad\/getAll$|storage/business/rootName/app/homePage),REJECT
+URL-REGEX,^https:\/\/api\.rr\.tv\/(?:ad\/getAll$|storage/business/rootName/app/homePage),REJECT
 
 # > 优酷 去广告
 URL-REGEX,^http:\/\/vali\.cp31\.ott\.cibntv\.net\/youku\/,REJECT-TINYGIF
-URL-REGEX,^https?+:\/\/.+?\.mp4\?ccode=0902
-URL-REGEX,^https?+:\/\/.+?\.mp4\?sid=
-URL-REGEX,^https?+:\/\/vali\.cp31\.ott\.cibntv\.net\/youku\/.+?\.mp4\?sid=
+URL-REGEX,^https:\/\/.+?\.mp4\?ccode=0902
+URL-REGEX,^https:\/\/.+?\.mp4\?sid=
+URL-REGEX,^https:\/\/vali\.cp31\.ott\.cibntv\.net\/youku\/.+?\.mp4\?sid=
 
 [URL Rewrite]
 # > TikTok 解锁
