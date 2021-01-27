@@ -25,6 +25,9 @@ AND,((USER-AGENT,PUClient*), (NOT,((DOMAIN-SUFFIX,rr.tv)))),REJECT
 URL-REGEX,^https?:\/\/api\.rr\.tv\/(?:ad\/getAll$|storage/business/rootName/app/homePage),REJECT
 # > 优酷 去广告
 URL-REGEX,^http:\/\/vali\.cp31\.ott\.cibntv\.net\/youku\/,REJECT-TINYGIF
+# > 快电
+URL-REGEX,^https?+:\/\/cdn-app\.nio\.com\/PE\/,REJECT-TINYGIF
+URL-REGEX,^https?+:\/\/app\.nio\.com\/pe\/app\/act\/v1\/poster,REJECT-TINYGIF
 
 [URL Rewrite]
 # > TikTok 解锁
