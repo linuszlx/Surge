@@ -33,22 +33,18 @@ GitHub监控= type=cron,cronexp=0 9 * * *,script-path=https://raw.githubusercont
 哔哩哔哩 = type=cron,cronexp=35 0 0 * * *,script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/bilibili/bilibili.js,script-update-interval=0
 # 如需银瓜子转硬币，取消下方注释
 瓜子转硬币 = type=cron,cronexp=40 0 0 * * *,script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/bilibili/bilibili.silver2coin.js,script-update-interval=0
+
 # 打开 APP, 访问下`个人中心`
 飞客茶馆 = type=cron,cronexp=55 0 0 * * *,script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/flyertea/flyertea.js,script-update-interval=0
-# 人人视频
-# 打开 APP, 访问下`个人中心`
-人人视频 = type=cron,cronexp=15 1 0 * * *,script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/rrtv/rrtv.js,script-update-interval=0
+
 # 什么值得买
 # 浏览器访问并登录: https://zhiyou.smzdm.com/user/login
 什么值得买 = type=cron,cronexp=25 1 0 * * *,script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/smzdm/smzdm.js,script-update-interval=0
+
 # 腾讯视频
 # 1.手机浏览器访问并登录: https://film.qq.com/
 腾讯视频 = type=cron,cronexp=35 1 0 * * *,script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/videoqq/videoqq.js,script-update-interval=0
-# 苏宁易购
-# 首页 > 签到有礼
-# 首页 > 领取红包
-# 首页  > 天天低价
-苏宁易购 = type=cron,cronexp=50 3 0 * * *,script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/suning/suning.js,script-update-interval=0
+
 # > 奈雪 (By @zZPiglet)
 # 进入"奈雪点单"小程序，若弹出"首次写入奈雪の茶 Token 成功"
 奈雪 =type=cron,cronexp=35 5 0 * * *,script-path=https://raw.githubusercontent.com/zZPiglet/Task/master/Naixue/Naixue.js,wake-system=1
