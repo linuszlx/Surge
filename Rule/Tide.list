@@ -132,8 +132,6 @@ IP-CIDR,58.211.84.84/32,no-resolve
 URL-REGEX,^http:\/\/.+?\/variety.tc.qq.com\/
 URL-REGEX,^https?+:\/\/vv\.video\.qq\.com\/getvmind\?
 URL-REGEX,^https?+:\/\/(?:(?:25[0-5]|2[0-4]\d|1\d{2}|[1-9]?\d)\.){3}(?:25[0-5]|2[0-4]\d|1\d{2}|[1-9]?\d)\/.+?\.tc\.qq\.com\/.+?p201\.1\.mp4\?
-# > 澎湃新闻
-URL-REGEX,^https?+:\/\/adpai\.thepaper\.cn\/.+?&ad=
 
 # W
 # > 网易
