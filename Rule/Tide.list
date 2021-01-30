@@ -1,8 +1,5 @@
 # Tide.list
 # Strong Stain Removal
-# 0~9
-# > 21经济
-URL-REGEX,^https?+:\/\/api\.21jingji\.com\/ad\/
 # A
 # >> 1688
 URL-REGEX,^https?+:\/\/acs\.m\.taobao\.com\/gw\/mtop\.alibaba\.advertisementservice\.getadv
