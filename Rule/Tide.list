@@ -19,10 +19,6 @@ URL-REGEX,^https?+:\/\/gw\.alicdn\.com\/imgextra\/i1\/
 URL-REGEX,^https?+:\/\/gw\.alicdn\.com\/imgextra\/i2\/
 URL-REGEX,^https?+:\/\/gw\.alicdn\.com\/imgextra\/i3\/
 URL-REGEX,^https?+:\/\/gw\.alicdn\.com\/imgextra\/i4\/
-URL-REGEX,^https?+:\/\/heic\.alicdn.com\/imgextra\/i1
-URL-REGEX,^https?+:\/\/heic\.alicdn.com\/imgextra\/i2
-URL-REGEX,^https?+:\/\/heic\.alicdn.com\/imgextra\/i3 
-URL-REGEX,^https?+:\/\/heic\.alicdn.com\/imgextra\/i4
 URL-REGEX,^https?+:\/\/heic\.alicdn.com\/tfs 
 
 # >> 淘票票
