@@ -12,10 +12,6 @@
 # > 机场流量查询(By Peng-YM)
 GitHub监控= type=cron,cronexp=0 9 * * *,script-path=https://raw.githubusercontent.com/Peng-YM/QuanX/master/Tasks/flow.js
 
-# > 京东价格提醒(By toulanboy)
-京东价格提醒 = type=cron,cronexp=5 0 * * *,script-path=https://raw.githubusercontent.com/toulanboy/scripts/master/jd_price_detect/jd_price_detect.js
-
-
 # 签到脚本
 
 #  NobyDa
@@ -44,7 +40,3 @@ GitHub监控= type=cron,cronexp=0 9 * * *,script-path=https://raw.githubusercont
 # 腾讯视频
 # 1.手机浏览器访问并登录: https://film.qq.com/
 腾讯视频 = type=cron,cronexp=35 1 0 * * *,script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/videoqq/videoqq.js,script-update-interval=0
-
-# > 奈雪 (By @zZPiglet)
-# 进入"奈雪点单"小程序，若弹出"首次写入奈雪の茶 Token 成功"
-奈雪 =type=cron,cronexp=35 5 0 * * *,script-path=https://raw.githubusercontent.com/zZPiglet/Task/master/Naixue/Naixue.js,wake-system=1
