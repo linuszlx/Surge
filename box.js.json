@@ -28,6 +28,40 @@
       ],
       "script": "https://raw.githubusercontent.com/Peng-YM/QuanX/master/Tasks/flow.js"
     },
+    {
+      "id": "NoteYoudao",
+      "name": "有道云笔记",
+      "keys": ["chavy_signurl_noteyoudao", "chavy_signbody_noteyoudao", "chavy_signheaders_noteyoudao"],
+      "author": "@chavyleung",
+      "repo": "https://github.com/chavyleung/scripts/tree/master/noteyoudao",
+      "url": "https://apps.apple.com/cn/app/有道云笔记-扫描王版/id450748070",
+      "script": "https://raw.githubusercontent.com/chavyleung/scripts/master/noteyoudao/noteyoudao.js",
+      "icons": [
+        "https://raw.githubusercontent.com/Orz-3/mini/master/Alpha/noteyoudao.png",
+        "https://raw.githubusercontent.com/Orz-3/mini/master/Color/noteyoudao.png"
+      ],
+      "tasks": [{ "cron": "3 0 * * *", "script": "noteyoudao.js" }],
+      "rewrites": [
+        {
+          "type": "request",
+          "pattern": "^https://note.youdao.com/yws/mapi/user?method=checkin",
+          "script": "noteyoudao.cookie.js",
+          "body": true
+        }
+      ]
+    },
+    {
+      "id": "chavyleung.bilibili.live",
+      "name": "bilibili直播",
+      "keys": ["chavy_cookie_bilibili"],
+      "author": "@chavyleung",
+      "repo": "https://github.com/chavyleung/scripts/blob/master/bilibili/bilibili.js",
+      "script": "https://raw.githubusercontent.com/chavyleung/scripts/master/bilibili/bilibili.js",
+      "icons": [
+        "https://raw.githubusercontent.com/Orz-3/mini/master/Alpha/bilibili.png",
+        "https://raw.githubusercontent.com/Orz-3/mini/master/Color/bilibili.png"
+      ]
+    },
      {
       "id": "smzdm",
       "name": "什么值得买",
