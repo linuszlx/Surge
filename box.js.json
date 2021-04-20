@@ -28,6 +28,48 @@
       ],
       "script": "https://raw.githubusercontent.com/Peng-YM/QuanX/master/Tasks/flow.js"
     },
+     {
+      "id": "smzdm",
+      "name": "什么值得买",
+      "keys": ["chavy_cookie_smzdm"],
+      "author": "@wangfei021325, @chavyleung",
+      "repo": "https://github.com/chavyleung/scripts/tree/master/smzdm",
+      "script": "https://raw.githubusercontent.com/chavyleung/scripts/master/smzdm/smzdm.js",
+      "icons": [
+        "https://raw.githubusercontent.com/Orz-3/mini/master/Alpha/smzdm.png",
+        "https://raw.githubusercontent.com/Orz-3/mini/master/Color/smzdm.png"
+      ]
+    },
+    {
+      "id": "flyertea",
+      "name": "飞客茶馆",
+      "keys": ["chavy_cookie_flyertea", "chavy_token_flyertea"],
+      "author": "@chavyleung",
+      "repo": "https://github.com/chavyleung/scripts/tree/master/flyertea",
+      "script": "https://raw.githubusercontent.com/chavyleung/scripts/master/flyertea/flyertea.js",
+      "icons": [
+        "https://raw.githubusercontent.com/Orz-3/mini/master/Alpha/flyertea.png",
+        "https://raw.githubusercontent.com/Orz-3/mini/master/Color/flyertea.png"
+      ]
+    },
+    {
+      "id": "videoqq",
+      "name": "腾讯视频",
+      "keys": [
+        "chavy_cookie_videoqq",
+        "chavy_auth_url_videoqq",
+        "chavy_auth_header_videoqq",
+        "chavy_msign_url_videoqq",
+        "chavy_msign_header_videoqq"
+      ],
+      "author": "@chavyleung",
+      "repo": "https://github.com/chavyleung/scripts/tree/master/videoqq",
+      "script": "https://raw.githubusercontent.com/chavyleung/scripts/master/videoqq/videoqq.js",
+      "icons": [
+        "https://raw.githubusercontent.com/Orz-3/mini/master/Alpha/videoqq.png",
+        "https://raw.githubusercontent.com/Orz-3/mini/master/Color/videoqq.png"
+      ]
+    },
     {
       "id": "ssid-auto-policy",
       "name": "SSID 自动策略",
