@@ -21,4 +21,4 @@ JD发现 = type=http-response,requires-body=1,max-size=0,pattern=^https?:\/\/api
 
 
 [MITM]
-hostname = 47.100.65.202, api.m.jd.com, 101.124.19.122
+hostname = %APPEND% 47.100.65.202, api.m.jd.com, 101.124.19.122
