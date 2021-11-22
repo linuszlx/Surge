@@ -22,4 +22,4 @@ URL-REGEX,^https?:\/\/manga\.bilibili\.com\/twirp\/comic\.v\d\.comic\/flash,REJE
 去除皮肤 = type=http-response,requires-body=1,max-size=0,pattern=^https?:\/\/app\.bilibili\.com\/x\/resource\/show\/skin,script-path=https://raw.githubusercontent.com/linuszlx/Quantumult-add/master/JS/bilipf.js
 
 [MITM]
-hostname = *.bilibili.com,api.live.bilibili.com,api.vc.bilibili.com
+hostname = %APPEND% *.bilibili.com,api.live.bilibili.com,api.vc.bilibili.com
