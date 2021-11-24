@@ -1,4 +1,4 @@
-let body = $response.body;
+var body = $response.body;
 let obj = JSON.parse(body);
 obj = body.replaceall('adv', 'abc');
 $done({body: JSON.stringify(obj)});
