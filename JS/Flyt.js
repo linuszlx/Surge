@@ -1,3 +1,4 @@
 var body = $response.body;
-body.replace('adv', 'abc');
+var obj = JSON.parse(body);
+obj.replace('adv', 'abc');
 $done({ body });
