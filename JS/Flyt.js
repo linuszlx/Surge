@@ -1,3 +1,3 @@
 var body = $response.body;
-replace('adv', 'abc');
+body.replace('adv', 'abc');
 $done({ body });
