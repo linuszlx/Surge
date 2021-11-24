@@ -13,6 +13,13 @@ let magicJS = MagicJS(scriptName, 'INFO');
           for (let item of obj['Variables']['data'] ){
             if (item.hasOwnProperty('adv')){
               let adv = [];
+          }
+        }
+                }
+        body = JSON.stringify(obj);
+        catch (err){
+          magicJS.logError(`推荐去广告出现异常：${err}`);
+        }
         break;
         default:
         magicJS.logWarning('触发意外的请求处理，请确认脚本或复写配置正常。');
