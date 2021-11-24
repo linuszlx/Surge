@@ -1,2 +1,4 @@
-var body = $response.body.replaceall('adv', 'abc').
+let body = JSON.parse($response.body)
+const p =body
+p.replaceall('adv', 'abc').
 $done({ body });
