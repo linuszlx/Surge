@@ -14,6 +14,9 @@ let magicJS = MagicJS(scriptName, 'INFO');
             if (item.hasOwnProperty('adv')){
               let adv = [];
         break;
+        default:
+        magicJS.logWarning('触发意外的请求处理，请确认脚本或复写配置正常。');
+        break;
     }
   }
   else{
