@@ -1,0 +1,11 @@
+#!name=破解补丁
+#!desc= 破解VIP脚本
+#!system=ios
+
+[Script]
+TestFlight = type=http-response,requires-body=1,max-size=0,pattern=^https?:\/\/testflight\.apple\.com\/v\d\/accounts\/.+?\/install$,script-path=https://raw.githubusercontent.com/linuszlx/Quantumult-add/master/JS/TF_Download.js
+有道云笔记 = type=http-response,requires-body=1,max-size=0,pattern=https://note.youdao.com/yws/(mapi/payment|api/self),script-path=https://raw.githubusercontent.com/linuszlx/Quantumult-add/master/ydybj.js
+Scanner Pro = type=http-response,requires-body=1,max-size=0,pattern=https://license.pdfexpert.com/api/2.0/scanner/subscription/refresh,script-path=https://raw.githubusercontent.com/ddgksf2013/Cuttlefish/master/Crack/sp.js
+懒饭 = type=http-response,requires-body=1,max-size=0,pattern=^https:\/\/lanfanapp.com\/api\/v1\/user\/(prime.json|page_detail.json),script-path=https://raw.githubusercontent.com/linuszlx/Quantumult-add/master/JS/lanfan.js
+[MITM]
+hostname = %APPEND% note.youdao.com, license.pdfexpert.com, testflight.apple.com, lanfanapp.com
