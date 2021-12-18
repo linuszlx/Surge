@@ -1,3 +1,3 @@
 var body = $response.body
-    .replace(/adv/, /abc/)
+    .replace(/adv/g, /abc/)
 $done({ body });
