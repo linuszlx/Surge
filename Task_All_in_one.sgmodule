@@ -1,32 +1,14 @@
-#!name=Task - All in one By . Linus
-#!desc=该模块适用于定时签到:集成全部: NobyDa、Chavy以及个人收集常用签到脚本。建议本地安装以便自定义修改签到时间。
+#!name=Task - All in one
+#!desc=
 #!system=ios
 
-# Task配置 By nzw9314
-# GitHub主页(https://github.com/nzw9314)
-# TG通知频道 (https://t.me/nzw9314News)
-# 定时脚本
-
 [Script]
-
-# > 机场流量查询(By Peng-YM)
-GitHub监控= type=cron,cronexp=0 9 * * *,script-path=https://raw.githubusercontent.com/Peng-YM/QuanX/master/Tasks/flow.js
-
 # 签到脚本
 
 #  NobyDa
 # > 京东
 京东 = type=cron,cronexp=0 0 0 * * *,script-path=https://raw.githubusercontent.com/NobyDa/Script/master/JD-DailyBonus/JD_DailyBonus.js,script-update-interval=0
 东东农场 = type=cron,cronexp=5 6-18/6 * * *,wake-system=1,timeout=3600,script-path=https://raw.githubusercontent.com/ChuheGit/1/main/Script/jd_scripts/jd_fruit.js
-# > 爱奇艺
-爱奇艺 = type=cron,cronexp=5 0 0 * * *,script-path=https://raw.githubusercontent.com/NobyDa/Script/master/iQIYI-DailyBonus/iQIYI.js,script-update-interval=0
-
-# @chavyleung
-# bilibili
-# 打开浏览器访问: https://www.bilibili.com 或 https://live.bilibili.com
-哔哩哔哩 = type=cron,cronexp=35 0 0 * * *,script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/bilibili/bilibili.js,script-update-interval=0
-# 如需银瓜子转硬币，取消下方注释
-瓜子转硬币 = type=cron,cronexp=40 0 0 * * *,script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/bilibili/bilibili.silver2coin.js,script-update-interval=0
 
 # 打开 APP, 访问下`个人中心`
 飞客茶馆 = type=cron,cronexp=55 0 0 * * *,script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/flyertea/flyertea.js,script-update-interval=0
@@ -34,7 +16,3 @@ GitHub监控= type=cron,cronexp=0 9 * * *,script-path=https://raw.githubusercont
 # 什么值得买
 # 浏览器访问并登录: https://zhiyou.smzdm.com/user/login
 什么值得买 = type=cron,cronexp=25 1 0 * * *,script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/smzdm/smzdm.js,script-update-interval=0
-
-# 腾讯视频
-# 1.手机浏览器访问并登录: https://film.qq.com/
-腾讯视频 = type=cron,cronexp=35 1 0 * * *,script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/videoqq/videoqq.js,script-update-interval=0
