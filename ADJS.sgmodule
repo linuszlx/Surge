@@ -22,7 +22,7 @@ JD推荐 = type=http-response,requires-body=1,max-size=0,pattern=^https?:\/\/api
 JD首页推荐 = type=http-response,requires-body=1,max-size=0,pattern=^https?:\/\/api\.m\.jd\.com\/client\.action\?functionId=getRecommendNewFeedsList,script-path=https://raw.githubusercontent.com/linuszlx/Quantumult-add/master/JS/jdsp.js
 JD发现 = type=http-response,requires-body=1,max-size=0,pattern=^https?:\/\/api\.m\.jd\.com\/client\.action\?functionId=discFollowEnterMainPage,script-path=https://raw.githubusercontent.com/linuszlx/Quantumult-add/master/JS/jds.js
 
-米家Tab = type=http-response,requires-body=1,max-size=0,pattern=http://home.mi.com/cgi-op/api/v1/common/findTabConfig,script-path=https://raw.githubusercontent.com/linuszlx/Surge/main/JS/MiTab.js
+米家Tab = type=http-response,requires-body=1,max-size=0,pattern=^https?:\/\/home\.mi\.com\/cgi-op\/api\/v1\/exploreTab,script-path=https://raw.githubusercontent.com/linuszlx/Surge/main/JS/MiTab.js
 米家ad = type=http-response,requires-body=1,max-size=0,pattern=^https?:\/\/home\.mi\.com\/cgi-op\/api\/v1\/recommendation\/myTab,script-path=https://raw.githubusercontent.com/linuszlx/Surge/main/JS/Miad.js
 
 
