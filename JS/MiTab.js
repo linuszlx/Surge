@@ -1,4 +1,4 @@
-const path1 = "welcomeHome";
+const path1 = "exploreTab";
 let url = $request.url;
 let body = JSON.parse($response.body);
 if (url.indexOf(path1) != -1) {
