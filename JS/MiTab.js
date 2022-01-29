@@ -1,5 +1,13 @@
-var body = $response.body;
-var obj = JSON.parse(body);
-obj.data.findTabSwitch= false;
-obj.data.findTabAccess.youPinTab= false;
-$done({body: JSON.stringify(obj)});
+const path1 = "welcomeHome";
+let url = $request.url;
+let body = JSON.parse($response.body);
+if (url.indexOf(path1) != -1) {
+  delete obj.data.stream;
+  body.name = body.data.modules.filter(function(item) {
+    if (item.name == "精彩活动" || item.name == "米家上新") {
+      return false;
+    }
+    return true;
+  });                                       
+}
+$done({body: JSON.stringify(body)});
