@@ -1,15 +1,4 @@
 # NAME: AdvertisingLite
-# AUTHOR: blackmatrix7
-# REPO: https://github.com/blackmatrix7/ios_rule_script
-# UPDATED: 2022-01-01 02:11:02
-# DESCRIPTION: 分流规则中含有URL-REGEX类型，请搭配MITM使用
-# DOMAIN: 23398
-# DOMAIN-SUFFIX: 13240
-# IP-CIDR: 158
-# DOMAIN-KEYWORD: 2
-# IP-CIDR6: 1
-# URL-REGEX: 296
-# TOTAL: 37095
 00-gov.cn
 0024aadd.com
 0026645142c89aeb1.com
@@ -34934,9 +34923,6 @@ zzxosget.com
 .um0592.com
 .um29.com
 .umbbs.cn
-.umeng.co
-.umeng.com
-.umengcloud.com
 .umid.orion.meizu.com
 .umiwi.com
 .umjsik.com
