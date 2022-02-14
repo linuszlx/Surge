@@ -1,4 +1,15 @@
 # NAME: AdvertisingLite
+# AUTHOR: blackmatrix7
+# REPO: https://github.com/blackmatrix7/ios_rule_script
+# UPDATED: 2022-02-06 02:10:12
+# DESCRIPTION: 分流规则中含有URL-REGEX类型，请搭配MITM使用
+# DOMAIN: 23358
+# DOMAIN-KEYWORD: 27
+# DOMAIN-SUFFIX: 13226
+# IP-CIDR: 158
+# IP-CIDR6: 1
+# URL-REGEX: 296
+# TOTAL: 37066
 00-gov.cn
 0024aadd.com
 0026645142c89aeb1.com
@@ -247,7 +258,6 @@
 24smi.org
 24smile.org
 24vunvrv.com
-24x7adservice.com
 2529.com
 254a.com
 2559a303164ddde96.com
@@ -1354,7 +1364,6 @@ adgoto.com
 adgreed.com
 adgroups.com
 adgrx.com
-adguanggao.eee114.com
 adgup.com
 adhealers.com
 adheart.de
@@ -1447,9 +1456,6 @@ admantx.com
 admarketing.yahoo.net
 admarketplace.net
 admartzone.com
-admarvel.s3.amazonaws.com
-admarvel.top
-admaster.net
 admatrix.jp
 admaxim.com
 admaya.in
@@ -1667,7 +1673,6 @@ ads4cheap.com
 ads4xxx.com
 ads5-adnow.com
 adsafety.net
-adsage.com
 adsagony.com
 adsalvo.com
 adsame1.cnr.cn
@@ -1700,9 +1705,6 @@ adserverplus.com
 adserverpub.com
 adservex.media.net
 adservhere.com
-adservice.google.co.jp
-adservice.google.com.hk
-adservicemedia.dk
 adserving.favorit-network.com
 adserving.unibet.com
 adservingfactory.com
@@ -1774,8 +1776,6 @@ adsring.com
 adsrv.bangbros.com
 adsrv.us
 adsrv4k.com
-adsrvmedia.com
-adsrvmedia.net
 adsrvx.com
 adssend.net
 adsstatic.vivo.com.cn
@@ -2481,6 +2481,7 @@ analysis.chinaiiss.com
 analysistools.net
 analytic.rocks
 analytic.xingcloud.com
+analytics-api.smzdm.com
 analytics-cdiscount.com
 analytics-egain.com
 analytics-engine.net
@@ -4073,7 +4074,6 @@ c.5r6t.com
 c.91wan.com
 c.booksir.com.cn
 c.dengbaozx.cn
-c.duomeng.net
 c.future888.net
 c.greystripe.com
 c.hit.ua
@@ -4949,8 +4949,6 @@ conduit-banners.com
 conduit-services.com
 conduze.com
 conf.hpplay.cn
-config.adsage.cn
-config.adsage.com
 config.unityads.unitychina.cn
 confirmational.com
 confirmit.com
@@ -6373,7 +6371,6 @@ down3.feiyang163.com
 download-archiver.ru
 download-performance.com
 download.56.com
-download.adsage.com
 download.grandcloud.cn
 download.ttrili.com
 download.xp666.com
@@ -6564,7 +6561,6 @@ dwin1.com
 dwin2.com
 dwkfnswdnheqfz.com
 dwmegismbq.com
-dwtrack.qidian.com
 dwuvmraztukg.com
 dxiixnrumvni.com
 dxkkb5tytkivf.cloudfront.net
@@ -6676,7 +6672,6 @@ e.9xws7p.cn
 e.ailix.cn
 e.bgj582.cn
 e.cx016d.cn
-e.duomeng.org
 e.easypatent.net
 e.ejuen.com
 e.evpywi.cn
@@ -7138,7 +7133,6 @@ entitlements.jwplayer.com
 entlydazhcmlgx.com
 entrecard.com
 entrecard.s3.amazonaws.com
-entry.adsage.com
 entygpeb.com
 enusbrzlmcmg.com
 enviousshape.com
@@ -7245,7 +7239,6 @@ esignificanvi.info
 eslkcmhn.com
 esm1.net
 esoad.frost-electric-supply.com
-esomniture.com
 espdesign.com.au
 essayads.com
 essaycoupons.com
@@ -8646,7 +8639,6 @@ go2jump.org
 go2link.net
 go2media.org
 go2speed.org
-goadservices.com
 goallurl.ru
 goatoode.net
 gobaiwhe.net
@@ -10854,7 +10846,6 @@ justuno.com
 jutmdieqbww.com
 juwtdcraiiihb.com
 juxiangyou.com
-juxiao.adsmogo.net
 juyoufan.net
 juzdqtmyo.com
 jvcswgskvw.com
@@ -13054,7 +13045,6 @@ mobday.com
 mobdisc.net
 mobdisc.org
 mobgold.com
-mobi.adsage.com
 mobicont.com
 mobidevdom.com
 mobifobi.com
@@ -13358,7 +13348,6 @@ mwc.velti.com
 mwfzoumik.com
 mwhjamwra.com
 mwhtoxix.com
-mws.adsage.com
 mwslcqfoifw.com
 mwstats.net
 mwtvrqokhbnidz.com
@@ -14370,9 +14359,6 @@ omeda.com
 ometria.com
 omg2.com
 omgid.qq.com
-omgmta.play.cp81.ott.cibntv.net
-omgmta.play.ott.video.qq.com
-omgmta.qq.com
 omgpm.com
 omguk.com
 omiki.com
@@ -14511,9 +14497,6 @@ opentracker.net
 opentracking.ru
 openvenue.com
 openvpn.f2pool.com
-openxadexchange.com
-openxenterprise.com
-openxmarket.asia
 operaserver.com
 operatedelivery.com
 opflriars.com
@@ -14870,7 +14853,6 @@ partner.dw.com
 partner.e-conomic.com
 partner.loveplanet.ru
 partner.video.syndication.msn.com
-partnerad.l.google.com
 partnercash.com
 partnercash.de
 partnerearning.com
@@ -16081,7 +16063,6 @@ q64a9ris0j.com
 q7ms.cn
 q8ux4fscc7.com
 qadserve.com
-qadservice.com
 qaggfomwjko.com
 qagkaxrj.com
 qagnufdwht.com
@@ -17653,7 +17634,6 @@ serve.williamhillcasino.com
 servebom.com
 servedby.yell.com
 servedbyadbutler.com
-servedbyopenx.com
 servemeads.com
 server.freegamesall.com
 server.jsecoin.com
@@ -18110,7 +18090,6 @@ slogantrend.de
 sloi1.com
 slopeaota.com
 slvcwiabpgyxa.com
-sm.domobcdn.com
 sm.pcmag.com
 smac-ssp.com
 smaclick.com
@@ -19779,7 +19758,6 @@ traviilo.com
 traviously.pro
 trbas.com
 trbo.com
-trc.adsage.com
 trclfonj.com
 trcrkykttaila.com
 trdmnpklszd.com
@@ -21815,8 +21793,6 @@ www.aabbttuu.com
 www.acquisizionevideo.com
 www.actiagroup.com
 www.adm668.com
-www.adsage.cn
-www.adsmogo.net
 www.advancesrl.eu
 www.aerreravasi.com
 www.airsonett.se
@@ -21889,7 +21865,6 @@ www.gennaroespositomilano.it
 www.gmcjjh.org
 www.gold-city.it
 www.grjs01.com
-www.guanggao369.cn
 www.guanyitanggy.com
 www.hausnet.ru
 www.hitekshop.vn
@@ -22110,7 +22085,6 @@ wzwetfprojnyx.com
 wzxdsgnqpnu.com
 wzyagambcfn.bid
 wzzrquhn.com
-x-adservice.com
 x-ssp.com
 x-stat.de
 x-traceur.com
@@ -23233,7 +23207,6 @@ zompmedia.com
 zomsfhgj.com
 zonealta.com
 zonhpljclov.com
-zononi.com
 zontera.com
 zoocauvo.net
 zoofaupt.net
@@ -23307,7 +23280,6 @@ zswhcsfww.mobi
 zsxqjjobfb.com
 zszgjiejuw.mobi
 zt-dst.com
-zt.adsage.com
 zt.tim-taxi.com
 ztcadx.com
 ztdfsxgcyprwvp.com
@@ -24480,6 +24452,7 @@ zzxosget.com
 .aabku.cn
 .aafanke.cc
 .aauisg64017.cn
+.aax-us-iad.amazon.com
 .aazcio.cn
 .ab.cnbanbao.com
 .ab.hysdknb.com
@@ -24933,9 +24906,6 @@ zzxosget.com
 .admaji.com
 .admarket.21cn.com
 .admarket.mobi
-.admarvel.com
-.admaster.com
-.admaster.com.cn
 .admd.housefun.com.tw
 .admd.yam.com
 .admddc.com
@@ -25069,17 +25039,12 @@ zzxosget.com
 .adsebs.ximalaya.com
 .adsence.sogou.com
 .adsense.html5.qq.com
-.adsensor.org
 .adserve2.tom.com
 .adserver-ad.321mh.com
 .adserver.pandora.com
 .adserver.snapads.com
 .adserver.xpanama.net
 .adservi.com
-.adservice.com
-.adservice.google.com
-.adservice.sigmob.cn
-.adserviceretry.kugou.com
 .adsfactor.net
 .adsfile.qq.com
 .adsfs.oppomobile.com
@@ -25098,8 +25063,6 @@ zzxosget.com
 .adslvfile.qq.com
 .adslvseed.qq.com
 .adsmind.tc.qq.com
-.adsmogo.com
-.adsmogo.org
 .adsolution.imtt.qq.com
 .adsor.openrunner.com
 .adsp.xunlei.com
@@ -25119,7 +25082,6 @@ zzxosget.com
 .adsyndication.msn.com
 .adsys.chinacloudapp.cn
 .adsys.sinovision.net
-.adsystem.wasu.tv
 .adtaily.com
 .adtarget.tech
 .adtech.de
@@ -25138,6 +25100,7 @@ zzxosget.com
 .adv-sv-show.focus.cn
 .adv.app.qq.com
 .adv.bandi.so
+.adv.ccb.com
 .adv.fjtv.net
 .adv.jxnews.com.cn
 .adv.s8bbs.com
@@ -25376,7 +25339,6 @@ zzxosget.com
 .am15.net
 .amazingfunnvideos.com
 .amazingmagics.com
-.amazon-adsystem.com
 .amdc.alipay.com
 .amdc.m.taobao.com
 .amensh.cn
@@ -25385,6 +25347,7 @@ zzxosget.com
 .amiok.org
 .ammankeyan.com
 .amobee.com
+.amp-error-reporting.appspot.com
 .ampallall.site
 .ampleteexis.info
 .amradmin.5173.com
@@ -25399,6 +25362,7 @@ zzxosget.com
 .analytic.imlive.com
 .analytic.pho.fm
 .analyticapi.pho.fm
+.analytics-static.ugc.bazaarvoice.com
 .analytics.21cn.com
 .analytics.arz.at
 .analytics.bhaskar.com
@@ -25612,7 +25576,6 @@ zzxosget.com
 .applog.uc.cn
 .applogapi.autohome.com.cn
 .applogios.uc.cn
-.applovin.com
 .applvn.com
 .appnext-a.akamaihd.net
 .appnext.com
@@ -25624,7 +25587,6 @@ zzxosget.com
 .apps2.outfit7.com
 .apps5.oingo.com
 .appservices.comcsoft.com
-.appsflyer.com
 .appspromote.wostore.cn
 .appsupdate.sinaapp.com
 .apptentive.com
@@ -25767,6 +25729,7 @@ zzxosget.com
 .ax.ifeng.com
 .axhxa.com
 .axiba66.com
+.axislogger.appspot.com
 .axizb.cn
 .axkxy.com
 .axonix.com
@@ -26496,6 +26459,7 @@ zzxosget.com
 .casee.cn
 .cash.neweramediaworks.com
 .casinohacksforyou.com
+.caspionlog.appspot.com
 .cast-bid27-j.adtdp.com
 .castplatform.com
 .catalog.video.msn.com
@@ -27159,6 +27123,7 @@ zzxosget.com
 .csbthyhh.com
 .csgtfruit.com
 .cshwhy.cn
+.csp-collector.appspot.com
 .cspb1.5w5w.com
 .csqiulong.com
 .css.juqingba.cn
@@ -27709,9 +27674,6 @@ zzxosget.com
 .dolphin4.ftimg.net
 .dolsoste.com
 .domisesvivin.info
-.domob.cn
-.domob.com.cn
-.domob.org
 .dontblockme.modaco.com
 .dooptoug.net
 .door2new.net
@@ -27849,7 +27811,6 @@ zzxosget.com
 .dumedia.ru
 .duobaoqj.com
 .duoduo.icu
-.duomeng.cn
 .duoqumanhua.com
 .duoyidd.com
 .dupinpu.com
@@ -27874,7 +27835,6 @@ zzxosget.com
 .dw.xcar.com.cn
 .dw998.com
 .dwh-tracking.it.auth0.com
-.dwtracking.sdo.com
 .dx1200.com
 .dxcssc.cn
 .dxmci.com
@@ -28058,7 +28018,6 @@ zzxosget.com
 .edysn.cn
 .ee.shixunwang.net
 .ee4kdushuba.com
-.eec.crunchyroll.com
 .eee.eh39.co
 .eee.kj78.org
 .eee.ttyy888.co
@@ -28482,6 +28441,7 @@ zzxosget.com
 .fouas.com
 .foumm.com
 .founseezb.cn
+.fourmtagservices.appspot.com
 .fowpq.top
 .foxypp.com
 .fozhu.rrsdl.com
@@ -28622,6 +28582,7 @@ zzxosget.com
 .g4rre.xyz
 .g52bl.cn
 .g6rfh.cn
+.ga-beacon.appspot.com
 .ga.canoe.ca
 .gad.kugou.com
 .gadhx.cn
@@ -28920,8 +28881,6 @@ zzxosget.com
 .goodgz.cn
 .goods.tudou.com
 .goodwold.top
-.googleadservices.com
-.googleadsserving.cn
 .googlealiyun.cn
 .googlecommerce.com
 .googlespider1.cn
@@ -28960,6 +28919,7 @@ zzxosget.com
 .graunada.com
 .greatvideos.xyz
 .grebanise.pw
+.green-griffin-860.appspot.com
 .green.erne.co
 .greenbetterkids.com
 .greenhouseglobal.cn
@@ -30001,6 +29961,7 @@ zzxosget.com
 .jasonsvid.com
 .jaugloup.com
 .jav23.com
+.javascriptcounter.appspot.com
 .javhd.com
 .jb.4hw.com.cn
 .jb.asqql.com
@@ -30773,6 +30734,7 @@ zzxosget.com
 .lishuanghao.com
 .listenother.com
 .listlog.baofeng.net
+.literally-analytics.appspot.com
 .litlif.net
 .littlementok.site
 .liufang1994.top
@@ -32096,11 +32058,9 @@ zzxosget.com
 .omafaren.pw
 .omaris.pw
 .omega7o.com
-.omgmta1.qq.com
 .omgnjvrjgpeg.com
 .ommodatesjoin.info
 .omnikool.discovery.com
-.omniture.theglobeandmail.com
 .omoaxaus.net
 .omtrdc.net
 .omztf.cn
@@ -32145,8 +32105,6 @@ zzxosget.com
 .opengam.com
 .openrcv.baidu.com
 .openstat.net
-.openx.net
-.openxt.cn
 .opgirl-tmp.adbxb.cn
 .ophoahik.net
 .opjalajamak.com
@@ -32461,6 +32419,7 @@ zzxosget.com
 .pimg1.126.net
 .pincidao.cn
 .pindao.huoban.taobao.com
+.ping-dot-acp-magento.appspot.com
 .ping.acc.sogou.com
 .ping.pinyin.sogou.com
 .ping.weiduofan.com
@@ -32931,6 +32890,7 @@ zzxosget.com
 .quanjiapp.cn
 .quansj.cn
 .quavomi.com
+.qubitanalytics.appspot.com
 .qucaigg.com
 .queene.cn
 .questionmarket.com
@@ -33773,7 +33733,6 @@ zzxosget.com
 .soltitate.site
 .somecoding.com
 .somennew.com
-.somniture.theglobeandmail.com
 .somode.net
 .song001.com
 .sonobi.com
@@ -34008,6 +33967,7 @@ zzxosget.com
 .stats.propublica.org
 .stats.pusher.com
 .stats.searchftps.org
+.stats.shopify.com
 .stats.shoppydoo.com
 .stats.sitesuite.org
 .stats.slideshare.net
@@ -34095,7 +34055,6 @@ zzxosget.com
 .superjuryger.site
 .superli666.top
 .supersonic.com
-.supersonicads.com
 .supertrackingz.com
 .supfast.net
 .surfacecharo.info
@@ -34641,7 +34600,6 @@ zzxosget.com
 .tracking.mobile.de
 .tracking.mycapture.com
 .tracking.nextdoor.com
-.tracking.olx-st.com
 .tracking.oui.sncf
 .tracking.porndoelabs.com
 .tracking.pornhd.com
@@ -34923,6 +34881,9 @@ zzxosget.com
 .um0592.com
 .um29.com
 .umbbs.cn
+.umeng.co
+.umeng.com
+.umengcloud.com
 .umid.orion.meizu.com
 .umiwi.com
 .umjsik.com
@@ -35079,6 +35040,7 @@ zzxosget.com
 .uzpmrbek.com
 .uzyid.cn
 .v.rmbn.net
+.v.shopify.com
 .v.smtcdns.net
 .v.szpaopao.com
 .v00087.com
