@@ -18,6 +18,7 @@
 什么值得买_搜索结果去广告 = type=http-response,requires-body=1,max-size=0,pattern=^https?:\/\/s-api\.smzdm\.com\/sou\/list_v10,script-path=https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/script/smzdm/smzdm_remove_ads.js
 什么值得买_搜索标签去广告 = type=http-response,requires-body=1,max-size=0,pattern=^https?:\/\/s-api\.smzdm\.com\/sou\/filter\/tags\/hot_tags,script-path=https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/script/smzdm/smzdm_remove_ads.js
 什么值得买_值会员权益中心banner去广告 = type=http-response,requires-body=1,max-size=0,pattern=^https?:\/\/zhiyou\.m\.smzdm\.com\/user\/vip\/ajax_get_banner,script-path=https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/script/smzdm/smzdm_remove_ads.js
+什么值得买_个人页去广告 = type=http-response,requires-body=1,max-size=0,pattern=^https?:\/\/user-api\.smzdm\.com\/vip,script-path=https://raw.githubusercontent.com/linuszlx/Quantumult-add/master/JS/smzdm_remove_ads.js
 
 
 [MITM]
