@@ -9,22 +9,23 @@ URL-REGEX,http://198.18.13.130/fs\/advert,REJECT
 URL-REGEX,http://oss.umetrip.com/fs\/advert,REJECT
 
 [Script]
-飞客去开屏广告 = type=http-response,requires-body=1,max-size=0,pattern=^https?:\/\/47\.100\.65\.202\/source\/plugin\/mobile\/mobile\.php\?module=advis,script-path=https://raw.githubusercontent.com/linuszlx/Surge/main/JS/Fly.js
-飞客去升级提示 = type=http-response,requires-body=1,max-size=0,pattern=^https?:\/\/47\.100\.65\.202\/source\/plugin\/mobile\/mobile\.php\?module=basicdata&type=appinfo,script-path=https://raw.githubusercontent.com/linuszlx/Surge/main/JS/Fly.js
-飞客去目录广告 = type=http-response,requires-body=1,max-size=0,pattern=^https?:\/\/47\.100\.65\.202\/source\/plugin\/mobile\/mobile\.php\?module=threadpost&.+?&page=1,script-path=https://raw.githubusercontent.com/linuszlx/Quantumult-add/master/JS/fly.js
-飞客去帖子广告 = type=http-response,requires-body=1,max-size=0,pattern=^https?:\/\/47\.100\.65\.202\/api\/mobile\/index\.php\?version=5&mobile=yes&module=basicdata&type=forumlist,script-path=https://raw.githubusercontent.com/linuszlx/Surge/main/JS/Flyt.js
+飞客去开屏广告 = type=http-response,requires-body=1,max-size=0,pattern=^https?:\/\/47\.100\.65\.202\/source\/plugin\/mobile\/mobile\.php\?module=advis,script-path=https://raw.githubusercontent.com/linuszlx/JS/main/FlyTea/FlyTea_OP.JS
+飞客去升级提示 = type=http-response,requires-body=1,max-size=0,pattern=^https?:\/\/47\.100\.65\.202\/source\/plugin\/mobile\/mobile\.php\?module=basicdata&type=appinfo,script-path=https://raw.githubusercontent.com/linuszlx/JS/main/FlyTea/FlyTea_OP.JS
+飞客去目录广告 = type=http-response,requires-body=1,max-size=0,pattern=^https?:\/\/47\.100\.65\.202\/source\/plugin\/mobile\/mobile\.php\?module=threadpost&.+?&page=1,script-path=https://raw.githubusercontent.com/linuszlx/JS/main/FlyTea/FlyTea_AD.js
+飞客去帖子广告 = type=http-response,requires-body=1,max-size=0,pattern=^https?:\/\/47\.100\.65\.202\/api\/mobile\/index\.php\?version=5&mobile=yes&module=basicdata&type=forumlist,script-path=https://raw.githubusercontent.com/linuszlx/JS/main/FlyTea/FlyTea_AS.js
 
-JD开屏 = type=http-response,requires-body=1,max-size=0,pattern=^https?:\/\/api\.m\.jd\.com\/client\.action\?functionId=start,script-path=https://raw.githubusercontent.com/linuszlx/Quantumult-add/master/JS/JDAdRemove.js
-JD订单 = type=http-response,requires-body=1,max-size=0,pattern=^https?:\/\/api\.m\.jd\.com\/client\.action\?functionId=myOrderInfo,script-path=https://raw.githubusercontent.com/linuszlx/Quantumult-add/master/JS/JDAdRemove.js
-JD物流 = type=http-response,requires-body=1,max-size=0,pattern=^https?:\/\/api\.m\.jd\.com\/client\.action\?functionId=orderTrackBusiness,script-path=https://raw.githubusercontent.com/linuszlx/Quantumult-add/master/JS/JDAdRemove.js
-JD首页 = type=http-response,requires-body=1,max-size=0,pattern=^https?:\/\/api\.m\.jd\.com\/client\.action\?functionId=welcomeHome,script-path=https://raw.githubusercontent.com/linuszlx/Surge/main/JS/JD/jdop.js
-JD推荐 = type=http-response,requires-body=1,max-size=0,pattern=^https?:\/\/api\.m\.jd\.com\/client\.action\?functionId=uniformRecommend,script-path=https://raw.githubusercontent.com/linuszlx/Quantumult-add/master/JS/jdtj.js
-JD首页推荐 = type=http-response,requires-body=1,max-size=0,pattern=^https?:\/\/api\.m\.jd\.com\/client\.action\?functionId=getRecommendNewFeedsList,script-path=https://raw.githubusercontent.com/linuszlx/Quantumult-add/master/JS/jdsp.js
-JD个人页面= type=http-response,requires-body=1,max-size=0,pattern=^https?:\/\/api\.m\.jd\.com\/client\.action\?functionId=personinfoBusiness,script-path=https://raw.githubusercontent.com/linuszlx/Surge/main/JS/JD/jdpp.js
-JD发现 = type=http-response,requires-body=1,max-size=0,pattern=^https?:\/\/api\.m\.jd\.com\/client\.action\?functionId=discFollowEnterMainPage,script-path=https://raw.githubusercontent.com/linuszlx/Quantumult-add/master/JS/jds.js
+JD开屏 = type=http-response,requires-body=1,max-size=0,pattern=^https?:\/\/api\.m\.jd\.com\/client\.action\?functionId=start,script-path=https://raw.githubusercontent.com/linuszlx/JS/main/JD/JD-Optimize/JD_ADRemove.js
+JD订单 = type=http-response,requires-body=1,max-size=0,pattern=^https?:\/\/api\.m\.jd\.com\/client\.action\?functionId=myOrderInfo,script-path=https://raw.githubusercontent.com/linuszlx/JS/main/JD/JD-Optimize/JD_ADRemove.js
+JD物流 = type=http-response,requires-body=1,max-size=0,pattern=^https?:\/\/api\.m\.jd\.com\/client\.action\?functionId=orderTrackBusiness,script-path=https://raw.githubusercontent.com/linuszlx/JS/main/JD/JD-Optimize/JD_ADRemove.js
+JD首页 = type=http-response,requires-body=1,max-size=0,pattern=^https?:\/\/api\.m\.jd\.com\/client\.action\?functionId=welcomeHome,script-path=https://raw.githubusercontent.com/linuszlx/JS/main/JD/JD-Optimize/JD_OpenPage.js
+JD推荐 = type=http-response,requires-body=1,max-size=0,pattern=^https?:\/\/api\.m\.jd\.com\/client\.action\?functionId=uniformRecommend,script-path=https://raw.githubusercontent.com/linuszlx/JS/main/JD/JD-Optimize/JD_Recommend.js
+JD首页推荐 = type=http-response,requires-body=1,max-size=0,pattern=^https?:\/\/api\.m\.jd\.com\/client\.action\?functionId=getRecommendNewFeedsList,script-path=https://raw.githubusercontent.com/linuszlx/JS/main/JD/JD-Optimize/JD_NewFeedsList.js
+JD个人页面= type=http-response,requires-body=1,max-size=0,pattern=^https?:\/\/api\.m\.jd\.com\/client\.action\?functionId=personinfoBusiness,script-path=https://raw.githubusercontent.com/linuszlx/JS/main/JD/JD-Optimize/JD_FollowPage.js
+JD发现 = type=http-response,requires-body=1,max-size=0,pattern=^https?:\/\/api\.m\.jd\.com\/client\.action\?functionId=discFollowEnterMainPage,script-path=https://raw.githubusercontent.com/linuszlx/JS/main/JD/JD-Optimize/JD_PersonPage.js
 
-米家Tab = type=http-response,requires-body=1,max-size=0,pattern=^https?:\/\/home\.mi\.com\/cgi-op\/api\/v1\/exploreTab,script-path=https://raw.githubusercontent.com/linuszlx/Surge/main/JS/MiTab.js
-米家ad = type=http-response,requires-body=1,max-size=0,pattern=^https?:\/\/home\.mi\.com\/cgi-op\/api\/v1\/recommendation\/myTab,script-path=https://raw.githubusercontent.com/linuszlx/Surge/main/JS/Miad.js
+米家Tab = type=http-response,requires-body=1,max-size=0,pattern=^https?:\/\/home\.mi\.com\/cgi-op\/api\/v1\/exploreTab,script-path=https://raw.githubusercontent.com/linuszlx/JS/main/Mi/MiTab.js
+米家ad = type=http-response,requires-body=1,max-size=0,pattern=^https?:\/\/home\.mi\.com\/cgi-op\/api\/v1\/recommendation\/myTab,script-path=https://raw.githubusercontent.com/linuszlx/JS/main/Mi/MiAD.js
+
 
 
 
