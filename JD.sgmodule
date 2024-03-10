@@ -1,0 +1,21 @@
+#!name=京东优化去广告
+#!desc = 优化京东客户端，去除广告
+#!category = 去广告
+
+[MITM]
+hostname = %APPEND% api.m.jd.com, venus.yhd.com, 211.144.24.231, 111.13.29.201,120.52.30.123, 106.39.170.200, 120.52.148.150,120.52.148.64, 106.39.169.231, 111.13.24.98, 120.52.148.120, 39.156.62.242, 120.52.30.130, 106.39.171.220, 36.110.181.150, 106.39.170.31, 106.39.171.84
+
+[Rule]
+URL-REGEX,^https?:\/\/api\.m\.jd\.com\/client\.action\?functionId=getSkinResourcesById,REJECT
+URL-REGEX,^https?:\/\/api\.m\.jd\.com\/client\.action\?functionId=readCustomSurfaceLis,REJECT
+URL-REGEX,^https?:\/\/venus\.yhd\.com\/memhome\/launchConfi,REJECT
+
+[Script]
+JD开屏 = type=http-response,requires-body=1,max-size=0,pattern=^https?:\/\/api\.m\.jd\.com\/client\.action\?functionId=start,script-path=https://raw.githubusercontent.com/linuszlx/JS/main/JD/JD-Optimize/JD_ADRemove.js
+JD订单 = type=http-response,requires-body=1,max-size=0,pattern=^https?:\/\/api\.m\.jd\.com\/client\.action\?functionId=myOrderInfo,script-path=https://raw.githubusercontent.com/linuszlx/JS/main/JD/JD-Optimize/JD_ADRemove.js
+JD物流 = type=http-response,requires-body=1,max-size=0,pattern=^https?:\/\/api\.m\.jd\.com\/client\.action\?functionId=orderTrackBusiness,script-path=https://raw.githubusercontent.com/linuszlx/JS/main/JD/JD-Optimize/JD_ADRemove.js
+JD首页 = type=http-response,requires-body=1,max-size=0,pattern=^https?:\/\/api\.m\.jd\.com\/client\.action\?functionId=welcomeHome,script-path=https://raw.githubusercontent.com/linuszlx/JS/main/JD/JD-Optimize/JD_OpenPage.js
+JD推荐 = type=http-response,requires-body=1,max-size=0,pattern=^https?:\/\/api\.m\.jd\.com\/client\.action\?functionId=uniformRecommend,script-path=https://raw.githubusercontent.com/linuszlx/JS/main/JD/JD-Optimize/JD_Recommend.js
+JD首页推荐 = type=http-response,requires-body=1,max-size=0,pattern=^https?:\/\/api\.m\.jd\.com\/client\.action\?functionId=getRecommendNewFeedsList,script-path=https://raw.githubusercontent.com/linuszlx/JS/main/JD/JD-Optimize/JD_NewFeedsList.js
+JD个人页面= type=http-response,requires-body=1,max-size=0,pattern=^https?:\/\/api\.m\.jd\.com\/client\.action\?functionId=personinfoBusiness,script-path=https://raw.githubusercontent.com/linuszlx/JS/main/JD/JD-Optimize/JD_FollowPage.js
+JD发现 = type=http-response,requires-body=1,max-size=0,pattern=^https?:\/\/api\.m\.jd\.com\/client\.action\?functionId=discFollowEnterMainPage,script-path=https://raw.githubusercontent.com/linuszlx/JS/main/JD/JD-Optimize/JD_PersonPage.js
