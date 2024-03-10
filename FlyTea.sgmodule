@@ -1,0 +1,17 @@
+#!name=飞客茶馆去广告
+#!desc= 飞客茶馆补充去广告去广告脚本
+#!category = 去广告
+
+[MITM]
+hostname = %APPEND% *47.100.65.202,www.flyert.com
+
+[Rule]
+URL-REGEX,^https?:\/\/47\.100\.65\.202\/source\/plugin\/mobile\/mobile\.php\?module=advis,REJECT
+URL-REGEX,^https?:\/\/47\.100\.65\.202\/source\/plugin\/mobile\/mobile\.php\?module=basicdata&type=appinfo,REJECT
+URL-REGEX,^https?:\/\/www\.flyert\.com\/source\/plugin\/mobile\/mobile\.php\?module=advis,REJECT
+URL-REGEX,^https?:\/\/www\.flyert\.com\/source\/plugin\/mobile\/mobile\.php\?module=basicdata&type=appinfo,REJECT
+
+[Script]
+飞客去目录广告 = type=http-response,requires-body=1,max-size=0,pattern=^https?:\/\/47\.100\.65\.202\/source\/plugin\/mobile\/mobile\.php\?module=threadpost&.+?&page=1,script-path=https://raw.githubusercontent.com/linuszlx/JS/main/FlyTea/FlyTea_AD.js
+飞客去帖子广告 = type=http-response,requires-body=1,max-size=0,pattern=^https?:\/\/47\.100\.65\.202\/api\/mobile\/index\.php\?version=5&mobile=yes&module=basicdata&type=forumlist,script-path=https://raw.githubusercontent.com/linuszlx/JS/main/FlyTea/FlyTea_AS.js
+
