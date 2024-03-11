@@ -7,7 +7,7 @@ hostname = %APPEND% api.m.jd.com, venus.yhd.com, 120.52.83.71, 120.52.83.22, 120
 
 
 [Rule]
-DOMAIN,dns.jd.com
+DOMAIN,dns.jd.com,REJECT
 IP-CIDR,101.124.19.122/32,no-resolve
 IP-CIDR6,2402:db40:5100:1011::5/128,no-resolve
 
