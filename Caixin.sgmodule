@@ -5,16 +5,16 @@
 [MITM]
 hostname = %APPEND% e*.caixin.com, g*.caixin.com, m*.caixin.com
 
-[Map Local]
+[URL Rewrite]
 # 财新数据通
-^https:\/\/entities\.caixin\.com\/api\/(dataplus\/promotionHints|public\/push\/appIndex|public\/recommendNews) data="https://raw.githubusercontent.com/linuszlx/Surge/main/Reject/blank_dict.json"
+^https:\/\/entities\.caixin\.com\/api\/(dataplus\/promotionHints|public\/push\/appIndex|public\/recommendNews) - REJECT
 # 广告样式
-^https:\/\/gateway\.caixin\.com\/api\/app-api\/cxAdInfo\/selectIndexAdInfo data="https://raw.githubusercontent.com/linuszlx/Surge/main/Reject/blank_dict.json"
-^https:\/\/mappsv5\.caixin\.com\/channelv5\/article_ad_ios_info\.json data="https://raw.githubusercontent.com/linuszlx/Surge/main/Reject/blank_dict.json"
+^https:\/\/gateway\.caixin\.com\/api\/app-api\/cxAdInfo\/selectIndexAdInfo - REJECT
+^https:\/\/mappsv5\.caixin\.com\/channelv5\/article_ad_ios_info\.json - REJECT
 # 文章中间推广,文章底部相关阅读
-^https:\/\/gg\.caixin\.com\/s\?z=caixin&slot=\d+ data="https://raw.githubusercontent.com/linuszlx/Surge/main/Reject/blank_dict.json"
+^https:\/\/gg\.caixin\.com\/s\?z=caixin&slot=\d+ - REJECT
 # 首页弹出框
-^https:\/\/msgapi\.caixin\.com\/msg_api\/annmsg\/annlist data="https://raw.githubusercontent.com/linuszlx/Surge/main/Reject/blank_dict.json"
+^https:\/\/msgapi\.caixin\.com\/msg_api\/annmsg\/annlist - REJECT
 
 [Script]
 财新数据通 = type=http-response,pattern=^https:\/\/entities\.caixin\.com\/api\/dataplus\/columns,script-path=https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/break/caixin.js,requires-body=true,max-size=-1,timeout=60
