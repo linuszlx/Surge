@@ -6,35 +6,33 @@
 # > 微博_请手动添加以下分流至本地
 DOMAIN-SUFFIX,sdkapp.uve.weibo.com,DIRECT
 
-[Map Local]
-# > 微博_AD_Preload@ddgksf2013
-^https?:\/\/api\.weibo\.cn\/\d\/ad\/preload data="https://raw.githubusercontent.com/linuszlx/Surge/main/Reject/blank_dict.json"
-# > 微博国际版_趋势页热门影片@ddgksf2013
-^https?:\/\/api\.weibo\.cn\/\d\/cardlist\?v_f=.*Weibo_intl data="https://raw.githubusercontent.com/linuszlx/Surge/main/Reject/blank_dict.json"
-# > 微博_用户推荐弹窗@ddgksf2013
-^https?:\/\/api\.weibo\.cn\/\d\/profile\/recommend_popuser data="https://raw.githubusercontent.com/linuszlx/Surge/main/Reject/blank_dict.json"
-# > 微博_每日一次的开屏广告请求@ddgksf2013
-^https?:\/\/boot.*weibo\.com\/v\d\/ad\/realtime data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-200.txt"
-# > 微博_去除底部超话栏表层浮icon及tips@ddgksf2013
-^https?:\/\/api\.weibo\.cn\/\d\/!\/huati\/discovery_home_bottom_getdotinfo data="https://raw.githubusercontent.com/linuszlx/Surge/main/Reject/blank_dict.json"
-# > 微博_屏蔽首页左上角每日的弹窗tips@ddgksf2013
-^https?:\/\/m?api\.weibo\.c(n|om)\/\d/push/daily data="https://raw.githubusercontent.com/linuszlx/Surge/main/Reject/blank_dict.json"
-# > 微博_Spotlight@ddgksf2013
-^https?:\/\/m?api\.weibo\.c(n|om)\/\d\/hot\/hours_spotlight data="https://raw.githubusercontent.com/linuszlx/Surge/main/Reject/blank_dict.json"
-# > 微博国际版_屏蔽hotsearch@ddgksf2013
-^https?:\/\/weibointl\.api\.weibo\.c(n|om)\/portal\.php\?a=hot_search_users data="https://raw.githubusercontent.com/linuszlx/Surge/main/Reject/blank_dict.json"
-# > 微博国际版_屏蔽热推荐@ddgksf2013
-^https?:\/\/m?api\.weibo\.c(n|om)\/\d\/ad\/weibointl\? data="https://raw.githubusercontent.com/linuszlx/Surge/main/Reject/blank_dict.json"
-# > 微博国际版_屏蔽searching_info@shiro
-^https?:\/\/weibointl\.api\.weibo\.c(n|om)\/portal\.php.*user&a=get_searching_info data="https://raw.githubusercontent.com/linuszlx/JS/main/Weibo/weibo_search_info.json"
-# > 微博国际版_屏蔽search_topic@shiro
-^https?:\/\/weibointl\.api\.weibo\.c(n|om)\/portal\.php.*feed&a=search_topic data="https://raw.githubusercontent.com/linuszlx/JS/main/Weibo/weibo_search_topic.json"
-
 [URL Rewrite]
 # > 微博_应用内弹窗广告@ddgksf2013 header
 ^https?:\/\/(preload-click|preload-impression)\.uve\.weibo\.com\/(interface\/wbpullad\/wbpullad_click\.php|wbapplua\/get_wbpullad_log\.lua) - reject
 # > 微博_屏蔽sdkconfig请求@ddgksf2013 header
 ^https?:\/\/sdkapp\.uve\.weibo\.com\/interface\/sdk\/sdkconfig\.php - reject
+# > 微博_AD_Preload@ddgksf2013
+^https?:\/\/api\.weibo\.cn\/\d\/ad\/preload - reject
+# > 微博国际版_趋势页热门影片@ddgksf2013
+^https?:\/\/api\.weibo\.cn\/\d\/cardlist\?v_f=.*Weibo_intl - reject
+# > 微博_用户推荐弹窗@ddgksf2013
+^https?:\/\/api\.weibo\.cn\/\d\/profile\/recommend_popuser - reject
+# > 微博_每日一次的开屏广告请求@ddgksf2013
+^https?:\/\/boot.*weibo\.com\/v\d\/ad\/realtime - reject
+# > 微博_去除底部超话栏表层浮icon及tips@ddgksf2013
+^https?:\/\/api\.weibo\.cn\/\d\/!\/huati\/discovery_home_bottom_getdotinfo - reject
+# > 微博_屏蔽首页左上角每日的弹窗tips@ddgksf2013
+^https?:\/\/m?api\.weibo\.c(n|om)\/\d/push/daily - reject
+# > 微博_Spotlight@ddgksf2013
+^https?:\/\/m?api\.weibo\.c(n|om)\/\d\/hot\/hours_spotlight - reject
+# > 微博国际版_屏蔽hotsearch@ddgksf2013
+^https?:\/\/weibointl\.api\.weibo\.c(n|om)\/portal\.php\?a=hot_search_users - reject
+# > 微博国际版_屏蔽热推荐@ddgksf2013
+^https?:\/\/m?api\.weibo\.c(n|om)\/\d\/ad\/weibointl\? - reject
+# > 微博国际版_屏蔽searching_info@shiro
+^https?:\/\/weibointl\.api\.weibo\.c(n|om)\/portal\.php.*user&a=get_searching_info data="https://raw.githubusercontent.com/linuszlx/JS/main/Weibo/weibo_search_info.json"
+# > 微博国际版_屏蔽search_topic@shiro
+^https?:\/\/weibointl\.api\.weibo\.c(n|om)\/portal\.php.*feed&a=search_topic data="https://raw.githubusercontent.com/linuszlx/JS/main/Weibo/weibo_search_topic.json"
 
 [Script]
 微博_首页顶部 = type=http-response,pattern=^https?:\/\/api\.weibo\.cn\/\d\/groups\/allgroups\/v\d,script-path=https://raw.githubusercontent.com/linuszlx/JS/main/Weibo/weibo_json.js,requires-body=true,max-size=-1,timeout=60
