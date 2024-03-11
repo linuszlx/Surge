@@ -1,0 +1,18 @@
+#!name=滴滴
+#!desc = 优化滴滴客户端，去除广告
+#!category = 去广告
+
+[MITM]
+hostname = %APPEND% hd.xiaojukeji.com, conf.diditaxi.com.cn, res.xiaojukeji.com, guard.sec.xiaojukeji.com, common.diditaxi.com.cn
+
+[URL Rewrite]
+^https?:\/\/hd\.xiaojukeji\.com - REJECT
+
+[Script]
+滴滴去广告 = type=http-response,requires-body=1,max-size=0,pattern=^https?:\/\/conf\.diditaxi\.com\.cn\/dynamic\/,script-path=https://raw.githubusercontent.com/linuszlx/JS/main/DiDi/dynamic.js
+滴滴下栏优化 = type=http-response,requires-body=1,max-size=0,pattern=^https?:\/\/conf\.diditaxi\.com\.cn\/homepage\/v1\/core\?,script-path=https://raw.githubusercontent.com/linuszlx/JS/main/DiDi/page.js
+滴滴去广告 = type=http-response,requires-body=1,max-size=0,pattern=^https?:\/\/conf\.diditaxi\.com\.cn\/homepage\/v1\/other,script-path=https://raw.githubusercontent.com/linuszlx/JS/main/DiDi/dynamic.js
+滴滴去广告 = type=http-response,requires-body=1,max-size=0,pattern=^https?:\/\/res\.xiaojukeji\.com\/resapi\/activity\/mget\?,script-path=https://raw.githubusercontent.com/linuszlx/JS/main/DiDi/dynamic.js
+滴滴去广告 = type=http-response,requires-body=1,max-size=0,pattern=^https?:\/\/conf\.diditaxi\.com\.cn\/nav\/widget\?,script-path=https://raw.githubusercontent.com/linuszlx/JS/main/DiDi/dynamic.js
+滴滴去广告 = type=http-response,requires-body=1,max-size=0,pattern=^https?:\/\/guard\.sec\.xiaojukeji\.com\/api\/guard\/psg\/v2\/getShieldStatus,script-path=https://raw.githubusercontent.com/linuszlx/JS/main/DiDi/dynamic.js
+滴滴个人页去广告 = type=http-response,requires-body=1,max-size=0,pattern=^https?:\/\/common\.diditaxi\.com\.cn\/common\/v5\/usercenter\/me\?,script-path=https://raw.githubusercontent.com/linuszlx/JS/main/DiDi/PersonPage.js
