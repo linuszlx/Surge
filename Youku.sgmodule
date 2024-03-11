@@ -1,0 +1,18 @@
+#!name=优酷
+#!desc = 优化优酷客户端，去除广告
+#!category = 去广告
+
+[MITM]
+hostname = %APPEND% acs.youku.com, push.m.youku.com, un-acs.youku.com
+
+[Map Local]
+# 播放页弹窗动图
+^https:\/\/acs\.youku\.com\/gw\/mtop\.youku\.(pisp\.scripts\.get|xspace\.play\.position\.preload\.query|xspace\.poplayer\.position\.query) data="https://raw.githubusercontent.com/linuszlx/Surge/main/Reject/blank_dict.json"
+
+[Script]
+播放详情页 = type=http-response,pattern=^https:\/\/acs\.youku\.com\/gw\/mtop\.youku\.columbus\.(gateway\.new\.execute|home\.feed|home\.query|uc\.query|ycp\.query),script-path=https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/cnftp.js,requires-body=true,max-size=-1,timeout=60
+底部tab = type=http-response,pattern=^https:\/\/acs\.youku\.com\/gw\/mtop\.youku\.haidai\.lantern\.appconfig\.get,script-path=https://raw.githubusercontent.com/linuszlx/JS/main/Youku/Youkupg.js,requires-body=true,max-size=-1,timeout=60
+青少年模式弹窗 = type=http-response,pattern=^https:\/\/acs\.youku\.com\/gw\/mtop\.youku\.huluwa\.dispatcher\.youthmode\.config2,script-path=https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/cnftp.js,requires-body=true,max-size=-1,timeout=60
+搜索列表 = type=http-response,pattern=^https:\/\/acs\.youku\.com\/gw\/mtop\.youku\.soku\.yksearch,script-path=https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/cnftp.js,requires-body=true,max-size=-1,timeout=60
+热剧弹窗 = type=http-response,pattern=^https:\/\/push\.m\.youku\.com\/collect-api\/get_push_interval_config_wx\?,script-path=https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/cnftp.js,requires-body=true,max-size=-1,timeout=60
+开屏广告 = type=http-response,pattern=^https:\/\/un-acs\.youku\.com\/gw\/mtop\.youku\.play\.ups\.appinfo\.get,script-path=https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/cnftp.js,requires-body=true,max-size=-1,timeout=60
