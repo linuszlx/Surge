@@ -1,0 +1,34 @@
+#!name=小红书
+#!desc=小红书去广告
+#!category = 去广告
+
+[Rule]
+
+[URL Rewrite]
+
+[Map Local]
+# > 小红书_通用广告请求@ddgksf2013
+^https?:\/\/www\.xiaohongshu\.com\/api\/sns\/v\d\/(tag\/)?ads data="https://raw.githubusercontent.com/linuszlx/Surge/main/Reject/blank_dict.json"
+# > 小红书_隐私屏蔽@ddgksf2013
+^https?:\/\/referee\.xiaohongshu\.com\/v\d\/stateReport data="https://raw.githubusercontent.com/linuszlx/Surge/main/Reject/blank_dict.json"
+# > 小红书_Switches@ddgksf2013
+^https?:\/\/pages\.xiaohongshu\.com\/data\/native\/matrix_switches data="https://raw.githubusercontent.com/linuszlx/Surge/main/Reject/blank_dict.json"
+# > 小红书_青少年请求@ddgksf2013
+^https?:\/\/edith\.xiaohongshu\.com\/api\/sns\/v\d\/user\/teenager\/status data="https://raw.githubusercontent.com/linuszlx/Surge/main/Reject/blank_dict.json"
+# > 小红书_启动引导@ddgksf2013
+^https?:\/\/edith\.xiaohongshu\.com\/api\/sns\/v\d\/guide\/home_guide data="https://raw.githubusercontent.com/linuszlx/Surge/main/Reject/blank_dict.json"
+
+
+
+[Script]
+小红书_视频播放页商品推广 = type=http-response,pattern=^https?:\/\/edith\.xiaohongshu\.com\/api\/sns\/v\d\/note\/widgets,script-path=https://raw.githubusercontent.com/linuszlx/JS/main/xiaohongshu/redbook_json.js,requires-body=true,max-size=-1,timeout=60
+小红书_短视频流去水印= type=http-response,pattern=^https?:\/\/edith\.xiaohongshu\.com\/api\/sns\/v\d\/note\/redtube\?,script-path=https://raw.githubusercontent.com/linuszlx/JS/main/xiaohongshu/redbook_json.js,requires-body=true,max-size=-1,timeout=60
+小红书_信息流视频去水印 = type=http-response,pattern=^https?:\/\/edith\.xiaohongshu\.com\/api\/sns\/v\d\/note\/videofeed\?,script-path=https://raw.githubusercontent.com/linuszlx/JS/main/xiaohongshu/redbook_json.js,requires-body=true,max-size=-1,timeout=60
+小红书_信息流图片去水印 = type=http-response,pattern=^https?:\/\/edith\.xiaohongshu\.com\/api\/sns\/v\d\/note\/feed\?,script-path=https://raw.githubusercontent.com/linuszlx/JS/main/xiaohongshu/redbook_json.js,requires-body=true,max-size=-1,timeout=60
+小红书_开屏广告 = type=http-response,pattern=^https?:\/\/edith\.xiaohongshu\.com\/api\/sns\/v\d\/system_service\/splash_config,script-path=https://raw.githubusercontent.com/linuszlx/JS/main/xiaohongshu/redbook_json.js,requires-body=true,max-size=-1,timeout=60
+小红书_首页瀑布流 = type=http-response,pattern=^https?:\/\/edith\.xiaohongshu\.com\/api\/sns\/v\d\/homefeed\?,script-path=https://raw.githubusercontent.com/linuszlx/JS/main/xiaohongshu/redbook_json.js,requires-body=true,max-size=-1,timeout=60
+小红书_启动处理 = type=http-response,pattern=^https?:\/\/edith\.xiaohongshu\.com\/api\/sns\/v\d\/system_service\/config\?,script-path=https://raw.githubusercontent.com/linuszlx/JS/main/xiaohongshu/redbook_json.js,requires-body=true,max-size=-1,timeout=60
+小红书_热搜发现 = type=http-response,pattern=^https?:\/\/edith\.xiaohongshu\.com\/api\/sns\/v\d\/search\/hot_list,script-path=https://raw.githubusercontent.com/linuszlx/JS/main/xiaohongshu/redbook_json.js,requires-body=true,max-size=-1,timeout=60
+小红书_默认填词 = type=http-response,pattern=^https?:\/\/edith\.xiaohongshu\.com\/api\/sns\/v\d\/search\/hint,script-path=https://raw.githubusercontent.com/linuszlx/JS/main/xiaohongshu/redbook_json.js,requires-body=true,max-size=-1,timeout=60
+小红书_去除购物 = type=http-response,pattern=^https?:\/\/edith\.xiaohongshu\.com\/api\/sns\/v\d\/homefeed\/categories,script-path=https://raw.githubusercontent.com/linuszlx/JS/main/xiaohongshu/redbook_json.js,requires-body=true,max-size=-1,timeout=60
+小红书_猜你想搜 = type=http-response,pattern=^https?:\/\/edith\.xiaohongshu\.com\/api\/sns\/v\d\/search\/trending,script-path=https://raw.githubusercontent.com/linuszlx/JS/main/xiaohongshu/redbook_json.js,requires-body=true,max-size=-1,timeout=60
