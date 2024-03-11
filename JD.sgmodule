@@ -5,10 +5,16 @@
 [MITM]
 hostname = %APPEND% api.m.jd.com, venus.yhd.com, 120.52.83.71, 120.52.83.22, 120.52.148.120
 
+
 [Rule]
-URL-REGEX,^https?:\/\/api\.m\.jd\.com\/client\.action\?functionId=getSkinResourcesById,REJECT
-URL-REGEX,^https?:\/\/api\.m\.jd\.com\/client\.action\?functionId=readCustomSurfaceLis,REJECT
-URL-REGEX,^https?:\/\/venus\.yhd\.com\/memhome\/launchConfi,REJECT
+DOMAIN,dns.jd.com
+IP-CIDR,101.124.19.122/32,no-resolve
+IP-CIDR6,2402:db40:5100:1011::5/128,no-resolve
+
+[URL Rewrite]
+^https?:\/\/api\.m\.jd\.com\/client\.action\?functionId=getSkinResourcesById - REJECT
+^https?:\/\/api\.m\.jd\.com\/client\.action\?functionId=readCustomSurfaceLis - REJECT
+^https?:\/\/venus\.yhd\.com\/memhome\/launchConfi - REJECT
 
 [Script]
 JD开屏 = type=http-response,requires-body=1,max-size=0,pattern=^https?:\/\/api\.m\.jd\.com\/client\.action\?functionId=start,script-path=https://raw.githubusercontent.com/linuszlx/JS/main/JD/JD-Optimize/JD_ADRemove.js
