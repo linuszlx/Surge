@@ -1,0 +1,21 @@
+#!name=腾讯视频
+#!desc=腾讯视频去广告
+#!category = 去广告
+
+[Rule]
+IP-CIDR,47.110.187.87/32,REJECT
+OR,((DOMAIN,pgdt.gtimg.cn), (AND,((USER-AGENT,live4iphoneRel*), (IP-CIDR,0.0.0.0/0,no-resolve)))),REJECT-DROP
+DOMAIN,config.ab.qq.com,REJECT
+DOMAIN,content.rconfig.qq.com,REJECT
+
+[URL Rewrite]
+^http:\/\/[\d\.:]*\/?(defaultts\.tc|vmind\.qqvideo\.tc|finderpdd\.video)\.qq\.com\/\w+ - reject
+^http:\/\/apd-vlive\.apdcdn\.tc\.qq\.com\/vmind\.qqvideo\.tc\.qq\.com\/\w+ - reject
+^http:\/\/apd-\w+\.v\.smtcdns\.com\/(defaultts|omts|vmind\.qqvideo)\.tc\.qq\.com\/\w+ - reject
+^https?://(|www\.)router\.com http://{{{GATEWAY_ADDRESS}}} 302
+
+[Script]
+TencentVideo = type = http-request,pattern=^https?:\/\/(iacc\.qq\.com|vv\.video\.qq\.com\/getvinfo),requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/Yixuling/Rules_Scripts/master/Scripts/TencentVideo.js
+
+[MITM]
+hostname = %APPEND% iacc.qq.com,vv.video.qq.com
