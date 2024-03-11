@@ -24,16 +24,10 @@ DOMAIN,appcloud2.in.zhihu.com,REJECT
 ^https?:\/\/api\.zhihu\.com\/ab\/api\/v1\/products\/zhihu\/platforms\/ios\/config data="https://raw.githubusercontent.com/linuszlx/Surge/main/Reject/blank_dict.json" header="Content-Type: application/x-protobuf"
 # 屏蔽我的页面开通会员的卡片
 # ^https?:\/\/api\.zhihu\.com\/unlimited\/go\/my_card data="https://raw.githubusercontent.com/linuszlx/Surge/main/Reject/blank_dict.json"
-# 去除底部标签页关注人角标
-^https?:\/\/api\.zhihu\.com\/moments\/tab_v2 data="https://raw.githubusercontent.com/linuszlx/Surge/main/Reject/blank_dict.json"
-# 去除消息通知角标
-^https?:\/\/api\.zhihu\.com\/(notifications\/v\d\/count) data="https://raw.githubusercontent.com/linuszlx/Surge/main/Reject/blank_dict.json"
 # 拦截回答下的卡片广告
 ^https?:\/\/www\.zhihu\.com\/api\/v\d\/answers\/\d+\/recommendations data="https://raw.githubusercontent.com/linuszlx/Surge/main/Reject/blank_dict.json"
 # 拦截应用内弹窗
 ^https?:\/\/api\.zhihu\.com\/me\/guides data="https://raw.githubusercontent.com/linuszlx/Surge/main/Reject/blank_dict.json"
-# 去除关注页最常访问
-^https?:\/\/api\.zhihu\.com\/moments\/recent data="https://raw.githubusercontent.com/linuszlx/Surge/main/Reject/blank_dict.json"
 # 拦截推荐页顶部广告
 ^https?:\/\/api\.zhihu\.com\/api\/v4\/ecom_data\/config data="https://raw.githubusercontent.com/linuszlx/Surge/main/Reject/blank_dict.json"
 # 底栏加号的广告
