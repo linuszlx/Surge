@@ -3,7 +3,7 @@
 #!category = 去广告
 
 [MITM]
-hostname = %APPEND% api.m.jd.com, venus.yhd.com, 120.52.83.71
+hostname = %APPEND% api.m.jd.com, venus.yhd.com, 120.52.83.71, 120.52.83.22
 
 [Rule]
 URL-REGEX,^https?:\/\/api\.m\.jd\.com\/client\.action\?functionId=getSkinResourcesById,REJECT
