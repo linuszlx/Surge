@@ -4,6 +4,8 @@
 
 [MITM]
 hostname = %APPEND% acs.youku.com, push.m.youku.com, un-acs.youku.com
+h2 = true
+tcp-connection = true
 
 [Map Local]
 # 播放页弹窗动图
@@ -16,5 +18,4 @@ hostname = %APPEND% acs.youku.com, push.m.youku.com, un-acs.youku.com
 搜索列表 = type=http-response, pattern=^https:\/\/acs\.youku\.com\/gw\/mtop\.youku\.soku\.yksearch, requires-body=true, max-size=3145728, script-path=https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/cnftp.js, timeout=60, script-update-interval=0
 热剧弹窗 = type=http-response, pattern=^https:\/\/push\.m\.youku\.com\/collect-api\/get_push_interval_config_wx\?, requires-body=true, max-size=3145728, script-path=https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/cnftp.js, timeout=60, script-update-interval=0
 开屏广告 = type=http-response, pattern=^https:\/\/un-acs\.youku\.com\/gw\/mtop\.youku\.play\.ups\.appinfo\.get, requires-body=true, max-size=3145728, script-path=https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/cnftp.js, timeout=60, script-update-interval=0
-h2 = true
-tcp-connection = true
+
