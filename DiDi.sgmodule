@@ -5,8 +5,12 @@
 [MITM]
 hostname = %APPEND% hd.xiaojukeji.com, conf.diditaxi.com.cn, res.xiaojukeji.com, guard.sec.xiaojukeji.com, common.diditaxi.com.cn
 
+[Rule]
+IP-CIDR,139.199.240.12/24,REJECT
+IP-CIDR,139.199.240.15/24,REJECT
+
 [URL Rewrite]
-^https?:\/\/hd\.xiaojukeji\.com - REJECT
+^https?:\/\/hd\.xiaojukeji\.com - reject
 
 [Script]
 滴滴去广告 = type=http-response,requires-body=1,max-size=0,pattern=^https?:\/\/conf\.diditaxi\.com\.cn\/dynamic\/,script-path=https://raw.githubusercontent.com/linuszlx/JS/main/DiDi/dynamic.js
