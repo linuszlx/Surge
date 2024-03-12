@@ -568,74 +568,25 @@ DOMAIN,sdk-conf.getui.com
 DOMAIN,switch.cup.com.cn
 DOMAIN,tysdk.95516.com
 # > 优酷
+DOMAIN,acs4baichuan.m.taobao.com
 DOMAIN,adsmind.ugdtimg.com
 DOMAIN,amdc.m.youku.com
+DOMAIN,api.sm.cn
 DOMAIN,apiv4-iyes.youku.com
-DOMAIN,httpdns.alicdn.com
+DOMAIN,baichuan-sdk.alicdn.com
+DOMAIN,cad.youku.com
 DOMAIN,huichuan-mc.sm.cn
 DOMAIN,huichuan.sm.cn
 DOMAIN,iyes.youku.com
 DOMAIN,m-vali.cp31.ott.cibntv.net
 DOMAIN,mc.atm.youku.com
+DOMAIN,nbsdk-baichuan.alicdn.com
+DOMAIN,pre-acs.youku.com
 DOMAIN,vali-g1.cp31.ott.cibntv.net
 DOMAIN,vali-ugc.cp31.ott.cibntv.net
 DOMAIN,yk-ssp.ad.youku.com
 DOMAIN,ykad-data.youku.com
-DOMAIN,ad.mobile.youku.com
-DOMAIN,pl.cp31.ott.cibntv.net
-DOMAIN-SUFFIX,atm.youku.com
-DOMAIN-SUFFIX,actives.youku.com
-DOMAIN-SUFFIX,ad.api.3g.tudou.com
-DOMAIN-SUFFIX,ad.api.3g.youku.com
-DOMAIN-SUFFIX,ad.api.mobile.youku.com
-DOMAIN-SUFFIX,a-dxk.play.api.3g.youku.com
-DOMAIN-SUFFIX,b.smartvideo.youku.com
-DOMAIN-SUFFIX,c.yes.youku.com
-DOMAIN-SUFFIX,das.api.youku.com
-DOMAIN-SUFFIX,das.mobile.youku.com
-DOMAIN-SUFFIX,dev-push.m.youku.com
-DOMAIN-SUFFIX,dl.g.youku.com
-DOMAIN-SUFFIX,dmapp.youku.com
-DOMAIN-SUFFIX,gamex.mobile.youku.com
-DOMAIN-SUFFIX,hudong.pl.youku.com
-DOMAIN-SUFFIX,huodong.pl.youku.com
-DOMAIN-SUFFIX,huodong.vip.youku.com
-DOMAIN-SUFFIX,hz.youku.com
-DOMAIN-SUFFIX,l.ykimg.com
-DOMAIN-SUFFIX,lstat.youku.com
-DOMAIN-SUFFIX,m.yes.youku.com
-DOMAIN-SUFFIX,mobilemsg.youku.com
-DOMAIN-SUFFIX,msg.youku.com
-DOMAIN-SUFFIX,myes.youku.com
-DOMAIN-SUFFIX,p.l.youku.com
-DOMAIN-SUFFIX,passport-log.youku.com
-DOMAIN-SUFFIX,p-log.ykimg.com
-DOMAIN-SUFFIX,push.m.youku.com
-DOMAIN-SUFFIX,r.l.youku.com
-DOMAIN-SUFFIX,s.p.youku.com
-DOMAIN-SUFFIX,sdk.api.gamex.mobile.youku.com
-DOMAIN-SUFFIX,sdk.m.youku.com
-DOMAIN-SUFFIX,stat.youku.com
-DOMAIN-SUFFIX,store.tv.api.3g.youku.com
-DOMAIN-SUFFIX,store.xl.api.3g.youku.com
-DOMAIN-SUFFIX,tdrec.youku.com
-DOMAIN-SUFFIX,test.ott.youku.com
-DOMAIN-SUFFIX,urchin.lstat.youku.com
-DOMAIN-SUFFIX,v.l.youku.com
-DOMAIN-SUFFIX,val.api.youku.com
-DOMAIN-SUFFIX,wan.youku.com
-DOMAIN-SUFFIX,ykatr.youku.com
-DOMAIN-SUFFIX,ykrec.youku.com
-# > 知乎
-USER-AGENT,AVOS*
-DOMAIN,appcloud.zhihu.com
-DOMAIN,appcloud2.in.zhihu.com
-DOMAIN,mqtt.zhihu.com
-DOMAIN,sugar.zhihu.com
-DOMAIN,crash2.zhihu.com
-DOMAIN,118.89.204.198
-IP-CIDR,118.89.204.198/32
-IP-CIDR6,2402:4e00:1200:ed00:0:9089:6dac:96b6/128
+DOMAIN,youku-acs.m.taobao.com
 # > 中国联通
 DOMAIN-SUFFIX,m1.ad.10010.com
 # > 字节跳动
@@ -3093,7 +3044,7 @@ DOMAIN-SUFFIX,d.39.net
 DOMAIN-SUFFIX,d.admx.baixing.com
 DOMAIN-SUFFIX,d.agkn.com
 DOMAIN-SUFFIX,d.annarbor.com
-# host-suffix, d.applovin.com, reject
+# host-suffix, d.applovin.com
 DOMAIN-SUFFIX,d.beigedi.com
 DOMAIN-SUFFIX,d.businessinsider.com
 DOMAIN-SUFFIX,d.clkservice.youdao.com
@@ -6631,7 +6582,7 @@ DOMAIN-SUFFIX,rs.sinajs.cn
 DOMAIN-SUFFIX,rs1.rensheng5.com
 DOMAIN-SUFFIX,rsas.szzek.com
 DOMAIN-SUFFIX,rsccs.com
-# host-suffix, rt.applovin.com, reject
+# host-suffix, rt.applovin.com
 DOMAIN-SUFFIX,rt.funshion.net
 DOMAIN-SUFFIX,rt.gsspat.jp
 DOMAIN-SUFFIX,rtas.videocc.net
@@ -6907,7 +6858,7 @@ DOMAIN-SUFFIX,shanghaironghua.com
 DOMAIN-SUFFIX,shanglinli.com
 DOMAIN-SUFFIX,shangz99991.com
 DOMAIN-SUFFIX,share.gzdsw.com
-# host-suffix, shared.youdao.com, reject
+# host-suffix, shared.youdao.com
 DOMAIN-SUFFIX,sharedadhost.com
 DOMAIN-SUFFIX,sharrysweb.com
 DOMAIN-SUFFIX,shbywsd.cn
@@ -7686,7 +7637,7 @@ DOMAIN-SUFFIX,v-sence.gentags.net
 DOMAIN-SUFFIX,vsnoon.com
 DOMAIN-SUFFIX,vt.bjhdonline.com
 DOMAIN-SUFFIX,vtale.org
-# host-suffix, vungle.com, reject
+# host-suffix, vungle.com
 DOMAIN-SUFFIX,vupload.duowan.com
 DOMAIN-SUFFIX,vvlog.moviebox.baofeng.com
 DOMAIN-SUFFIX,vvv.ieduw.com
@@ -8697,7 +8648,7 @@ DOMAIN-SUFFIX,mmstat.com
 DOMAIN-SUFFIX,4paradigm.com
 DOMAIN-SUFFIX,catch.gift
 DOMAIN-SUFFIX,pubnative.net
-# host-suffix, applovin.com, reject
+# host-suffix, applovin.com
 DOMAIN-SUFFIX,inner-active.mobi
 DOMAIN-SUFFIX,mdfull.com
 DOMAIN-SUFFIX,openx.net
