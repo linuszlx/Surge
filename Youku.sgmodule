@@ -3,7 +3,7 @@
 #!category = 去广告
 
 [MITM]
-hostname = %APPEND% acs.youku.com, push.m.youku.com, un-acs.youku.com, 59.82.112.103, 59.82.132.170
+hostname = %APPEND% acs.youku.com, push.m.youku.com, un-acs.youku.com, 59.82.112.103, 59.82.132.170, 106.11.35.106
 
 [Map Local]
 # 播放页弹窗动图
