@@ -134,23 +134,15 @@ hostname = %APPEND% ad.12306.cn, mobile.12306.cn, gateway.36kr.com, aes.acfun.cn
 # > 发现精彩
 # hostname = static.95508.com
 # 开屏广告
-^https?:\/\/static\.95508\.com\/mmg\/images\/ads\/.+\/(.+1125?.+2436|.+%.+%|.+_.+_) - REJECT
-^https?:\/\/static\.95508\.com\/mmg\/ciop\/sysabbr\/cmep\/images\/apppopupads - REJECT
+^https?:\/\/static\.95508\.com\/mmg\/images\/ads\/.+\/(.+1125?.+2436|.+%.+%|.+_.+_) - REJECT-TINYGIF
+^https?:\/\/static\.95508\.com\/mmg\/ciop\/sysabbr\/cmep\/images\/apppopupads - REJECT-TINYGIF
 
 # >>>>>>>>>>>>>>> ✅ G ✅ <<<<<<<<<<<<<<
 # > 广发银行
 # hostname = static.95508.com, mps.95508.com
-^https?:\/\/static\.95508\.com\/icppweb\/images\/modelMaterial\/accurate\/202\d{5}\/.*.(png|jpg) - REJECT
-^https?:\/\/static\.95508\.com\/icppweb\/images\/modelMaterial\/advertising\/202\d{5}\/.*.(png|jpg) - REJECT
+^https?:\/\/static\.95508\.com\/icppweb\/images\/modelMaterial\/accurate\/202\d{5}\/.*.(png|jpg) - REJECT-TINYGIF
+^https?:\/\/static\.95508\.com\/icppweb\/images\/modelMaterial\/advertising\/202\d{5}\/.*.(png|jpg) - REJECT-TINYGIF
 ^https?:\/\/mps\.95508\.com\/mps\/club\/cardPortals\/adv\/\d{25}\.(png|jpg) - REJECT-TINYGIF
-
-# > 谷歌
-# hostname = *.googleapis.com, pagead2.googlesyndication.com
-# 如开启可自行添加主机名，但似乎已不可MITM
-^https?:\/\/.+\.googleapis.com/.+ad_break - REJECT-TINYGIF
-^https?:\/\/.+\.googleapis.com/.+log_event - REJECT-TINYGIF
-^https?:\/\/.+\.googleapis.com/adsmeasurement - REJECT-TINYGIF
-^https?:\/\/pagead2\.googlesyndication\.com\/pagead\/ - REJECT-TINYGIF
 
 # > 挂号网（微医）
 # hostname = kano.guahao.cn, app.wy.guahao.com
@@ -430,15 +422,15 @@ https://ios.sspai.com/api/v3/recommend/page/get\?ad.*ios_home_modal - REJECT
 
 # > 中国银行
 # hostname = mbs.boc.cn, mlife.jf365.boc.cn
-^https:\/\/mbs\.boc\.cn\/ubas-mgateway-static\/images\/advertType\/.+.jpg - REJECT
+^https:\/\/mbs\.boc\.cn\/ubas-mgateway-static\/images\/advertType\/.+.jpg - REJECT-TINYGIF
 # > 中国银行 缤纷生活
-^https?:\/\/mlife\.jf365\.boc\.cn\/AppPrj\/FirstPic\.do\?txnId=2PIC000001 - REJECT
+^https?:\/\/mlife\.jf365\.boc\.cn\/AppPrj\/FirstPic\.do\?txnId=2PIC000001 - REJECT-TINYGIF
 
 # > 中信银行
 # hostname = wap.bank.ecitic.com, imcs.citicbank.com
 ^https?:\/\/wap.bank\.ecitic\.com:6443\/NMBFOServer\/cbframework\.do\?act=CUBEPAGEDATA - REJECT
 # 开屏广告
-^https:\/\/imcs\.citicbank\.com\/cloud\/.+(1125.+2436|1242.+2688|750.+1638|563.+1218) - REJECT
+^https:\/\/imcs\.citicbank\.com\/cloud\/.+(1125.+2436|1242.+2688|750.+1638|563.+1218) - REJECT-TINYGIF
 
 # > 中国联通
 # hostname = m.client.10010.com, m1.ad.10010.com, res.mall.10010.cn
