@@ -11,7 +11,7 @@ hostname = %APPEND% ad.12306.cn, mobile.12306.cn, gateway.36kr.com, aes.acfun.cn
 # >>>>>>>>>>>>>>> ✅ 3 ✅ <<<<<<<<<<<<<<
 # > 36kr
 # hostname = gateway.36kr.com
-^https?:\/\/gateway\.36kr\.com\/api\/adx\/ad\/show - REJECT
+^https?:\/\/gateway\.36kr\.com\/api\/adx\/ad\/show - reject
 
 # >>>>>>>>>>>>>>> ✅ A ✅ <<<<<<<<<<<<<<
 # > AcFun
@@ -193,7 +193,7 @@ hostname = %APPEND% ad.12306.cn, mobile.12306.cn, gateway.36kr.com, aes.acfun.cn
 ^http?:\/\/home\.umetrip\.com\/gateway\/api\/umetrip\/native - REJECT
 ^https?:\/\/home\.umetrip\.com\/gateway\/api\/umetrip\/native - REJECT
 ^https?:\/\/(discardrp|startup)\.umetrip\.com\/gateway\/api\/umetrip\/native - REJECT
-^http:\/\/oss\.umetrip\.com\/fs\/advert\/ url reject
+^http:\/\/oss\.umetrip\.com\/fs\/advert\/ - reject
 
 # >>>>>>>>>>>>>>> ✅ J ✅ <<<<<<<<<<<<<<
 # 建设银行
