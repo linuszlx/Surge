@@ -3,7 +3,7 @@
 #!category = 去广告
 
 [MITM]
-hostname = %APPEND% hd.xiaojukeji.com, conf.diditaxi.com.cn, res.xiaojukeji.com, guard.sec.xiaojukeji.com, common.diditaxi.com.cn,  116.85.2.*, 123.207.209.*, 139.199.240.* , 123.207.209.39, 116.85.3.12
+hostname = %APPEND% hd.xiaojukeji.com, conf.diditaxi.com.cn, res.xiaojukeji.com, guard.sec.xiaojukeji.com, common.diditaxi.com.cn,  116.85.2.*, 123.207.209.*, 139.199.240.* , 123.207.209.39, 116.85.3.12, 123.207.209.60, 157.255.76.9, 157.255.76.12, 157.255.76.17, 157.255.76.19, 157.122.212.12, 157.255.76.12, 157.255.76.9
 
 [Rule]
 IP-CIDR,139.199.240.12/32,REJECT
