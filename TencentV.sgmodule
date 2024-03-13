@@ -3,8 +3,8 @@
 #!category = 去广告
 
 [Rule]
-IP-CIDR,47.110.187.87/32,REJECT
-OR,((DOMAIN,pgdt.gtimg.cn), (AND,((USER-AGENT,live4iphoneRel*), (IP-CIDR,0.0.0.0/0,no-resolve)))),REJECT-DROP
+AND,((PROTOCOL,HTTPS), (DOMAIN,iacc.qq.com)),REJECT-NO-DROP
+OR,((DOMAIN,pgdt.gtimg.cn), (AND,((USER-AGENT,live4iphoneRel*), (IP-CIDR,0.0.0.0/0,no-resolve))))
 DOMAIN,config.ab.qq.com,REJECT
 DOMAIN,content.rconfig.qq.com,REJECT
 
