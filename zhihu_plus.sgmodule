@@ -1,31 +1,73 @@
 #!name=知乎
-#!desc=知乎助手Plus版，去广告及阅读体验增强
+#!desc=知乎去广告，简易版本
+#!category = 去广告
 
 [Rule]
-# 知乎广告拦截
-RULE-SET,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/script/zhihu/zhihu_remove_ads.list,REJECT
-
-[URL Rewrite]
-# 知乎下发的配置，如皮肤等，目前已知会导致Tab页管理功能失效
-^https?:\/\/api\.zhihu\.com\/ab\/api\/v1\/products\/zhihu\/platforms\/ios\/config - reject
-
-[Map Local]
-# 知乎去除最常访问
-^https?:\/\/api\.zhihu\.com\/moments\/recent data="https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/blank/blank_dict.json"
-# 知乎其他广告拦截
-^https?:\/\/api\.zhihu\.com\/(notifications\/v\d\/count|v\d\/package|me\/guides|drama\/living-info|ad|fringe|commercial|market\/popovers|.*featured-comment-ad) data="https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/blank/blank_dict.json"
-
-[Script]
-知乎_处理用户信息 = type=http-response,requires-body=1,max-size=0,pattern=^https?:\/\/api\.zhihu\.com\/people\/,script-path=https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/script/zhihu/zhihu_plus.js
-知乎_信息流去广告 = type=http-response,requires-body=1,max-size=0,pattern=^https?:\/\/api\.zhihu\.com\/(moments|topstory)(\/|\?)?(recommend|action=|feed_type=)(?!\/people),script-path=https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/script/zhihu/zhihu_plus.js
-知乎_获取黑名单 = type=http-response,requires-body=1,max-size=0,pattern=^https?:\/\/api\.zhihu\.com\/settings\/blocked_users,script-path=https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/script/zhihu/zhihu_plus.js
-知乎_回答黑名单增强 = type=http-response,requires-body=1,max-size=0,pattern=^https?:\/\/api\.zhihu\.com\/v4\/questions,script-path=https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/script/zhihu/zhihu_plus.js
-知乎_官方消息去广告 = type=http-response,requires-body=1,max-size=0,pattern=^https?:\/\/api\.zhihu\.com\/notifications\/v3\/(message\?|timeline\/entry\/system_message),script-path=https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/script/zhihu/zhihu_plus.js
-知乎_预置关键词去广告 = type=http-response,requires-body=1,max-size=0,pattern=^https?:\/\/api\.zhihu\.com\/search\/preset_words\?,script-path=https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/script/zhihu/zhihu_plus.js
-知乎_回答内容优化 = type=http-response,requires-body=1,max-size=0,pattern=^https?:\/\/www\.zhihu\.com\/appview\/v2\/answer\/.*(entry=(?!(preload-topstory|preload-search|preload-subscription)))?,script-path=https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/script/zhihu/zhihu_plus.js
-知乎_优化软件配置 = type=http-response,requires-body=1,max-size=0,pattern=^https?:\/\/appcloud2\.zhihu\.com\/v\d+\/config,script-path=https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/script/zhihu/zhihu_plus.js
-知乎_热榜去广告 = type=http-response,requires-body=1,max-size=0,pattern=^https?:\/\/api\.zhihu\.com\/topstory\/hot-lists?(\?|\/),script-path=https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/script/zhihu/zhihu_plus.js
-知乎_评论去广告 = type=http-response,requires-body=1,max-size=0,pattern=^https?:\/\/api\.zhihu\.com\/comment_v5\/answers\/\d+\/root_comment,script-path=https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/script/zhihu/zhihu_plus.js
+# 拦截开屏广告
+URL-REGEX,^https?:\/\/api\.zhihu\.com\/commercial_api\/launch_v2\?,REJECT
+URL-REGEX,^https?:\/\/api\.zhihu\.com\/commercial_api\/real_time_launch_v2\?,REJECT
+# 拦截品牌提问广告
+URL-REGEX,^https?:\/\/api\.zhihu\.com\/brand\/question\/\d+/card\?,REJECT
+URL-REGEX,^https?:\/\/www\.zhihu\.com\/api\/v\d+\/brand\/question/\d+/card\?,REJECT
+# 其他拦截不影响使用的域名
+DOMAIN,mqtt.zhihu.com,REJECT
+DOMAIN,sugar.zhihu.com,REJECT
+DOMAIN,crash2.zhihu.com,REJECT
+DOMAIN,appcloud.zhihu.com,REJECT
+DOMAIN,appcloud2.in.zhihu.com,REJECT
 
 [MITM]
-hostname = %APPEND% www.zhihu.com,api.zhihu.com,zhuanlan.zhihu.com,appcloud2.zhihu.com
+hostname = %APPEND% 118.89.204.198,103.41.167.237,2402:4e00:1200:ed00:0:9089:6dac:96b6,www.zhihu.com,api.zhihu.com,zhuanlan.zhihu.com,appcloud2.zhihu.com,m-cloud.zhihu.com,103.41.167.236,103.41.167.234,103.41.167.235,103.41.167.226
+
+[URL Rewrite]
+# 我的页面会员卡片
+^https:\/\/api\.zhihu\.com\/unlimited\/go\/my_card - reject
+# 其他,服务器推送配置
+^https:\/\/api\.zhihu\.com\/ab\/api\/v1\/products\/zhihu\/platforms\/ios\/config - reject
+^https:\/\/link\.zhihu\.com\/\?target=(https?)?(%3A|:)?(\/\/|%2F%2F)?(.*?)(&source.*)?$ http://$4 302
+^https:\/\/www\.zhihu\.com\/api\/v4\/hot_recommendation - reject
+^https:\/\/www\.zhihu\.com\/api\/v4\/mcn\/v2\/linkcards\? - reject
+^https:\/\/www\.zhihu\.com\/api\/v4/(answers|questions)\/\d+/related-readings - reject
+^https:\/\/www\.zhihu\.com\/commercial_api\/banners_v3\/mobile_banner - reject
+^https:\/\/zhuanlan\.zhihu\.com\/api\/articles\/\d+\/recommendation - reject
+
+[Map Local]
+^https?:\/\/118\.89\.204\.198 data="https://raw.githubusercontent.com/linuszlx/Surge/main/Reject/blank_dict.json"
+^https?:\/\/103\.41\.167\.237 data="https://raw.githubusercontent.com/linuszlx/Surge/main/Reject/blank_dict.json"
+^https?:\/\/2402:4e00:1200:ed00:0:9089:6dac:96b6 data="https://raw.githubusercontent.com/linuszlx/Surge/main/Reject/blank_dict.json"
+
+^https:\/\/api\.zhihu\.com\/commercial_api\/(answer\/\d+\/bottom-v2|banners_v3\/app_topstory_banner|launch_v2|real_time_launch_v2) data="https://raw.githubusercontent.com/linuszlx/Surge/main/Reject/blank_dict.json"
+^https:\/\/api\.zhihu\.com\/content-distribution-core\/bubble\/common\/settings data="https://raw.githubusercontent.com/linuszlx/Surge/main/Reject/blank_dict.json"
+^https:\/\/api\.zhihu\.com\/(moments\/lastread|drama\/hot-drama-list) data="https://raw.githubusercontent.com/linuszlx/Surge/main/Reject/blank_dict.json"
+^https:\/\/api\.zhihu\.com\/root\/window data="https://raw.githubusercontent.com/linuszlx/Surge/main/Reject/blank_dict.json"
+# 会员页面 弹窗,悬浮动图
+^https:\/\/api\.zhihu\.com\/(bazaar\/float_window|market\/popovers_v2) data="https://raw.githubusercontent.com/linuszlx/Surge/main/Reject/blank_dict.json"
+# 我的页面 项目列表,会员卡片
+^https:\/\/api\.zhihu\.com\/me\/guides data="https://raw.githubusercontent.com/linuszlx/Surge/main/Reject/blank_dict.json"
+# 搜索页 关键词,猜你想搜
+^https:\/\/api\.zhihu\.com\/search\/preset_words data="https://raw.githubusercontent.com/linuszlx/Surge/main/Reject/blank_dict.json"
+^https:\/\/www\.zhihu\.com\/api\/v4\/search\/related_queries\/(article|answer)\/\d+ data="https://raw.githubusercontent.com/linuszlx/Surge/main/Reject/blank_dict.json"
+# 回答详情页,评论区顶部,下一个回答
+^https:\/\/api\.zhihu\.com\/comment_v5\/(articles|answers)\/\d+\/list-headers data="https://raw.githubusercontent.com/linuszlx/Surge/main/Reject/blank_dict.json"
+^https:\/\/api\.zhihu\.com\/prague\/related_suggestion_native\/feed\? data="https://raw.githubusercontent.com/linuszlx/Surge/main/Reject/blank_dict.json"
+^https:\/\/api\.zhihu\.com\/v5\.1\/topics\/answer\/\d+\/relation data="https://raw.githubusercontent.com/linuszlx/Surge/main/Reject/blank_dict.json"
+^https:\/\/api\.zhihu\.com\/ad-style-service\/request data="https://raw.githubusercontent.com/linuszlx/Surge/main/Reject/blank_dict.json"
+^https:\/\/appcloud2\.zhihu\.com\/v3\/resource\?group_name=mp data="https://raw.githubusercontent.com/linuszlx/Surge/main/Reject/blank_dict.json"
+
+[Script]
+# 首页 悬浮图标,顶部横幅,开屏广告,关注页推荐,推荐信息流,热榜信息流,热榜直播,回答底部卡片
+zhihu = type=http-response,pattern=^https:\/\/api\.zhihu\.com\/commercial_api\/app_float_layer,script-path=https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/zhihu.js,requires-body=true,max-size=-1,timeout=60
+
+zhihu = type=http-response,pattern=^https:\/\/api\.zhihu\.com\/feed\/render\/tab\/config\?,script-path=https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/zhihu.js,requires-body=true,max-size=-1,timeout=60
+
+zhihu = type=http-response,pattern=^https:\/\/api\.zhihu\.com\/(moments_v3|topstory\/hot-lists\/total|topstory\/recommend),script-path=https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/zhihu.js,requires-body=true,max-size=-1,timeout=60
+
+zhihu = type=http-response,pattern=^https:\/\/api\.zhihu\.com\/v2\/topstory\/hot-lists\/everyone-seeing\?,script-path=https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/zhihu.js,requires-body=true,max-size=-1,timeout=60
+
+zhihu = type=http-response,pattern=^https:\/\/api\.zhihu\.com\/next-(bff|data|render)\?,script-path=https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/zhihu.js,requires-body=true,max-size=-1,timeout=60
+
+zhihu = type=http-response,pattern=^https:\/\/api\.zhihu\.com\/questions\/\d+(\/answers|\/feeds|\?include=),script-path=https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/zhihu.js,requires-body=true,max-size=-1,timeout=60
+
+zhihu = type=http-response,pattern=^https:\/\/www\.zhihu\.com\/api\/v4\/(articles|answers)\/\d+\/recommendations?\?,script-path=https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/zhihu.js,requires-body=true,max-size=-1,timeout=60
+
+zhihu = type=http-response,pattern=^https:\/\/appcloud2\.zhihu\.com\/v3\/config,script-path=https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/zhihu.js,requires-body=true,max-size=-1,timeout=60
