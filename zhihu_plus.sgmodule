@@ -35,7 +35,7 @@ hostname = %APPEND% 118.89.204.198,103.41.167.237,2402:4e00:1200:ed00:0:9089:6da
 ^https?:\/\/118\.89\.204\.198 data="https://raw.githubusercontent.com/linuszlx/Surge/main/Reject/blank_dict.json"
 ^https?:\/\/103\.41\.167\.237 data="https://raw.githubusercontent.com/linuszlx/Surge/main/Reject/blank_dict.json"
 ^https?:\/\/2402:4e00:1200:ed00:0:9089:6dac:96b6 data="https://raw.githubusercontent.com/linuszlx/Surge/main/Reject/blank_dict.json"
-
+# 屏蔽广告
 ^https:\/\/api\.zhihu\.com\/commercial_api\/(answer\/\d+\/bottom-v2|banners_v3\/app_topstory_banner|launch_v2|real_time_launch_v2) data="https://raw.githubusercontent.com/linuszlx/Surge/main/Reject/blank_dict.json"
 ^https:\/\/api\.zhihu\.com\/content-distribution-core\/bubble\/common\/settings data="https://raw.githubusercontent.com/linuszlx/Surge/main/Reject/blank_dict.json"
 ^https:\/\/api\.zhihu\.com\/(moments\/lastread|drama\/hot-drama-list) data="https://raw.githubusercontent.com/linuszlx/Surge/main/Reject/blank_dict.json"
