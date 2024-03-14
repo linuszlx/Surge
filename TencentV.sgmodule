@@ -3,6 +3,7 @@
 #!category = 去广告
 
 [Rule]
+IP-CIDR,47.110.187.87/32,REJECT,no-resolve
 AND,((PROTOCOL,HTTPS), (DOMAIN,iacc.qq.com)),REJECT-NO-DROP
 OR,((DOMAIN,pgdt.gtimg.cn), (AND,((USER-AGENT,live4iphoneRel*), (IP-CIDR,0.0.0.0/0,no-resolve))))
 DOMAIN,config.ab.qq.com,REJECT
@@ -13,6 +14,7 @@ DOMAIN,content.rconfig.qq.com,REJECT
 ^http:\/\/apd-vlive\.apdcdn\.tc\.qq\.com\/vmind\.qqvideo\.tc\.qq\.com\/\w+ - reject
 ^http:\/\/apd-\w+\.v\.smtcdns\.com\/(defaultts|omts|vmind\.qqvideo)\.tc\.qq\.com\/\w+ - reject
 ^https?://(|www\.)router\.com http://{{{GATEWAY_ADDRESS}}} 302
+^https:\/\/ossgw\.alicdn\.com\/creatives-assets/prod/feupload/user - reject
 
 [Script]
 TencentVideo = type = http-request,pattern=^https?:\/\/(iacc\.qq\.com|vv\.video\.qq\.com\/getvinfo),requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/Yixuling/Rules_Scripts/master/Scripts/TencentVideo.js
