@@ -12,8 +12,6 @@ DOMAIN,content.rconfig.qq.com,REJECT
 ^http:\/\/[\d\.:]*\/?(defaultts\.tc|vmind\.qqvideo\.tc|finderpdd\.video)\.qq\.com\/\w+ - reject
 ^http:\/\/apd-vlive\.apdcdn\.tc\.qq\.com\/vmind\.qqvideo\.tc\.qq\.com\/\w+ - reject
 ^http:\/\/apd-\w+\.v\.smtcdns\.com\/(defaultts|omts|vmind\.qqvideo)\.tc\.qq\.com\/\w+ - reject
-^https?://(|www\.)router\.com http://{{{GATEWAY_ADDRESS}}} 302
-^https:\/\/ossgw\.alicdn\.com\/creatives-assets/prod/feupload/user - reject
 
 [Script]
 TencentVideo = type = http-request,pattern=^https?:\/\/(iacc\.qq\.com|vv\.video\.qq\.com\/getvinfo),requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/Yixuling/Rules_Scripts/master/Scripts/TencentVideo.js
