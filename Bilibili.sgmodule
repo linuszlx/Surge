@@ -4,7 +4,7 @@
 #!category = 去广告
 
 [MITM]
-hostname = %APPEND% app.bilibili.com, api.bilibili.com, api.biliapi.net, api.live.bilibili.com, grpc.biliapi.net
+hostname = %APPEND% app.bilibili.com, api.bilibili.com, app.biliapi.net, api.live.bilibili.com, grpc.biliapi.net
 
 [Map Local]
 ^https?:\/\/[\d\.]+:8000\/v1\/resource\/\w{32}-1-SPLASH  data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-dict.json"
