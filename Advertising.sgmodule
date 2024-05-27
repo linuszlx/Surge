@@ -11,6 +11,10 @@ hostname = %APPEND% ad.12306.cn, mobile.12306.cn, gateway.36kr.com, aes.acfun.cn
 
 [URL Rewrite]
 # >>>>>>>>>>>>>>> ✅ 1 ✅ <<<<<<<<<<<<<<
+# > 12306
+# hostname = ad.12306.cn, mobile.12306.cn
+^https?:\/\/ad\.12306\.cn\/res\/adfiles\/*.jpg - reject
+
 # >>>>>>>>>>>>>>> ✅ 3 ✅ <<<<<<<<<<<<<<
 # > 36kr
 # hostname = gateway.36kr.com
