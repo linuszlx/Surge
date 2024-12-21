@@ -281,12 +281,7 @@ http-response ^https?:\/\/m\.lkcoffee\.com\/capi\/resource\/m\/growUp\/main$ bod
 # 公众号文章下方广告
 http-response ^https?:\/\/mp\.weixin\.qq\.com\/mp\/getappmsgad$ body-replace /advertisement/fmz200/
 
-
-
-
-
 [Map Local]
-
 # >>>>>>>>>>>>>>> ✅ 0 ✅ <<<<<<<<<<<<<<
 # >>>>>>>>>>>>>>> ✅ 1 ✅ <<<<<<<<<<<<<<
 # >>>>>>>>>>>>>>> ✅ 2 ✅ <<<<<<<<<<<<<<
@@ -325,7 +320,6 @@ http-response ^https?:\/\/mp\.weixin\.qq\.com\/mp\/getappmsgad$ body-replace /ad
 
 # > 东方航空
 # hostname = app.ceair.com
-[Rewrite]
 ^https?:\/\/app\.ceair\.com\/customize\/security\/update data-type=text data="{}" status-code=200
 ^https?:\/\/app\.ceair\.com\/customize\/main\/adScreen data-type=text data="{}" status-code=200
 
