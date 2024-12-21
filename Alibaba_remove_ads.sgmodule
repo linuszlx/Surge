@@ -12,28 +12,27 @@ hostname = %APPEND% acs.m.taobao.com, amdc.m.taobao.com, img.alicdn.com, heic.al
 
 
 [Rule]
-DOMAIN,adashx.m.taobao.com,data-type=text data="{}" status-code=200,extended-matching,pre-matching
-DOMAIN,ossgw.alicdn.com,data-type=text data="{}" status-code=200,extended-matching,pre-matching
-DOMAIN,ems.youku.com,data-type=text data="{}" status-code=200,extended-matching,pre-matching
-DOMAIN,hudong.alicdn.com,data-type=text data="{}" status-code=200,extended-matching,pre-matching
-DOMAIN,h-adashx.ut.taobao.com,data-type=text data="{}" status-code=200,extended-matching,pre-matching
-DOMAIN,ut.taobao.com,data-type=text data="{}" status-code=200,extended-matching,pre-matching
-
+DOMAIN,adashx.m.taobao.com,REJECT,extended-matching,pre-matching
+DOMAIN,ossgw.alicdn.com,REJECT,extended-matching,pre-matching
+DOMAIN,ems.youku.com,REJECT,extended-matching,pre-matching
+DOMAIN,hudong.alicdn.com,REJECT,extended-matching,pre-matching
+DOMAIN,h-adashx.ut.taobao.com,REJECT,extended-matching,pre-matching
+DOMAIN,ut.taobao.com,REJECT,extended-matching,pre-matching
 # 盒马
-AND, ((URL-REGEX, ^http:\/\/amdc\.m\.taobao\.com\/amdc\/mobileDispatch), (USER-AGENT, Hema4iPhone*)), data-type=text data="{}" status-code=200,pre-matching
+AND, ((URL-REGEX, ^http:\/\/amdc\.m\.taobao\.com\/amdc\/mobileDispatch), (USER-AGENT, Hema4iPhone*)), REJECT
 # 饿了么
-AND, ((URL-REGEX, ^http:\/\/amdc\.m\.taobao\.com\/amdc\/mobileDispatch), (USER-AGENT, eleme*)), data-type=text data="{}" status-code=200,pre-matching
-AND, ((URL-REGEX, ^http:\/\/amdc\.m\.ele\.me\/amdc\/mobileDispatch), (USER-AGENT, eleme*)), data-type=text data="{}" status-code=200,pre-matching
+AND, ((URL-REGEX, ^http:\/\/amdc\.m\.taobao\.com\/amdc\/mobileDispatch), (USER-AGENT, eleme*)), REJECT
+AND, ((URL-REGEX, ^http:\/\/amdc\.m\.ele\.me\/amdc\/mobileDispatch), (USER-AGENT, eleme*)), REJECT
 # 飞猪旅行
-AND,((URL-REGEX, ^http:\/\/amdc\.m\.taobao\.com\/amdc\/mobileDispatch), (USER-AGENT, %E9%A3%9E%E7%8C%AA%E6%97%85%E8%A1%8C*)), data-type=text data="{}" status-code=200,pre-matching
+AND,((URL-REGEX, ^http:\/\/amdc\.m\.taobao\.com\/amdc\/mobileDispatch), (USER-AGENT, %E9%A3%9E%E7%8C%AA%E6%97%85%E8%A1%8C*)), REJECT
 # 一淘
-AND,((USER-AGENT,ishare4iphone*),(URL-REGEX,^http:\/\/amdc\.m\.taobao\.com\/amdc\/mobileDispatch)),data-type=text data="{}" status-code=200,pre-matching
+AND,((USER-AGENT,ishare4iphone*),(URL-REGEX,^http:\/\/amdc\.m\.taobao\.com\/amdc\/mobileDispatch)),REJECT
 # 其他
-AND,((URL-REGEX, ^http:\/\/amdc\.m\.taobao\.com\/amdc\/mobileDispatch), (USER-AGENT, %E5%96%B5%E8%A1%97*)), data-type=text data="{}" status-code=200,pre-matching
-AND,((URL-REGEX, ^http:\/\/amdc\.m\.taobao\.com\/amdc\/mobileDispatch), (USER-AGENT, %E5%A4%A9%E7%8C%AB*)), data-type=text data="{}" status-code=200,pre-matching
-AND,((URL-REGEX, ^http:\/\/amdc\.m\.taobao\.com\/amdc\/mobileDispatch), (USER-AGENT, Alibaba*)), data-type=text data="{}" status-code=200,pre-matching
-AND,((URL-REGEX, ^http:\/\/amdc\.m\.taobao\.com\/amdc\/mobileDispatch), (USER-AGENT, Moon*)), data-type=text data="{}" status-code=200,pre-matching
-AND,((URL-REGEX, ^http:\/\/amdc\.m\.taobao\.com\/amdc\/mobileDispatch), (USER-AGENT, DMPortal*)), data-type=text data="{}" status-code=200,pre-matching
+AND,((URL-REGEX, ^http:\/\/amdc\.m\.taobao\.com\/amdc\/mobileDispatch), (USER-AGENT, %E5%96%B5%E8%A1%97*)), REJECT
+AND,((URL-REGEX, ^http:\/\/amdc\.m\.taobao\.com\/amdc\/mobileDispatch), (USER-AGENT, %E5%A4%A9%E7%8C%AB*)), REJECT
+AND,((URL-REGEX, ^http:\/\/amdc\.m\.taobao\.com\/amdc\/mobileDispatch), (USER-AGENT, Alibaba*)), REJECT
+AND,((URL-REGEX, ^http:\/\/amdc\.m\.taobao\.com\/amdc\/mobileDispatch), (USER-AGENT, Moon*)), REJECT
+AND,((URL-REGEX, ^http:\/\/amdc\.m\.taobao\.com\/amdc\/mobileDispatch), (USER-AGENT, DMPortal*)), REJECT
 
 [Map Local]
 # 阿里巴巴 
