@@ -2,10 +2,8 @@
 #!desc=移除开屏广告、各类广告横幅、各类信息流广告、各类弹窗推广、各类浮窗、我的页面广告。
 #!author=可莉🅥[https://github.com/luestr/ProxyResource/blob/main/README.md]
 #!icon=https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/AutoHome.png
-#!category=iKeLee
+#!category=去广告
 #!openUrl=https://apps.apple.com/app/id385919493
-#!tag=去广告
-#!loon_version=3.2.4(787)
 #!homepage=https://github.com/luestr/ProxyResource/blob/main/README.md
 #!date=2024-11-28 00:00:00
 
@@ -55,17 +53,17 @@ DOMAIN,adproxy.autohome.com.cn,REJECT,extended-matching,pre-matching
 ^https:\/\/a\.athm\.cn\/clientlive\.api\.autohome\.com\.cn\/api\/live\/getserieswindowsinfo data-type=text data="{}" status-code=200
 
 [Script]
-精简我的页面 = type=http-response, pattern=^https:\/\/news\.app\.autohome\.com\.cn\/news_v\d+(?:\.\d+){2}\/news\/homenavigation, script-path=https://kelee.one/Resource/Script/AutoHome/AutoHome_remove_ads.js, requires-body=true
+精简我的页面 = type=http-response, pattern=^https:\/\/news\.app\.autohome\.com\.cn\/news_v\d+(?:\.\d+){2}\/news\/homenavigation, script-path=https://raw.githubusercontent.com/linuszlx/JS/main/AutoHome/AutoHome_remove_ads.js, requires-body=true
 
-精简我的页面 = type=http-response, pattern=^https:\/\/(a\.athm\.cn\/)?mobile\.app\.autohome\.com\.cn\/platform\/carserver\/((usercenter\/getservicecards)|(carcard\/allcard)|(carcard\/mycardv\d+)|(carcard\/cards)), script-path=https://kelee.one/Resource/Script/AutoHome/AutoHome_remove_ads.js, requires-body=true
+精简我的页面 = type=http-response, pattern=^https:\/\/(a\.athm\.cn\/)?mobile\.app\.autohome\.com\.cn\/platform\/carserver\/((usercenter\/getservicecards)|(carcard\/allcard)|(carcard\/mycardv\d+)|(carcard\/cards)), script-path=https://raw.githubusercontent.com/linuszlx/JS/main/AutoHome/AutoHome_remove_ads.js, requires-body=true
 
-社区广场去广告 = type=http-response, pattern=^https:\/\/(a\.athm\.cn\/)?club\.app\.autohome\.com\.cn\/club_v\d+(?:\.\d+){2}\/club\/index\/businessv\d+, script-path=https://kelee.one/Resource/Script/AutoHome/AutoHome_remove_ads.js, requires-body=true
+社区广场去广告 = type=http-response, pattern=^https:\/\/(a\.athm\.cn\/)?club\.app\.autohome\.com\.cn\/club_v\d+(?:\.\d+){2}\/club\/index\/businessv\d+, script-path=https://raw.githubusercontent.com/linuszlx/JS/main/AutoHome/AutoHome_remove_ads.js, requires-body=true
 
-移除直播浮窗 = type=http-response, pattern=^https:\/\/(a\.athm\.cn\/)?cars\.app\.autohome\.com\.cn\/carstreaming\/selectcarportal\/reclist, script-path=https://kelee.one/Resource/Script/AutoHome/AutoHome_remove_ads.js, requires-body=true
+移除直播浮窗 = type=http-response, pattern=^https:\/\/(a\.athm\.cn\/)?cars\.app\.autohome\.com\.cn\/carstreaming\/selectcarportal\/reclist, script-path=https://raw.githubusercontent.com/linuszlx/JS/main/AutoHome/AutoHome_remove_ads.js, requires-body=true
 
-移除报价页面直播内容 = type=http-response, pattern=^https:\/\/(a\.athm\.cn\/)?cars\.app\.autohome\.com\.cn\/carstreaming\/selectcarportal\/seriestopwithtagscard, script-path=https://kelee.one/Resource/Script/AutoHome/AutoHome_remove_ads.js, requires-body=true
+移除报价页面直播内容 = type=http-response, pattern=^https:\/\/(a\.athm\.cn\/)?cars\.app\.autohome\.com\.cn\/carstreaming\/selectcarportal\/seriestopwithtagscard, script-path=https://raw.githubusercontent.com/linuszlx/JS/main/AutoHome/AutoHome_remove_ads.js, requires-body=true
 
-移除二手车竖版轮播图 = type=http-response, pattern=^https:\/\/(a\.athm\.cn\/)?apiautoappusc\.che168\.com\/apic\/v\d+\/gethomepagefeed, script-path=https://kelee.one/Resource/Script/AutoHome/AutoHome_remove_ads.js, requires-body=true
+移除二手车竖版轮播图 = type=http-response, pattern=^https:\/\/(a\.athm\.cn\/)?apiautoappusc\.che168\.com\/apic\/v\d+\/gethomepagefeed, script-path=https://raw.githubusercontent.com/linuszlx/JS/main/AutoHome/AutoHome_remove_ads.js, requires-body=true
 
 [MITM]
 hostname = %APPEND% a.athm.cn, adproxy.autohome.com.cn, apiautoappusc.che168.com, autoapi.autohome.com.cn, cars.app.autohome.com.cn, clientlive.api.autohome.com.cn, club.app.autohome.com.cn, dealer.m.autohome.com.cn, maam.pingan.com.cn, mobile.app.autohome.com.cn, news.app.autohome.com.cn, pcmx.autohome.com.cn
