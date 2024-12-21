@@ -6,7 +6,7 @@
 #!icon = https://raw.githubusercontent.com/linuszlx/Loon/main/Logo/Ali.png
 #!date = 2024-01-25 18:00:54
 
-[Mitm]
+[MITM]
 hostname = %APPEND% acs.m.taobao.com, amdc.m.taobao.com, img.alicdn.com, heic.alicdn.com, guide-acs.m.taobao.com, poplayer.template.alibaba.com, acs-m.freshippo.com, gw.alicdn.com, elemecdn.com, fuss10.elemecdn.com, cube.elemecdn.com, www1.elecfans.com, nr-op.elemecdn.com
 
 
