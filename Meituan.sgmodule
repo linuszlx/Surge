@@ -31,7 +31,7 @@ DOMAIN-SUFFIX, wmlog.meituan.com, REJECT,extended-matching,pre-matching
 DOMAIN-SUFFIX, ad.e.waimai.sankuai.com, REJECT,extended-matching,pre-matching
 DOMAIN-SUFFIX, mads.meituan.com, REJECT,extended-matching,pre-matching
 DOMAIN-SUFFIX, d.meituan.net, REJECT,extended-matching,pre-matching
-DOMAIN-keyword, report.meituan, REJECT,extended-matching,pre-matching
+DOMAIN-KEYWORD, report.meituan, REJECT
 
 [URL Rewrite]
 # > 大众点评
