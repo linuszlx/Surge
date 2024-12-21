@@ -326,10 +326,10 @@ http-response ^https?:\/\/mp\.weixin\.qq\.com\/mp\/getappmsgad$ body-replace /ad
 # > 斗鱼直播
 # hostname = daoyu.sdo.com, rtbapi.douyucdn.cn, staticlive.douyucdn.cn, capi.douyucdn.cn, douyucdn.cn
 ^https?:\/\/rtbapi\.douyucdn\.cn\/japi\/sign\/app\/getinfo data-type=text data="{}" status-code=200
-^https?:\/\/staticlive\.douyucdn\.cn\/.+?\/getStartSend data-type=tiny-gif data=" "
-^https?:\/\/capi\.douyucdn\.cn\/api\/ios_app\/check_update data-type=tiny-gif data=" "
-^https?:\/\/capi\.douyucdn\.cn\/api\/v1\/getStartSend?client_sys=ios data-type=tiny-gif data=" "
-^https?:\/\/douyucdn\.cn\/.+?\/appapi\/getinfo data-type=tiny-gif data=" "
+^https?:\/\/staticlive\.douyucdn\.cn\/.+?\/getStartSend data-type=tiny-gif data=""
+^https?:\/\/capi\.douyucdn\.cn\/api\/ios_app\/check_update data-type=tiny-gif data=""
+^https?:\/\/capi\.douyucdn\.cn\/api\/v1\/getStartSend?client_sys=ios data-type=tiny-gif data=""
+^https?:\/\/douyucdn\.cn\/.+?\/appapi\/getinfo data-type=tiny-gif data=""
 
 # >>>>>>>>>>>>>>> ✅ E ✅ <<<<<<<<<<<<<<
 
@@ -359,12 +359,12 @@ http-response ^https?:\/\/mp\.weixin\.qq\.com\/mp\/getappmsgad$ body-replace /ad
 # hostname = static.95508.com, mps.95508.com
 ^https?:\/\/static\.95508\.com\/icppweb\/images\/modelMaterial\/accurate\/202\d{5}\/.*.(png|jpg) data-type=text data="{}" status-code=200
 ^https?:\/\/static\.95508\.com\/icppweb\/images\/modelMaterial\/advertising\/202\d{5}\/.*.(png|jpg) data-type=text data="{}" status-code=200
-^https?:\/\/mps\.95508\.com\/mps\/club\/cardPortals\/adv\/\d{25}\.(png|jpg) data-type=tiny-gif data=" "
+^https?:\/\/mps\.95508\.com\/mps\/club\/cardPortals\/adv\/\d{25}\.(png|jpg) data-type=tiny-gif data=""
 
 # > 挂号网（微医）
 # hostname = kano.guahao.cn, app.wy.guahao.com
 ^https?:\/\/kano\.guahao\.cn\/[a-zA-Z0-9]{12} data-type=text data="{}" status-code=200
-^https?:\/\/kano\.guahao\.cn\/.+?\?resize=\d{3}-\d{4} data-type=tiny-gif data=" "
+^https?:\/\/kano\.guahao\.cn\/.+?\?resize=\d{3}-\d{4} data-type=tiny-gif data=""
 ^https?:\/\/app\.wy\.guahao\.com\/json\/white\/dayquestion\/getpopad data-type=text data="{}" status-code=200
 
 # > 故宫博物馆小程序
@@ -380,16 +380,16 @@ http-response ^https?:\/\/mp\.weixin\.qq\.com\/mp\/getappmsgad$ body-replace /ad
 
 # > 虎牙直播
 # hostname = cdn.wup.huya.com, business.msstatic.com, cdnfile1.msstatic.com, live-ads.huya.com
-^https?:\/\/cdnfile1\.msstatic\.com\/cdnfile\/appad\/ data-type=tiny-gif data=" "
+^https?:\/\/cdnfile1\.msstatic\.com\/cdnfile\/appad\/ data-type=tiny-gif data=""
 ^https?://live-ads\.huya\.com/live/getAllEntrance.*$ data-type=text data="{}" status-code=200
 
 
 # > 虎扑
 # hostname = games.mobileapi.hupu.com, du.hupucdn.com, i*.hoopchina.com.cn, goblin.hupu.com
-^https?:\/\/games\.mobileapi\.hupu\.com\/.+?\/(search|interfaceAdMonitor|status|hupuBbsPm)/(hotkey|init|hupuBbsPm)\. data-type=tiny-gif data=" "
-^https?:\/\/du\.hupucdn\.com\/\w+h\d{4} data-type=tiny-gif data=" "
-^https?:\/\/i\d\.hoopchina\.com\.cn/blogfile\//d+\//d+\/BbsImg\.(?<=(big.(png|jpg)))$ data-type=tiny-gif data=" "
-^https?:\/\/i1\.hoopchina\.com\.cn\/blogfile\/.+_\d{3}x\d{4} data-type=tiny-gif data=" "
+^https?:\/\/games\.mobileapi\.hupu\.com\/.+?\/(search|interfaceAdMonitor|status|hupuBbsPm)/(hotkey|init|hupuBbsPm)\. data-type=tiny-gif data=""
+^https?:\/\/du\.hupucdn\.com\/\w+h\d{4} data-type=tiny-gif data=""
+^https?:\/\/i\d\.hoopchina\.com\.cn/blogfile\//d+\//d+\/BbsImg\.(?<=(big.(png|jpg)))$ data-type=tiny-gif data=""
+^https?:\/\/i1\.hoopchina\.com\.cn\/blogfile\/.+_\d{3}x\d{4} data-type=tiny-gif data=""
 
 
 # > 航旅纵横
@@ -403,8 +403,8 @@ http-response ^https?:\/\/mp\.weixin\.qq\.com\/mp\/getappmsgad$ body-replace /ad
 # > 猫眼
 # hostname = p0.pipi.cn
 ^https?:\/\/p0\.pipi\.cn\/adAdmin\/.+\.jpg\?imageMogr2\/quality\/85\?may_covertWebp data-type=text data="{}" status-code=200
-^https?:\/\/p0\.pipi\.cn\/adAdmin\/\w+.jpg\? data-type=tiny-gif data=" "
-^https?:\/\/p0\.pipi\.cn\/mediaplus\/maoyantong_ads_fe\/ data-type=tiny-gif data=" "
+^https?:\/\/p0\.pipi\.cn\/adAdmin\/\w+.jpg\? data-type=tiny-gif data=""
+^https?:\/\/p0\.pipi\.cn\/mediaplus\/maoyantong_ads_fe\/ data-type=tiny-gif data=""
 
 # > 麦当劳
 # hostname = api.mcd.cn
@@ -481,22 +481,22 @@ http-response ^https?:\/\/mp\.weixin\.qq\.com\/mp\/getappmsgad$ body-replace /ad
 # > 腾讯广告
 # hostname = btrace.qq.com, api2.helper.qq.com, *.beacon.qq.com, mi.gdt.qq.com, lives.l.qq.com, imgcache.qq.com, mtteve.beacon.qq.com, vv.video.qq.com, ssl.kohsocialapp.qq.com, qt.qq.com, 3gimg.qq.com, y.gtimg.cn, splashqqlive.gtimg.com, qzonestyle.gtimg.cn, discuz.gtimg.cn, bla.gtimg.com, mmgr.gtimg.com, bk.bingo.qq.com
 ^https?:\/\/btrace\.qq\.com data-type=text data="{}" status-code=200
-^https?:\/\/api2\.helper\.qq\.com\/game\/buttons data-type=tiny-gif data=" "
-^https?:\/\/lives\.l\.qq\.com\/livemsg\?sdtfrom= data-type=tiny-gif data=" "
-^https?:\/\/imgcache\.qq\.com\/qqlive\/ data-type=tiny-gif data=" "
-^https?:\/\/mtteve\.beacon\.qq\.com\/analytics data-type=tiny-gif data=" "
+^https?:\/\/api2\.helper\.qq\.com\/game\/buttons data-type=tiny-gif data=""
+^https?:\/\/lives\.l\.qq\.com\/livemsg\?sdtfrom= data-type=tiny-gif data=""
+^https?:\/\/imgcache\.qq\.com\/qqlive\/ data-type=tiny-gif data=""
+^https?:\/\/mtteve\.beacon\.qq\.com\/analytics data-type=tiny-gif data=""
 ^https?:\/\/vv\.video\.qq\.com\/getvmind\? data-type=text data="{}" status-code=200
 ^https?:\/\/ssl\.kohsocialapp\.qq\.com:10001\/game\/buttons data-type=text data="{}" status-code=200
 ^https?:\/\/qt\.qq\.com\/lua\/mengyou\/get_splash_screen_info data-type=text data="{}" status-code=200
 ^https?:\/\/3gimg\.qq\.com\/tencentMapTouch\/app\/activity\/ data-type=text data="{}" status-code=200
 ^https?:\/\/3gimg\.qq\.com\/tencentMapTouch\/splash\/ data-type=text data="{}" status-code=200
-^https?:\/\/y\.gtimg\.cn\/music\/.*?_Ad/\d+\.png data-type=tiny-gif data=" "
-^https?:\/\/splashqqlive\.gtimg\.com\/website\/\d{6} data-type=tiny-gif data=" "
-^https?:\/\/qzonestyle\.gtimg\.cn\/qzone\/biz\/gdt\/mob\/sdk\/ios\/v2\/ data-type=tiny-gif data=" "
-^https?:\/\/discuz\.gtimg\.cn\/cloud\/scripts\/discuz_tips\.js data-type=tiny-gif data=" "
-^https?:\/\/bla\.gtimg\.com\/qqlive\/\d{6}.+?\.png data-type=tiny-gif data=" "
-^https?:\/\/mmgr\.gtimg\.com\/gjsmall\/qiantu\/upload\/ data-type=tiny-gif data=" "
-^https?:\/\/mmgr\.gtimg\.com\/gjsmall\/qqpim\/public\/ios\/splash\/.+?\/\d{4}_\d{4} data-type=tiny-gif data=" "
+^https?:\/\/y\.gtimg\.cn\/music\/.*?_Ad/\d+\.png data-type=tiny-gif data=""
+^https?:\/\/splashqqlive\.gtimg\.com\/website\/\d{6} data-type=tiny-gif data=""
+^https?:\/\/qzonestyle\.gtimg\.cn\/qzone\/biz\/gdt\/mob\/sdk\/ios\/v2\/ data-type=tiny-gif data=""
+^https?:\/\/discuz\.gtimg\.cn\/cloud\/scripts\/discuz_tips\.js data-type=tiny-gif data=""
+^https?:\/\/bla\.gtimg\.com\/qqlive\/\d{6}.+?\.png data-type=tiny-gif data=""
+^https?:\/\/mmgr\.gtimg\.com\/gjsmall\/qiantu\/upload\/ data-type=tiny-gif data=""
+^https?:\/\/mmgr\.gtimg\.com\/gjsmall\/qqpim\/public\/ios\/splash\/.+?\/\d{4}_\d{4} data-type=tiny-gif data=""
 ^https?://bk\.bingo\.qq\.com/bk/crx/data/videoAd.*$ data-type=text data="{}" status-code=200
 
 # >>>>>>>>>>>>>>> ✅ U ✅ <<<<<<<<<<<<<<
@@ -519,12 +519,12 @@ http-response ^https?:\/\/mp\.weixin\.qq\.com\/mp\/getappmsgad$ body-replace /ad
 ^https?:\/\/api\.jr\.mi\.com\/v\d\/adv\/ data-type=text data="{}" status-code=200
 ^https?:\/\/api\.jr\.mi\.com\/jr\/api\/playScreen data-type=text data="{}" status-code=200
 ^https?:\/\/api-mifit.+?\.huami\.com\/discovery\/mi\/discovery\/.+?_ad\? data-type=text data="{}" status-code=200
-^https?:\/\/api-mifit\.huami\.com\/discovery\/mi\/discovery\/homepage_ad\? data-type=tiny-gif data=" "
-^https?:\/\/api-mifit\.huami\.com\/discovery\/mi\/discovery\/sleep_ad\? data-type=tiny-gif data=" "
-^https?:\/\/api-mifit\.huami\.com\/discovery\/mi\/discovery\/sport_summary_ad\? data-type=tiny-gif data=" "
-^https?:\/\/api-mifit\.huami\.com\/discovery\/mi\/discovery\/sport_training_ad\? data-type=tiny-gif data=" "
-^https?:\/\/api-mifit\.huami\.com\/discovery\/mi\/discovery\/step_detail_ad\? data-type=tiny-gif data=" "
-^https?:\/\/api-mifit\.huami\.com\/discovery\/mi\/discovery\/training_video_ad\? data-type=tiny-gif data=" "
+^https?:\/\/api-mifit\.huami\.com\/discovery\/mi\/discovery\/homepage_ad\? data-type=tiny-gif data=""
+^https?:\/\/api-mifit\.huami\.com\/discovery\/mi\/discovery\/sleep_ad\? data-type=tiny-gif data=""
+^https?:\/\/api-mifit\.huami\.com\/discovery\/mi\/discovery\/sport_summary_ad\? data-type=tiny-gif data=""
+^https?:\/\/api-mifit\.huami\.com\/discovery\/mi\/discovery\/sport_training_ad\? data-type=tiny-gif data=""
+^https?:\/\/api-mifit\.huami\.com\/discovery\/mi\/discovery\/step_detail_ad\? data-type=tiny-gif data=""
+^https?:\/\/api-mifit\.huami\.com\/discovery\/mi\/discovery\/training_video_ad\? data-type=tiny-gif data=""
 
 # > 小米有品
 # hostname = shopapi.io.mi.com
@@ -584,12 +584,12 @@ http-response ^https?:\/\/mp\.weixin\.qq\.com\/mp\/getappmsgad$ body-replace /ad
 # > 中国联通
 # hostname = m.client.10010.com, m1.ad.10010.com, res.mall.10010.cn
 ^https?:\/\/m\.client\.10010\.com\/uniAdmsInterface\/getWelcomeAd data-type=text data="{}" status-code=200
-^https?:\/\/m\.client\.10010\.com\/mobileService\/(activity|customer)\/(accountListData|get_client_adv|get_startadv) data-type=tiny-gif data=" "
+^https?:\/\/m\.client\.10010\.com\/mobileService\/(activity|customer)\/(accountListData|get_client_adv|get_startadv) data-type=tiny-gif data=""
 ^https?:\/\/m\.client\.10010\.com\/mobileService\/customer\/getclientconfig\.htm data-type=text data="{}" status-code=200
-^https?:\/\/m\.client\.10010\.com\/uniAdmsInterface\/(getHomePageAd|getWelcomeAd) data-type=tiny-gif data=" "
-^https?:\/\/[^(apple|10010)]+\.(com|cn)\/(a|A)d(s|v)?(\/|\.js) data-type=tiny-gif data=" "
-^https?:\/\/m1\.ad\.10010\.com\/noticeMag\/images\/imageUpload\/2\d{3} data-type=tiny-gif data=" "
-^https?:\/\/res\.mall\.10010\.cn\/mall\/common\/js\/fa\.js?referer= data-type=tiny-gif data=" "
+^https?:\/\/m\.client\.10010\.com\/uniAdmsInterface\/(getHomePageAd|getWelcomeAd) data-type=tiny-gif data=""
+^https?:\/\/[^(apple|10010)]+\.(com|cn)\/(a|A)d(s|v)?(\/|\.js) data-type=tiny-gif data=""
+^https?:\/\/m1\.ad\.10010\.com\/noticeMag\/images\/imageUpload\/2\d{3} data-type=tiny-gif data=""
+^https?:\/\/res\.mall\.10010\.cn\/mall\/common\/js\/fa\.js?referer= data-type=tiny-gif data=""
 
 # > 字节跳动
 # hostname = *.pstatp.com, amemv.com, musical.com, snssdk.com, tiktokv.com, dsp.toutiao.com
@@ -599,9 +599,9 @@ http-response ^https?:\/\/mp\.weixin\.qq\.com\/mp\/getappmsgad$ body-replace /ad
 ^https?:\/\/dsp\.toutiao\.com\/api\/xunfei\/ads\/ data-type=text data="{}" status-code=200
 ^https?:\/\/[\w-]+\.amemv\.com\/aweme\/v\d\/ad\/ data="{}" status-code=200
 ^https?:\/\/[\w-]+\.snssdk\.com\/.+_ad\/ data="{}" status-code=200
-^https?:\/\/.+\.amemv\.com\/.+app_log data-type=tiny-gif data=" "
-^https?:\/\/.+\.amemv\.com\/.+report data-type=tiny-gif data=" "
-^https?:\/\/.+\.amemv\.com\/.+stats data-type=tiny-gif data=" "
+^https?:\/\/.+\.amemv\.com\/.+app_log data-type=tiny-gif data=""
+^https?:\/\/.+\.amemv\.com\/.+report data-type=tiny-gif data=""
+^https?:\/\/.+\.amemv\.com\/.+stats data-type=tiny-gif data=""
 # >>>>>>>>>>>>>>> ✅ # ✅ <<<<<<<<<<<<<<
 
 [Script]
