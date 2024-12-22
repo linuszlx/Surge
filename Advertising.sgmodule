@@ -608,8 +608,8 @@ http-response ^https?:\/\/mp\.weixin\.qq\.com\/mp\/getappmsgad$ body-replace /ad
 # >>>>>>>>>>>>>>> ✅ 1 ✅ <<<<<<<<<<<<<<
 # > 12306
 # hostname = ad.12306.cn, mobile.12306.cn
-移除12306开屏广告 = type=http-response, pattern=^https:\/\/ad\.12306\.cn\/ad\/ser\/getAdList$, script-path=https://raw.githubusercontent.com/linuszlx/JS/main/12306/12306.js ,requires-body=true
-移除12306应用内广告 = type=http-response, pattern=^https:\/\/mobile\.12306\.cn\/otsmobile\/app\/mgs\/mgw\.htm$, script-path=https://raw.githubusercontent.com/linuszlx/JS/main/12306/12306_remove_ads.js ,requires-body=true
+移除12306开屏广告 = type=http-request, pattern=^https:\/\/ad\.12306\.cn\/ad\/ser\/getAdList$, script-path=https://raw.githubusercontent.com/linuszlx/JS/main/12306/12306.js ,requires-body=true
+移除12306应用内广告 = type=http-request, pattern=^https:\/\/mobile\.12306\.cn\/otsmobile\/app\/mgs\/mgw\.htm$, script-path=https://raw.githubusercontent.com/linuszlx/JS/main/12306/12306_remove_ads.js ,requires-body=true
 
 
 # >>>>>>>>>>>>>>> ✅ F ✅ <<<<<<<<<<<<<<
