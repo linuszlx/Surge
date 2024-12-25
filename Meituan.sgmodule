@@ -64,6 +64,7 @@ DOMAIN-KEYWORD, report.meituan, REJECT
 [Map Local]
 # > 大众点评
 ^https?:\/\/rms\.meituan\.com\/api\/v\d\/rmsmina\/c\/queryWechatAdvertisement data="{}" status-code=200
+^https?:\/\/img\.meituan\.net\/goodsawardpic data-type=tiny-gif data=""
 ^https?:\/\/p\d\.meituan\.net\/nrpresourcevenus\/\w+\.gif data-type=tiny-gif data=""
 ^https?:\/\/p\d\.meituan\.net\/travelcube\/(?!c129a661)\w+\.gif data-type=tiny-gif data=""
 
