@@ -63,7 +63,7 @@ DOMAIN-KEYWORD, report.meituan, REJECT
 
 [Map Local]
 # > 大众点评
-^https?:\/\/rms\.meituan\.com\/api\/v\d\/rmsmina\/c\/queryWechatAdvertisement data="{}" status-code=200
+^https?:\/\/rms\.meituan\.com\/api\/v\d\/rmsmina\/c\/queryWechatAdvertisement data-type=text data="{}" status-code=200
 ^https?:\/\/img\.meituan\.net\/goodsawardpic data-type=tiny-gif data=""
 ^https?:\/\/p\d\.meituan\.net\/nrpresourcevenus\/\w+\.gif data-type=tiny-gif data=""
 ^https?:\/\/p\d\.meituan\.net\/travelcube\/(?!c129a661)\w+\.gif data-type=tiny-gif data=""
@@ -78,7 +78,7 @@ DOMAIN-KEYWORD, report.meituan, REJECT
 ^https?:\/\/p\d\.meituan\.net\/travelcube\/(?!1d4a663|52e9bfc|29a6227).+@100w_100h  data-type=tiny-gif data=""
 ^https?:\/\/p\d\.meituan\.net\/(\d+\.\d+\.\d+\/)?wmbanner\/(?!fb51b9d|4e9d3c4).+\.gif  data-type=tiny-gif data=""
 ^https?:\/\/(s3plus|flowplus)\.meituan\.net\/v\d\/\w+\/linglong\/.+\.(?>gif|jpg|mp4)  data-type=tiny-gif data=""
-^https?:\/\/portal-portm\.meituan\.com\/horn_ios  data="{}" status-code=200
+^https?:\/\/portal-portm\.meituan\.com\/horn_ios  data-type=text data="{}" status-code=200
 
 
 [Script]
