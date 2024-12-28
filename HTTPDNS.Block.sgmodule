@@ -78,9 +78,6 @@ IP-CIDR6,2402:4e00:8030:1::17/128,REJECT,no-resolve,pre-matching
 IP-CIDR6,2402:4e00:1900:1700:0:9554:1ad9:c3a/128,REJECT,no-resolve,pre-matching
 IP-CIDR6,2408:8711:10:10::20/128,REJECT,no-resolve,pre-matching
 IP-CIDR6,2409:8702:4860:10::4d/128,REJECT,no-resolve,pre-matching
-# QQ音乐
-DOMAIN,httpdns.kg.qq.com,REJECT,extended-matching,pre-matching
-URL-REGEX,"^http:\/\/182\.256\.116\.116\/d",REJECT,extended-matching
 # 哔哩哔哩
 DOMAIN,httpdns.bilivideo.com,REJECT,extended-matching,pre-matching
 # KEY_EXT_P2P_HTTPDNS_BILI_IP
@@ -115,8 +112,6 @@ DOMAIN,httpdns-sc.aliyuncs.com,REJECT,extended-matching,pre-matching
 IP-CIDR,203.107.1.0/24,REJECT,no-resolve,pre-matching
 # 淘宝
 DOMAIN,httpdns.danuoyi.tbcache.com,REJECT,extended-matching,pre-matching
-# CCTV - 中央电视台
-DOMAIN,httpdns.cctv.com,REJECT,extended-matching,pre-matching
 # 华为云
 DOMAIN,httpdns-browser.platform.dbankcloud.cn,REJECT,extended-matching,pre-matching
 DOMAIN,httpdns.huaweicloud.com,REJECT,extended-matching,pre-matching
@@ -124,8 +119,6 @@ DOMAIN,httpdns.c.cdnhwc2.com,REJECT,extended-matching,pre-matching
 DOMAIN,httpdns.platform.dbankcloud.cn,REJECT,extended-matching,pre-matching
 DOMAIN,httpdns.platform.dbankcloud.com,REJECT,extended-matching,pre-matching
 DOMAIN,httpdns1.cc.cdnhwc5.com,REJECT,extended-matching,pre-matching
-# GITV银河互联网电视
-DOMAIN,doh.ptqy.gitv.tv,REJECT,extended-matching,pre-matching
 # 百度
 DOMAIN,httpdns.baidu.com,REJECT,extended-matching,pre-matching
 DOMAIN,httpsdns.baidu.com,REJECT,extended-matching,pre-matching
