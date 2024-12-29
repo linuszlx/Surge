@@ -15,7 +15,14 @@ IP-CIDR6,2402:db40:5100:1011::5/128,REJECT,no-resolve,pre-matching
 ^https:\/\/api\.m\.jd\.com\/client\.action\?functionId=(searchBoxWord|stationPullService|uniformRecommend[06]) data-type=text data="{}" status-code=200
 
 [Script]
-移除京东广告 = type=http-response, pattern=^https:\/\/api\.m\.jd\.com\/client\.action\?functionId=(deliverLayer|getTabHomeInfo|myOrderInfo|orderTrackBusiness|personinfoBusiness|start|welcomeHome), script-path=https://kelee.one/Resource/Script/JD/JD_remove_ads.js, requires-body=true
+JD开屏 = type=http-response,pattern=^https?:\/\/api\.m\.jd\.com\/client\.action\?functionId=start,script-path=https://raw.githubusercontent.com/linuszlx/JS/main/JD/JD-Optimize/JD_ADRemove.js, requires-body=true
+JD订单 = type=http-response,pattern=^https?:\/\/api\.m\.jd\.com\/client\.action\?functionId=myOrderInfo,script-path=https://raw.githubusercontent.com/linuszlx/JS/main/JD/JD-Optimize/JD_ADRemove.js, requires-body=true
+JD物流 = type=http-response,pattern=^https?:\/\/api\.m\.jd\.com\/client\.action\?functionId=orderTrackBusiness,script-path=https://raw.githubusercontent.com/linuszlx/JS/main/JD/JD-Optimize/JD_ADRemove.js, requires-body=true
+JD首页 = type=http-response,pattern=^https?:\/\/api\.m\.jd\.com\/client\.action\?functionId=welcomeHome,script-path=https://raw.githubusercontent.com/linuszlx/JS/main/JD/JD-Optimize/JD_OpenPage.js, requires-body=true
+JD首页推荐 = type=http-response,pattern=^https?:\/\/api\.m\.jd\.com\/client\.action\?functionId=getRecommendNewFeedsList,script-path=https://raw.githubusercontent.com/linuszlx/JS/main/JD/JD-Optimize/JD_NewFeedsList.js, requires-body=true
+JD个人页面= type=http-response,pattern=^https?:\/\/api\.m\.jd\.com\/client\.action\?functionId=personinfoBusiness,script-path=https://raw.githubusercontent.com/linuszlx/JS/main/JD/JD-Optimize/JD_PersonPage.js, requires-body=true
+JD发现 = type=http-response,pattern=^https?:\/\/api\.m\.jd\.com\/client\.action\?functionId=discFollowEnterMainPage,script-path=https://raw.githubusercontent.com/linuszlx/JS/main/JD/JD-Optimize/JD_FollowPage.js, requires-body=true
+JD DNS = type=http-response,pattern=^https?:\/\/api\.m\.jd\.com\/client\.action\?functionId=basicConfig,script-path=https://raw.githubusercontent.com/linuszlx/JS/main/JD/JD-Optimize/JD_DNS.js, requires-body=true
 
 [MITM]
 hostname = %APPEND% api.m.jd.com
