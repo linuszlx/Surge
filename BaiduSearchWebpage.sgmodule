@@ -3,8 +3,6 @@
 #!openUrl = 
 #!author = Keywos
 #!category=去广告
-#!homepage = https://gitlab.com/lodepuly/vpn_tool/-/tree/master/Tool/Loon/Plugin
-#!icon = https://raw.githubusercontent.com/linuszlx/Loon/main/Logo/Baidu.png
 #!date = 2023-09-12 20:30:28
 
 
@@ -12,5 +10,5 @@
 hostname = %APPEND% m.baidu.com
 
 [Script]
-移除百度搜索首页信息流广告 = type=http-response,pattern=^https?:\/\/(www|m)\.baidu\.com\/?($|\?from=\w{8,9}),requires-body=1,script-path=https://raw.githubusercontent.com/linuszlx/JS/main/BaiduSearch/BaiduSearchHomePage_remove_ads.js
+移除百度搜索首页信息流广告 = type=http-response,pattern=^https?:\/\/(www|m)\.baidu\.com\/?($|\?from=\w{8,9}),script-path=https://raw.githubusercontent.com/linuszlx/JS/main/BaiduSearch/BaiduSearchHomePage_remove_ads.js, requires-body=true
 
