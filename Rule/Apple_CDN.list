@@ -1,3 +1,10 @@
+#########################################
+# Sukka's Ruleset - Apple CDN
+# Last Updated: 2024-08-27T00:02:56.131Z
+# Size: 173
+# License: AGPL 3.0
+# Homepage: https://ruleset.skk.moe
+# GitHub: https://github.com/SukkaW/Surge
 DOMAIN-SUFFIX,a1.mzstatic.com
 DOMAIN-SUFFIX,a2.mzstatic.com
 DOMAIN-SUFFIX,a3.mzstatic.com
