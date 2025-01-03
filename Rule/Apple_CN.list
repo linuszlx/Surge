@@ -1,3 +1,10 @@
+#########################################
+# Sukka's Ruleset - Apple China Special Domains
+# Last Updated: 2024-10-15T10:37:07.456Z
+# Size: 9
+# License: AGPL 3.0
+# Homepage: https://ruleset.skk.moe
+# GitHub: https://github.com/SukkaW/Surge
 DOMAIN-SUFFIX,apple.com.cn
 DOMAIN-SUFFIX,icloud.com.cn
 DOMAIN-SUFFIX,cn.apple.com
