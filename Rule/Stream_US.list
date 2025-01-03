@@ -1,0 +1,63 @@
+#########################################
+# Sukka's Ruleset - Stream Services: North America
+# Last Updated: 2024-11-14T14:40:56.599Z
+# Size: 46
+# License: AGPL 3.0
+# Homepage: https://ruleset.skk.moe
+# GitHub: https://github.com/SukkaW/Surge
+#
+# - Fox Now
+# - Fox+
+# - Hulu
+# - Hulu Japan
+# - Vudu
+# - SHOWTIME
+# - encoreTVB
+# - Discovery+
+# - Paramount+
+# - Peacock
+DOMAIN-SUFFIX,discoveryplus.in
+DOMAIN-SUFFIX,hulu.jp
+DOMAIN-SUFFIX,happyon.jp
+DOMAIN-SUFFIX,hjholdings.jp
+DOMAIN-SUFFIX,hulu.tv
+DOMAIN-SUFFIX,pluto.tv
+DOMAIN-SUFFIX,hulu.us
+DOMAIN-SUFFIX,fox.com
+DOMAIN-SUFFIX,sho.com
+DOMAIN-SUFFIX,cbsi.com
+DOMAIN-SUFFIX,hulu.com
+DOMAIN-SUFFIX,vudu.com
+DOMAIN-SUFFIX,dnitv.com
+DOMAIN-SUFFIX,foxdcg.com
+DOMAIN-SUFFIX,huluim.com
+DOMAIN-SUFFIX,uplynk.com
+DOMAIN-SUFFIX,foxplus.com
+DOMAIN-SUFFIX,showtime.com
+DOMAIN-SUFFIX,cbsivideo.com
+DOMAIN-SUFFIX,disco-api.com
+DOMAIN-SUFFIX,encoretvb.com
+DOMAIN-SUFFIX,peacocktv.com
+DOMAIN-SUFFIX,cbsaavideo.com
+DOMAIN-SUFFIX,hulustream.com
+DOMAIN-SUFFIX,theplatform.com
+DOMAIN-SUFFIX,discoveryplus.com
+DOMAIN-SUFFIX,paramountplus.com
+DOMAIN-SUFFIX,discoveryplus.co.uk
+DOMAIN,bcbolt446c5271-a.akamaihd.net
+DOMAIN,dashasiafox.akamaized.net
+DOMAIN,staticasiafox.akamaized.net
+DOMAIN,cbsservice.aws.syncbak.com
+DOMAIN,cbsplaylistserver.aws.syncbak.com
+DOMAIN,edge.api.brightcove.com
+DOMAIN,cbsi.live.ott.irdeto.com
+USER-AGENT,FOX NOW*
+USER-AGENT,FOXPlus*
+USER-AGENT,Hulu*
+USER-AGENT,encoreTVB*
+USER-AGENT,TVer-Release*
+USER-AGENT,DPlus*
+USER-AGENT,discovery+*
+USER-AGENT,PPlus*
+USER-AGENT,PeacockMobile*
+PROCESS-NAME,com.hulu.plus
