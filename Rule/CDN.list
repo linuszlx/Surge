@@ -1,0 +1,53 @@
+#########################################
+# Sukka's Ruleset - CDN Domains
+# Last Updated: 2025-01-02T13:01:56.768Z
+# Size: 46
+# License: AGPL 3.0
+# Homepage: https://ruleset.skk.moe
+# GitHub: https://github.com/SukkaW/Surge
+DOMAIN,this_ruleset_is_made_by_sukkaw.ruleset.skk.moe
+DOMAIN,cdn-msp.jmcomic.me
+DOMAIN,cdn-msp.jmcomic-zzz.one
+DOMAIN,cdn-msp.18comic.vip
+DOMAIN-KEYWORD,-files.gitbook.io
+DOMAIN-KEYWORD,vod-adaptive.akamaized.net
+DOMAIN-KEYWORD,web-assets.zendesk
+DOMAIN-KEYWORD,-res.cloudinary.com
+DOMAIN-KEYWORD,dsn.algolia.net
+DOMAIN-KEYWORD,cdnstatic.
+DOMAIN-WILDCARD,appcenter-filemanagement-*.cloudapp.net
+DOMAIN-WILDCARD,proxy-*.dailymotion.com
+DOMAIN-WILDCARD,static*.tgstat.ru
+DOMAIN-WILDCARD,ocsp.*.amazontrust.com
+DOMAIN-WILDCARD,s3.*.wasabisys.com
+DOMAIN-WILDCARD,i?.nhentai.net
+DOMAIN-WILDCARD,t?.nhentai.net
+DOMAIN-WILDCARD,cdn?-thumbs.pornhost.com
+DOMAIN-WILDCARD,cdn?-dl.pornhost.com
+DOMAIN-WILDCARD,cdn-msp?.18comic.vip
+DOMAIN-WILDCARD,cdn-msp?.jmcomic.me
+DOMAIN-WILDCARD,cdn-msp?.jmcomic-zzz.one
+DOMAIN-WILDCARD,static-??-cdn.eporner.com
+DOMAIN-WILDCARD,file?.mikuclub.fun
+DOMAIN-WILDCARD,cdn?.mikuclub.fun
+DOMAIN-WILDCARD,cdns.*.gigya.com
+DOMAIN-WILDCARD,sdk.*.braze.eu
+DOMAIN-WILDCARD,video-thumbnail2.fc2.com
+DOMAIN-WILDCARD,video?-thumbnail?.fc2.com
+DOMAIN-WILDCARD,video-thumbnail2.liaoningmovie.net
+DOMAIN-WILDCARD,video?-thumbnail?.liaoningmovie.net
+DOMAIN-WILDCARD,vip-videoprem*-thumbnail?.fc2.com
+DOMAIN-WILDCARD,blog-imgs-??.2nt.com
+DOMAIN-WILDCARD,blog-imgs-??.fc2.com
+DOMAIN-WILDCARD,rr?---??.ouo.si
+DOMAIN-WILDCARD,*.ffzy-online?.com
+DOMAIN-WILDCARD,*.ffzy-play?.com
+DOMAIN-WILDCARD,*.kuaikan-cdn?.com
+DOMAIN-WILDCARD,*.lz-cdn?.com
+DOMAIN-WILDCARD,*.lz-cdn??.com
+DOMAIN-WILDCARD,*.fsvod?.com
+DOMAIN-WILDCARD,image*.cloudokyo.cloud
+DOMAIN-WILDCARD,video*.cloudokyo.cloud
+DOMAIN-WILDCARD,v.rn???.xyz
+URL-REGEX,^http://www\.microsoft\.com/pki/
+URL-REGEX,^http://www\.microsoft\.com/pkiops/
