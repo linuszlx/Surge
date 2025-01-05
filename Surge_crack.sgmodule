@@ -12,5 +12,6 @@
 
 Noted = type=http-response, pattern=^https:\/\/subscription-api\.notedapp\.io\/api\/verifyReceipt, script-path=https://raw.githubusercontent.com/89996462/Quantumult-X/main/ycdz/noteb.js, requires-body=true, timeout=10
 
+Notability = type=http-response,pattern=^https?:\/\/notability\.com\/(global|subscriptions),requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/chxm1023/Rewrite/main/notability.js
 [MITM]
-hostname = %APPEND% note.youdao.com, p.du.163.com, lanfanapp.com, subscription-api.notedapp.io
+hostname = %APPEND% note.youdao.com, p.du.163.com, lanfanapp.com, subscription-api.notedapp.io, notability.com
