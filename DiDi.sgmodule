@@ -25,7 +25,6 @@ AND,((IP-ASN,63646,no-resolve),(DEST-PORT,25641),(PROTOCOL,TCP)),REJECT
 [Script]
 滴滴去广告 = type=http-response,requires-body=1,max-size=0,pattern=^https?:\/\/conf\.diditaxi\.com\.cn\/dynamic\/,script-path=https://raw.githubusercontent.com/linuszlx/JS/main/DiDi/dynamic.js
 滴滴下栏优化 = type=http-response,requires-body=1,max-size=0,pattern=^https?:\/\/conf\.diditaxi\.com\.cn\/homepage\/v1\/core\?,script-path=https://raw.githubusercontent.com/linuszlx/JS/main/DiDi/page.js
-滴滴去广告 = type=http-response,requires-body=1,max-size=0,pattern=^https?:\/\/conf\.diditaxi\.com\.cn\/homepage\/v1\/other,script-path=https://raw.githubusercontent.com/linuszlx/JS/main/DiDi/dynamic.js
 滴滴去广告 = type=http-response,requires-body=1,max-size=0,pattern=^https?:\/\/res\.xiaojukeji\.com\/resapi\/activity\/mget\?,script-path=https://raw.githubusercontent.com/linuszlx/JS/main/DiDi/dynamic.js
 滴滴去广告 = type=http-response,requires-body=1,max-size=0,pattern=^https?:\/\/conf\.diditaxi\.com\.cn\/nav\/widget\?,script-path=https://raw.githubusercontent.com/linuszlx/JS/main/DiDi/dynamic.js
 滴滴去广告 = type=http-response,requires-body=1,max-size=0,pattern=^https?:\/\/guard\.sec\.xiaojukeji\.com\/api\/guard\/psg\/v2\/getShieldStatus,script-path=https://raw.githubusercontent.com/linuszlx/JS/main/DiDi/dynamic.js
