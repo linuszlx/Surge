@@ -591,17 +591,6 @@ http-response ^https?:\/\/mp\.weixin\.qq\.com\/mp\/getappmsgad$ body-replace /ad
 ^https?:\/\/m1\.ad\.10010\.com\/noticeMag\/images\/imageUpload\/2\d{3} data-type=tiny-gif data=""
 ^https?:\/\/res\.mall\.10010\.cn\/mall\/common\/js\/fa\.js?referer= data-type=tiny-gif data=""
 
-# > 字节跳动
-# hostname = *.pstatp.com, amemv.com, musical.com, snssdk.com, tiktokv.com, dsp.toutiao.com
-;^https?:\/\/.+\.pstatp\.com\/img\/ad data-type=text data="{}" status-code=200
-^https?:\/\/.+\.(amemv|musical|snssdk|tiktokv)\.com\/(api|motor)\/ad\/ data-type=text data="{}" status-code=200
-^https?:\/\/.+\.snssdk\.com\/motor\/operation\/activity\/display\/config\/V2\/ data-type=text data="{}" status-code=200
-^https?:\/\/dsp\.toutiao\.com\/api\/xunfei\/ads\/ data-type=text data="{}" status-code=200
-^https?:\/\/[\w-]+\.amemv\.com\/aweme\/v\d\/ad\/ data="{}" status-code=200
-^https?:\/\/[\w-]+\.snssdk\.com\/.+_ad\/ data="{}" status-code=200
-^https?:\/\/.+\.amemv\.com\/.+app_log data-type=tiny-gif data=""
-^https?:\/\/.+\.amemv\.com\/.+report data-type=tiny-gif data=""
-^https?:\/\/.+\.amemv\.com\/.+stats data-type=tiny-gif data=""
 # >>>>>>>>>>>>>>> ✅ # ✅ <<<<<<<<<<<<<<
 
 [Script]
