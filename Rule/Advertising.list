@@ -10,7 +10,7 @@
 # > 广告联盟
 DOMAIN-SUFFIX, miaozhen.com
 DOMAIN-KEYWORD, -ad-sign.byteimg.com
-DOMAIN-KEYWORD, -tos.pstatp.com
+#DOMAIN-KEYWORD, -tos.pstatp.com
 DOMAIN-KEYWORD, asiad.byteactivity
 DOMAIN-KEYWORD, pangolin-sdk-toutiao
 DOMAIN-KEYWORD, pglstatp-toutiao
