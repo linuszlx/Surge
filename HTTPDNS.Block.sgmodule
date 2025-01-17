@@ -15,7 +15,7 @@ AND,((DOMAIN-KEYWORD,api100-normal-quic-,extended-matching),(DOMAIN-SUFFIX,amemv
 AND,((DOMAIN-KEYWORD,api100-normal-quic-aweme-,extended-matching),(DOMAIN-SUFFIX,amemv.com,extended-matching)),REJECT,pre-matching
 AND,((DOMAIN-KEYWORD,api100-quic-core-,extended-matching),(DOMAIN-SUFFIX,amemv.com,extended-matching)),REJECT,pre-matching
 AND,((DOMAIN-KEYWORD,api100-quic-normal-,extended-matching),(DOMAIN-SUFFIX,amemv.com,extended-matching)),REJECT,pre-matching
-AND,((DOMAIN-KEYWORD,frontier-aweme-,extended-matching),(AND,((OR,((DOMAIN-KEYWORD,-ipa.,extended-matching),(DOMAIN-KEYWORD,-ipainner.,extended-matching),(DOMAIN-KEYWORD,-origin.,extended-matching),(DOMAIN-KEYWORD,-ipainner-,extended-matching))),(OR,((DOMAIN-SUFFIX,snssdk.com,extended-matching),(DOMAIN-SUFFIX,amemv.com,extended-matching)))))),REJECT,pre-matching
+#AND,((DOMAIN-KEYWORD,frontier-aweme-,extended-matching),(AND,((OR,((DOMAIN-KEYWORD,-ipa.,extended-matching),(DOMAIN-KEYWORD,-ipainner.,extended-matching),(DOMAIN-KEYWORD,-origin.,extended-matching),(DOMAIN-KEYWORD,-ipainner-,extended-matching))),(OR,((DOMAIN-SUFFIX,snssdk.com,extended-matching),(DOMAIN-SUFFIX,amemv.com,extended-matching)))))),REJECT,pre-matching
 AND,((DOMAIN-KEYWORD,frontier100-aweme,extended-matching),(DOMAIN-SUFFIX,amemv.com,extended-matching)),REJECT,pre-matching
 AND,((DOMAIN-KEYWORD,ma5-normal-,extended-matching),(DOMAIN-SUFFIX,zijieapi.com,extended-matching)),REJECT,pre-matching
 AND,((DOMAIN-KEYWORD,polaris5-normal-,extended-matching),(DOMAIN-SUFFIX,zijieapi.com,extended-matching)),REJECT,pre-matching
