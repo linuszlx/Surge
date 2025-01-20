@@ -5,7 +5,7 @@
 
 
 [MITM]
-hostname = %APPEND% ad.12306.cn, mobile.12306.cn, gateway.36kr.com, aes.acfun.cn, api-new.app.acfun.cn, res.pizzahut.com.cn, api.caijingmobile.com, ump.sz.creditcard.ecitic.com, app.ceair.com, api.douban.com, daoyu.sdo.com, rtbapi.douyucdn.cn, staticlive.douyucdn.cn, capi.douyucdn.cn, douyucdn.cn, dxy.com, 47.100.65.202, www.flyert.com, www.flyert.com.cn, static.95508.com, static.95508.com, mps.95508.com, fuwu.nhsa.gov.cn, kano.guahao.cn, app.wy.guahao.com, gugongmini.dpm.org.cn, api-one-wscn.awtmt.com, api.wallstreetcn.com, cdn.wup.huya.com, business.msstatic.com, cdnfile1.msstatic.com, live-ads.huya.com, appapi.huazhu.com, games.mobileapi.hupu.com, du.hupucdn.com, i*.hoopchina.com.cn, goblin.hupu.com, api-ad-product.huxiu.com, umerp.umetrip.com, umerp.umetrip.com.cn, home.umetrip.com, bkclient.umetrip.com.cn, discardrp.umetrip.com, startup.umetrip.com, oss.umetrip.com, img.jiemian.com, abplatform.yumchina.com,res.kfc.com.cn, api-access.pangolin-sdk-toutiao.com, is.snssdk.com, mi.gdt.qq.com, apapia-sqk.manmanbuy.com, p0.pipi.cn, ox.da.mgtv.com, capi.mwee.cn, api.mcd.cn, v3.wufazhuce.com, app.api.d3yuiw4.com, api.21ec74.com, image.spdbccc.com.cn, adpai.thepaper.cn, app.thepaper.cn, fmapp.chinafamilymart.com.cn, gql.reddit.com, gql-fed.reddit.com, capi.lkcoffee.com, ecapi.lkcoffee.com, m.lkcoffee.com, img*.lkcoffee.com, ccsp-egmas.sf-express.com, ucmp.sf-express.com, mcs-mimp-web.sf-express.com, ucmp.sf-express.com, mapi.sfbest.com, ios.sspai.com, api-sams.walmartmobile.cn, testflight.apple.com, wx.17u.cn, mkt-gateway.tuhu.cn, guide-acs.m.taobao.com, poplayer.template.alibaba.com, vv.video.qq.com, btrace.qq.com, api2.helper.qq.com, *.beacon.qq.com, mi.gdt.qq.com, lives.l.qq.com, imgcache.qq.com, mtteve.beacon.qq.com, vv.video.qq.com, ssl.kohsocialapp.qq.com, qt.qq.com, 3gimg.qq.com, y.gtimg.cn, splashqqlive.gtimg.com, qzonestyle.gtimg.cn, discuz.gtimg.cn, bla.gtimg.com, mmgr.gtimg.com, bk.bingo.qq.com, mp.weixin.qq.com, easyreadfs.nosdn.127.net, p.du.163.com, api.m.mi.com, api.jr.mi.com, shopapi.io.mi.com, api-miprint.hannto.com, api.indeedpower.com, home.mi.com, venus.yhd.com, xyst.yuanfudao.com, api-cslp-emt.amazon.cn, webappcfg.paas.cmbchina.com, mbasecc.bas.cmbchina.com, mbasecc.bcs.cmbchina.com, intellicc.bcs.cmbchina.com, mbs.boc.cn, mlife.jf365.boc.cn, wap.bank.ecitic.com, imcs.citicbank.com, m.client.10010.com, m1.ad.10010.com, res.mall.10010.cn
+hostname = %APPEND% ad.12306.cn, mobile.12306.cn, gateway.36kr.com, aes.acfun.cn, api-new.app.acfun.cn, api.caijingmobile.com, ump.sz.creditcard.ecitic.com, app.ceair.com, api.douban.com, daoyu.sdo.com, rtbapi.douyucdn.cn, staticlive.douyucdn.cn, capi.douyucdn.cn, douyucdn.cn, dxy.com, www.flyert.com.cn, static.95508.com, static.95508.com, mps.95508.com, kano.guahao.cn, app.wy.guahao.com, gugongmini.dpm.org.cn, api-one-wscn.awtmt.com, api.wallstreetcn.com, cdn.wup.huya.com, business.msstatic.com, cdnfile1.msstatic.com, live-ads.huya.com, appapi.huazhu.com, games.mobileapi.hupu.com, du.hupucdn.com, i*.hoopchina.com.cn, goblin.hupu.com, api-ad-product.huxiu.com, bkclient.umetrip.com.cn, discardrp.umetrip.com, startup.umetrip.com, oss.umetrip.com, img.jiemian.com, abplatform.yumchina.com,res.kfc.com.cn, api-access.pangolin-sdk-toutiao.com, is.snssdk.com, mi.gdt.qq.com, apapia-sqk.manmanbuy.com, p0.pipi.cn, ox.da.mgtv.com, api.mcd.cn, v3.wufazhuce.com, app.api.d3yuiw4.com, api.21ec74.com, image.spdbccc.com.cn, adpai.thepaper.cn, app.thepaper.cn, gql.reddit.com, gql-fed.reddit.com, capi.lkcoffee.com, ecapi.lkcoffee.com, m.lkcoffee.com, img*.lkcoffee.com, mcs-mimp-web.sf-express.com, ucmp.sf-express.com, ios.sspai.com, api-sams.walmartmobile.cn, testflight.apple.com, mkt-gateway.tuhu.cn, guide-acs.m.taobao.com, poplayer.template.alibaba.com, vv.video.qq.com, btrace.qq.com, api2.helper.qq.com, *.beacon.qq.com, mi.gdt.qq.com, lives.l.qq.com, imgcache.qq.com, mtteve.beacon.qq.com, vv.video.qq.com, ssl.kohsocialapp.qq.com, qt.qq.com, 3gimg.qq.com, y.gtimg.cn, splashqqlive.gtimg.com, qzonestyle.gtimg.cn, discuz.gtimg.cn, bla.gtimg.com, mmgr.gtimg.com, bk.bingo.qq.com, mp.weixin.qq.com, easyreadfs.nosdn.127.net, p.du.163.com, api.m.mi.com, api.jr.mi.com, shopapi.io.mi.com, api-miprint.hannto.com, api.indeedpower.com, home.mi.com, venus.yhd.com, xyst.yuanfudao.com, api-cslp-emt.amazon.cn, webappcfg.paas.cmbchina.com, mbasecc.bas.cmbchina.com, mbasecc.bcs.cmbchina.com, intellicc.bcs.cmbchina.com, mbs.boc.cn, mlife.jf365.boc.cn, wap.bank.ecitic.com, imcs.citicbank.com, m.client.10010.com, m1.ad.10010.com, res.mall.10010.cn
 
 [Rule]
 DOMAIN-SUFFIX,wxs.qq.com,REJECT,extended-matching,pre-matching
@@ -33,10 +33,6 @@ DOMAIN-SUFFIX,wxs.qq.com,REJECT,extended-matching,pre-matching
 ^https?:\/\/api-new\.app\.acfun\.cn\/rest\/app\/flash\/screen\/ - reject
 
 # >>>>>>>>>>>>>>> ✅ B ✅ <<<<<<<<<<<<<<
-# > 必胜客
-# hostname = res.pizzahut.com.cn
-^https?:\/\/res\.pizzahut\.com\.cn\/CRM\/phad\/apphome\/apphome - reject
-
 # >>>>>>>>>>>>>>> ✅ C ✅ <<<<<<<<<<<<<<
 # > 财经杂志
 # hostname = api.caijingmobile.com
@@ -70,11 +66,9 @@ DOMAIN-SUFFIX,wxs.qq.com,REJECT,extended-matching,pre-matching
 
 # >>>>>>>>>>>>>>> ✅ F ✅ <<<<<<<<<<<<<<
 # > 飞客茶馆
-# hostname = 47.100.65.202, www.flyert.com, www.flyert.com.cn
+# hostname = www.flyert.com.cn
 # 全局广告配置
 ^https:\/\/www\.flyert\.com\.cn\/api\/mobile\/index\.php\?module=advis - reject
-^https?:\/\/47\.100\.65\.202\/source\/plugin\/mobile\/mobile\.php\?module=advis  -reject
-^https?:\/\/www\.flyert\.com\/source\/plugin\/mobile\/mobile\.php\?module=advis.* - reject
 ^https?:\/\/www\.flyert\.com\.cn\/source\/plugin\/mobile\/mobile\.php\?module=advis.* - reject
 # 我的页面 - 弹窗
 ^https:\/\/www\.flyert\.com\.cn\/api\/mobile\/index\.php\?module=vip_coupon - reject
@@ -83,18 +77,10 @@ DOMAIN-SUFFIX,wxs.qq.com,REJECT,extended-matching,pre-matching
 # 发帖 - 横幅广告
 ^https:\/\/www\.flyert\.com\.cn\/api\/mobile\/index\.php\?module=getdata - reject
 # 软件更新
-^https?:\/\/47\.100\.65\.202\/source\/plugin\/mobile\/mobile\.php\?module=basicdata&type=appinfo - reject
-^https?:\/\/www\.flyert\.com\/source\/plugin\/mobile\/mobile\.php\?module=basicdata&type=appinfo - reject
 ^https?:\/\/www\.flyert\.com\.cn\/source\/plugin\/mobile\/mobile\.php\?module=basicdata&type=appinfo - reject
-^https?:\/\/www\.flyert\.com\/api\/mobile\/index\.php\?module=basicdata&type=appinfo - reject
 ^https?:\/\/www\.flyert\.com\.cn\/api\/mobile\/source\/plugin\/mobile\/mobile\.php\?module=basicdata&type=appinfo - reject
 
 # >>>>>>>>>>>>>>> ✅ G ✅ <<<<<<<<<<<<<<
-# > 国家医保服务平台 开屏广告
-# hostname = fuwu.nhsa.gov.cn
-^https?:\/\/fuwu\.nhsa\.gov\.cn\/ebus\/fuwu\/api\/base\/cms\/iep\/web\/cms\/hmpgcfg\/queryAppHmpgCfgByApp - reject
-
-
 # >>>>>>>>>>>>>>> ✅ H ✅ <<<<<<<<<<<<<<
 # > 华尔街见闻
 # hostname = api-one-wscn.awtmt.com, api.wallstreetcn.com
@@ -122,11 +108,9 @@ DOMAIN-SUFFIX,wxs.qq.com,REJECT,extended-matching,pre-matching
 ^https?:\/\/api-ad-product\.huxiu\.com\/Api\/Product\/SDK\/Advert\/Query\/queryAdvertListInfo - reject
 
 # > 航旅纵横
-# > hostname = umerp.umetrip.com, umerp.umetrip.com.cn, home.umetrip.com, bkclient.umetrip.com.cn, discardrp.umetrip.com, startup.umetrip.com, oss.umetrip.com
+# > hostname = bkclient.umetrip.com.cn, discardrp.umetrip.com, startup.umetrip.com
 ^https?:\/\/(discardrp|startup)\.umetrip\.com\/gateway\/api\/umetrip\/native - reject
-#^https?:\/\/umerp\.umetrip\.com\/gateway\/api\/umetrip\/native - reject
 ^https?:\/\/bkclient\.umetrip\.com\.cn\/gateway\/api\/umetrip\/native - reject
-#^https?:\/\/home\.umetrip\.com\/gateway\/api\/umetrip\/native - reject
 
 # >>>>>>>>>>>>>>> ✅ I ✅ <<<<<<<<<<<<<<
 # > 界面新闻
@@ -142,11 +126,6 @@ DOMAIN-SUFFIX,wxs.qq.com,REJECT,extended-matching,pre-matching
 # > 芒果TV
 # hostname = ox.da.mgtv.com
 ^https?:\/\/ox\.da\.mgtv\.com\/json\/app\/boot - reject
-
-# > 美味不用等
-# hostname = capi.mwee.cn
-^https?:\/\/capi\.mwee\.cn\/app-api\/V\d{2}\/app\/(ad|getstartad) - reject
-
 # >>>>>>>>>>>>>>> ✅ N ✅ <<<<<<<<<<<<<<
 # >>>>>>>>>>>>>>> ✅ O ✅ <<<<<<<<<<<<<<
 # > ONE
@@ -163,10 +142,6 @@ DOMAIN-SUFFIX,wxs.qq.com,REJECT,extended-matching,pre-matching
 ^https?:\/\/app\.thepaper\.cn\/clt\/course\/mine\/popularize - reject
 
 # >>>>>>>>>>>>>>> ✅ Q ✅ <<<<<<<<<<<<<<
-# > 全家便利店
-# hostname = fmapp.chinafamilymart.com.cn
-^https?:\/\/fmapp\.chinafamilymart\.com\.cn\/api\/app\/biz\/base\/appversion\/latest - reject
-
 # >>>>>>>>>>>>>>> ✅ R ✅ <<<<<<<<<<<<<<
 # > 瑞幸咖啡
 # hostname = capi.lkcoffee.com, ecapi.lkcoffee.com, m.lkcoffee.com, img*.lkcoffee.com
@@ -176,10 +151,6 @@ DOMAIN-SUFFIX,wxs.qq.com,REJECT,extended-matching,pre-matching
 ^https?:\/\/img0[1-9]{1}\.luckincoffeecdn\.com\/group\d/M00/[A-Z0-9]{2}/[A-Z0-9]{2}/[a-zA-Z0-9]{29}\.(jpg|jpeg)_\.webp - reject
 
 # >>>>>>>>>>>>>>> ✅ S ✅ <<<<<<<<<<<<<<
-# > 顺丰优选
-# hostname = mapi.sfbest.com
-^https?:\/\/mapi\.sfbest\.com\/brokerservice-server\/cms\/getPositionById.* - reject
-
 # > 少数派
 # hostname = ios.sspai.com
 https://ios.sspai.com/api/v3/recommend/page/get\?ad.*ios_home_modal - reject
@@ -189,12 +160,6 @@ https://ios.sspai.com/api/v3/recommend/page/get\?ad.*ios_home_modal - reject
 ^https?:\/\/api-sams\.walmartmobile\.cn\/api\/v\d\/sams\/sams-user\/(window\/getGoUpPlus|screen_promotion\/get) - reject
 
 # >>>>>>>>>>>>>>> ✅ T ✅ <<<<<<<<<<<<<<
-# > 同程旅行
-# hostname = wx.17u.cn
-# 开屏广告
-^https?:\/\/wx\.17u\.cn\/xcxhomeapi\/((aggregator\/index)|(home\/(screen|banner|converge)))$ - reject
-
-
 # > 腾讯广告
 # hostname = btrace.qq.com, api2.helper.qq.com, *.beacon.qq.com, mi.gdt.qq.com, lives.l.qq.com, imgcache.qq.com, mtteve.beacon.qq.com, vv.video.qq.com, ssl.kohsocialapp.qq.com, qt.qq.com, 3gimg.qq.com, y.gtimg.cn, splashqqlive.gtimg.com, qzonestyle.gtimg.cn, discuz.gtimg.cn, bla.gtimg.com, mmgr.gtimg.com, bk.bingo.qq.com
 ^https?:\/\/\w+\.beacon\.qq\.com - reject
@@ -335,7 +300,7 @@ http-response ^https?:\/\/mp\.weixin\.qq\.com\/mp\/getappmsgad$ body-replace /ad
 
 
 # > 航旅纵横
-# > hostname = umerp.umetrip.com, umerp.umetrip.com.cn, home.umetrip.com, bkclient.umetrip.com.cn, discardrp.umetrip.com, startup.umetrip.com, oss.umetrip.com
+# > hostname = bkclient.umetrip.com.cn, discardrp.umetrip.com, startup.umetrip.com, oss.umetrip.com
 ^https?:\/\/oss\.umetrip\.com\/fs\/advert\/polite data-type=text data="{}" status-code=200
 
 # >>>>>>>>>>>>>>> ✅ I ✅ <<<<<<<<<<<<<<
@@ -372,14 +337,6 @@ http-response ^https?:\/\/mp\.weixin\.qq\.com\/mp\/getappmsgad$ body-replace /ad
 ^https?:\/\/img0[1-9]{1}\.luckincoffeecdn\.com\/group\d/M00/[A-Z0-9]{2}/[A-Z0-9]{2}/[a-zA-Z0-9]{29}\.(jpg|jpeg)_\.webp data-type=text data="{}" status-code=200
 
 # >>>>>>>>>>>>>>> ✅ S ✅ <<<<<<<<<<<<<<
-# > 顺丰快递
-# hostname = ccsp-egmas.sf-express.com, ucmp.sf-express.com
-# APP净化 感谢【怎么肥事】分享
-^https?:\/\/ucmp\.sf-express\.com\/proxy\/esgcempcore\/memberGoods\/pointMallService\/goodsList data-type=text data="{}" status-code=200
-^https?:\/\/ccsp-egmas\.sf-express\.com\/cx-app-video\/video\/app\/video\/labelClusterList data-type=text data="{}" status-code=200
-^https?:\/\/ccsp-egmas\.sf-express\.com\/cx-app-base\/base\/app\/ad\/queryInfoFlow data-type=text data="{}" status-code=200
-^https?:\/\/ccsp-egmas\.sf-express\.com\/cx-app-base\/base\/app\/bms\/queryRecommend data-type=text data="{}" status-code=200
-
 # > 顺丰快递小程序
 # hostname = mcs-mimp-web.sf-express.com, ucmp.sf-express.com
 ^https?:\/\/mcs-mimp-web\.sf-express\.com\/mcs-mimp\/integralPlanet\/getCxAdvertiseList data-type=text data="{}" status-code=200
@@ -400,11 +357,6 @@ http-response ^https?:\/\/mp\.weixin\.qq\.com\/mp\/getappmsgad$ body-replace /ad
 ^https?:\/\/api-sams\.walmartmobile\.cn\/api\/v1\/sams\/configuration\/portal\/beUpdate data-type=text data="{}" status-code=200
 
 # >>>>>>>>>>>>>>> ✅ T ✅ <<<<<<<<<<<<<<
-# > 同程旅行
-# hostname = wx.17u.cn
-# 开屏广告
-^https?:\/\/wx\.17u\.cn\/crapi\/query\/getAdImgUrlByCode data-type=text data="{}" status-code=200
-
 # > 途虎养车小程序
 # hostname = mkt-gateway.tuhu.cn
 # 首页悬浮窗广告
@@ -535,17 +487,9 @@ http-response ^https?:\/\/mp\.weixin\.qq\.com\/mp\/getappmsgad$ body-replace /ad
 
 # >>>>>>>>>>>>>>> ✅ F ✅ <<<<<<<<<<<<<<
 # > 飞客茶馆
-# hostname = 47.100.65.202,www.flyert.com,www.flyert.com.cn
-飞客去目录广告 = type=http-response, pattern=^https?:\/\/47\.100\.65\.202\/source\/plugin\/mobile\/mobile\.php\?module=threadpost&.+?&page=1 , script-path=https://raw.githubusercontent.com/linuszlx/JS/main/FlyTea/FlyTea_AD.js,requires-body=true
-飞客去目录广告 = type=http-response, pattern=^https?:\/\/www\.flyert\.com\/api\/mobile\/source\/plugin\/mobile\/mobile\.php\?module=threadpost&.+?&page=1 , script-path=https://raw.githubusercontent.com/linuszlx/JS/main/FlyTea/FlyTea_AS.js,requires-body=true
+# hostname = www.flyert.com.cn
 飞客去目录广告 = type=http-response, pattern=^https?:\/\/www\.flyert\.com\.cn\/api\/mobile\/source\/plugin\/mobile\/mobile\.php\?module=threadpost&.+?&page=1 , script-path=https://raw.githubusercontent.com/linuszlx/JS/main/FlyTea/FlyTea_AS.js,requires-body=true
-飞客去目录广告 = type=http-response, pattern=^https?:\/\/www\.flyert\.com\/source\/plugin\/mobile\/mobile\.php\?module=threadpost&.+?&page=1 , script-path=https://raw.githubusercontent.com/linuszlx/JS/main/FlyTea/FlyTea_AS.js,requires-body=true
-
-飞客去帖子广告 = type=http-response, pattern=^https?:\/\/47\.100\.65\.202\/api\/mobile\/index\.php\?version=5&mobile=yes&module=basicdata&type=forumlist , script-path=https://raw.githubusercontent.com/linuszlx/JS/main/FlyTea/FlyTea_AS.js,requires-body=true
-飞客去帖子广告 = type=http-response, pattern=^https?:\/\/www\.flyert\.com\/api\/mobile\/index\.php\?version=5&mobile=yes&module=basicdata&type=forumlist , script-path=https://raw.githubusercontent.com/linuszlx/JS/main/FlyTea/FlyTea_AS.js,requires-body=true
 飞客去帖子广告 = type=http-response, pattern=^https?:\/\/www\.flyert\.com\.cn\/api\/mobile\/index\.php\?version=5&mobile=yes&module=basicdata&type=forumlist , script-path=https://raw.githubusercontent.com/linuszlx/JS/main/FlyTea/FlyTea_AS.js,requires-body=true
-飞客去帖子广告 = type=http-response, pattern=^https?:\/\/www\.flyert\.com\/api\/mobile\/index\.php\?version=5&mobile=yes&module=basicdata&type=forumlist , script-path=https://raw.githubusercontent.com/linuszlx/JS/main/FlyTea/FlyTea_AS.js,requires-body=true
-
 
 # >>>>>>>>>>>>>>> ✅ H ✅ <<<<<<<<<<<<<<
 # > 航旅纵横
