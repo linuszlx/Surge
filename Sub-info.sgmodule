@@ -11,5 +11,5 @@
 {{{NAME2}}}=script-name={{{NAME2}}},update-interval=3600
 
 [Script]
-{{{NAME1}}}=type=generic,timeout=10,script-path=https://raw.githubusercontent.com/Rabbit-Spec/Surge/Master/Module/Panel/Sub-info/Moore/Sub-info.js,script-update-interval=0,argument=url={{{URL}}}&reset_day={{{RESET_Day}}}&title={{{NAME}}}&icon={{{ICON}}}&color={{{COLOR}}}
-{{{NAME2}}}=type=generic,timeout=10,script-path=https://raw.githubusercontent.com/Rabbit-Spec/Surge/Master/Module/Panel/Sub-info/Moore/Sub-info.js,script-update-interval=0,argument=url={{{URL}}}&reset_day={{{RESET_Day}}}&title={{{NAME}}}&icon={{{ICON}}}&color={{{COLOR}}}
+{{{NAME1}}}=type=generic,timeout=10,script-path=https://raw.githubusercontent.com/Rabbit-Spec/Surge/Master/Module/Panel/Sub-info/Moore/Sub-info.js,script-update-interval=0,argument=url={{{URL1}}}&reset_day={{{RESET_Day1}}}&title={{{NAME1}}}&icon={{{ICON1}}}&color={{{COLOR1}}}
+{{{NAME2}}}=type=generic,timeout=10,script-path=https://raw.githubusercontent.com/Rabbit-Spec/Surge/Master/Module/Panel/Sub-info/Moore/Sub-info.js,script-update-interval=0,argument=url={{{URL2}}}&reset_day={{{RESET_Day2}}}&title={{{NAME2}}}&icon={{{ICON2}}}&color={{{COLOR2}}}
