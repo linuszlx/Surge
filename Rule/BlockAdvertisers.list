@@ -126,8 +126,6 @@ DOMAIN,adsmind.gdtimg.com
 DOMAIN,adsmind.ugdtimg.com
 DOMAIN,c2.gdt.qq.com
 DOMAIN,huatuocode.huatuo.qq.com
-DOMAIN,info4.video.qq.com
-DOMAIN,info6.video.qq.com
 DOMAIN,ios.bugly.qq.com
 DOMAIN,pro.bugly.qq.com
 DOMAIN,ios.video.mpush.qq.com
@@ -145,9 +143,6 @@ DOMAIN,t.gdt.qq.com
 DOMAIN,tmead.y.qq.com
 DOMAIN,tmeadbak.y.qq.com
 DOMAIN,tmeadcomm.y.qq.com
-DOMAIN,tpns.qq.com
-DOMAIN,v.gdt.qq.com
-DOMAIN,v2.gdt.qq.com
 DOMAIN,win.gdt.qq.com
 DOMAIN,wup.imtt.qq.com
 DOMAIN,tpstelemetry.tencent.com
@@ -157,7 +152,6 @@ DOMAIN-KEYWORD,trace.video.qq.com
 DOMAIN-SUFFIX,gdt.qq.com
 DOMAIN-SUFFIX,l.qq.com
 DOMAIN-SUFFIX,ugdtimg.com
-IP-CIDR,47.110.187.87/32,REJECT,no-resolve
 DOMAIN-SUFFIX,openinstall.io
 DOMAIN,b-gtc.getui.net
 DOMAIN,c-gtc.getui.net
