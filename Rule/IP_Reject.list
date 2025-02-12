@@ -142,3 +142,4 @@ IP-CIDR,222.186.61.96/31,no-resolve
 IP-CIDR,222.221.5.204/32,no-resolve
 IP-CIDR,222.221.5.252/31,no-resolve
 IP-CIDR,223.82.248.117/32,no-resolve
+IP-CIDR,0.0.0.0/24
