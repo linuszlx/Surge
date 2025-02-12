@@ -10,7 +10,6 @@ OR,((DOMAIN,pgdt.gtimg.cn), (AND,((USER-AGENT,live4iphoneRel*), (IP-CIDR,0.0.0.0
 URL-REGEX,^https:\/\/ossgw\.alicdn\.com\/creatives-assets/prod/feupload/user,REJECT
 
 [Script]
-TencentVideo = type = http-request,pattern=^https?:\/\/vv\.video\.qq\.com\/getvinfo,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/Yixuling/Rules_Scripts/master/Scripts/TencentVideo.js
 
 [MITM]
-hostname = %APPEND% iacc.qq.com,vv.video.qq.com, ossgw.alicdn.com
+hostname = %APPEND% ossgw.alicdn.com
