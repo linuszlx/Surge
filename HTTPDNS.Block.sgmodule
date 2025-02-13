@@ -193,7 +193,7 @@ DOMAIN,httpdns.zybang.com,REJECT,extended-matching,pre-matching
 
 [URL Rewrite]
 # 腾讯DNS
-#^https?:\/\/119\.29\.29\.29\/d - reject
+^https?:\/\/119\.29\.29\.29\/d - reject
 # 小川在线HTTPDNS
 ^https?:\/\/203\.107\.1\.1/\d+/ss - reject
 ^https?:\/\/203\.107\.1\.33/\d+/ss - reject
