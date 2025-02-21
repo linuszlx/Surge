@@ -137,6 +137,10 @@ DOMAIN,dns.jd.com,REJECT,extended-matching,pre-matching
 IP-CIDR,101.124.19.122/32,REJECT,no-resolve,pre-matching
 IP-CIDR6,2402:db40:5100:1011::5/128,REJECT,no-resolve,pre-matching
 IP-CIDR,103.224.222.208/32,REJECT,no-resolve,pre-matching
+# 腾讯云
+IP-CIDR,119.29.29.98/32,REJECT,no-resolve,pre-matching
+IP-CIDR,119.29.29.99/32,REJECT,no-resolve,pre-matching
+URL-REGEX,"^http:\/\/182\.254\.116\.116\/d",REJECT,extended-matching
 # 字节跳动
 DOMAIN,httpdns.volcengineapi.com,REJECT,extended-matching,pre-matching
 DOMAIN,dig.bdurl.net,REJECT,extended-matching,pre-matching
