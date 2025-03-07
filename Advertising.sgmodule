@@ -78,7 +78,7 @@ DOMAIN-SUFFIX,wxs.qq.com,REJECT,extended-matching,pre-matching
 ^https:\/\/www\.flyert\.com\.cn\/api\/mobile\/index\.php\?module=getdata - reject
 # 软件更新
 ^https?:\/\/www\.flyert\.com\.cn\/source\/plugin\/mobile\/mobile\.php\?module=basicdata&type=appinfo - reject
-^https?:\/\/www\.flyert\.com\.cn\/api\/mobile\/source\/plugin\/mobile\/mobile\.php\?module=basicdata&type=appinfo - reject
+^https?:\/\/www\.flyert\.com\.cn\/api\/mobile\/index\.php\?module=basicdata&type=appinfo - reject
 
 # >>>>>>>>>>>>>>> ✅ G ✅ <<<<<<<<<<<<<<
 # >>>>>>>>>>>>>>> ✅ H ✅ <<<<<<<<<<<<<<
