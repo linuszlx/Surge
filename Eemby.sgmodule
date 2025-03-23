@@ -6,12 +6,10 @@
 
 
 [Header Rewrite]
-^https://cavps.eu.org  header-replace User-Agent Senplayer 5.1.3
-^http://50.114.55.29 User-Agent Senplayer 5.1.3
-^http://wmxz.567996.xyz User-Agent Senplayer 5.1.3
-^https://emby.pppp.us.kg User-Agent Senplayer 5.1.3
-^http://156.224.77.145 User-Agent Senplayer 5.1.3
-^https://emby-e-hk.pppp.us.kg User-Agent Senplayer 5.1.3
-^https://emby-e-jp.pppp.us.kg User-Agent Senplayer 5.1.3
-^http://156.229.165.55 User-Agent Senplayer 5.1.3
-^http://45.192.243.75 User-Agent Senplayer 5.1.3
+^https://cavps.eu.org  header-replace User-Agent Conflux/1.4.0 (app.svn.Conflux; build:1400; iOS 18.3.2) Alamofire/5.10.2
+^https://vfing.de User-Agent Conflux/1.4.0 (app.svn.Conflux; build:1400; iOS 18.3.2) Alamofire/5.10.2
+^http://50.114.55.29 User-Agent Conflux/1.4.0 (app.svn.Conflux; build:1400; iOS 18.3.2) Alamofire/5.10.2
+^http://43.143.248.18 User-Agent Conflux/1.4.0 (app.svn.Conflux; build:1400; iOS 18.3.2) Alamofire/5.10.2
+
+[MITM]
+hostname = %APPEND% cavps.eu.org, vfing.de
