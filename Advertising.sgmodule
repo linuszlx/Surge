@@ -451,6 +451,13 @@ http-response ^https?:\/\/mp\.weixin\.qq\.com\/mp\/getappmsgad$ body-replace /ad
 
 # >>>>>>>>>>>>>>> ✅ # ✅ <<<<<<<<<<<<<<
 
+[Body Rewrite]
+# >>>>>>>>>>>>>>> ✅ R ✅ <<<<<<<<<<<<<<
+# Reddit
+# hostname = gql.reddit.com, gql-fed.reddit.com
+http-response-jq ^https?:\/\/gql(-fed)?\.reddit\.com ' walk(   if type == "object" then      (if .isNsfw == true then .isNsfw = false else . end)     | (if .isNsfwMediaBlocked == true then .isNsfwMediaBlocked = false else . end)     | (if .isNsfwContentShown == false then .isNsfwContentShown = true else . end)      | (if (.commentsPageAds | type == "array") then (.commentsPageAds = []) else . end)      | (if ( (.node | type == "object") and (.node.cells | type == "array") and (.node.cells | any(.__typename? == "AdMetadataCell" or .isAdPost? == true)) ) then empty else . end)     | (if (.node | type == "object") and (.node.adPayload | type == "object") then empty else . end)     | (if .__typename == "AdPost" then empty else . end)   else .  end)'
+
+
 [Script]
 # >>>>>>>>>>>>>>> ✅ 1 ✅ <<<<<<<<<<<<<<
 # > 12306
@@ -479,11 +486,6 @@ http-response ^https?:\/\/mp\.weixin\.qq\.com\/mp\/getappmsgad$ body-replace /ad
 # KFC
 # hostname = abplatform.yumchina.com,res.kfc.com.cn
 KFC去广告= type=http-response, pattern=^https?:\/\/res\.kfc\.com\.cn\/CRM\/kfcad\/apphome6\/apphome , script-path=https://raw.githubusercontent.com/linuszlx/JS/main/KFC/KFC.js, requires-body = true
-# >>>>>>>>>>>>>>> ✅ R ✅ <<<<<<<<<<<<<<
-# Reddit
-# hostname = gql.reddit.com, gql-fed.reddit.com
-# 过滤推广 关NSFW提示 感谢【xream】分享
-Reddit过滤推广，关NSFW提示= type=http-response, pattern=^https?:\/\/gql(-fed)?\.reddit\.com ,script-path=https://raw.githubusercontent.com/linuszlx/JS/main/Reddit/Reddit.js, requires-body = true
 
 # >>>>>>>>>>>>>>> ✅ T ✅ <<<<<<<<<<<<<<
 # > TestFlight
