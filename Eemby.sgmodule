@@ -5,7 +5,7 @@
 
 [Header Rewrite]
 http-request ^https://cavps.eu.org header-replace User-Agent "Conflux/1.4.0 (app.svn.Conflux; build:1400; iOS 18.3.2) Alamofire/5.10.2"
-http-request ^https://vfing.de header-replace User-Agent "Conflux/1.4.0 (app.svn.Conflux; build:1400; iOS 18.3.2) Alamofire/5.10.2"
+http-request ^https://*.vfing.de header-replace User-Agent "Conflux/1.4.0 (app.svn.Conflux; build:1400; iOS 18.3.2) Alamofire/5.10.2"
 http-request ^http://50.114.55.29 header-replace User-Agent "Conflux/1.4.0 (app.svn.Conflux; build:1400; iOS 18.3.2) Alamofire/5.10.2"
 http-request http://wmxz.567996.xyz header-replace User-Agent "Conflux/1.4.0 (app.svn.Conflux; build:1400; iOS 18.3.2) Alamofire/5.10.2"
 http-request ^http://43.143.248.18 header-replace User-Agent "Conflux/1.4.0 (app.svn.Conflux; build:1400; iOS 18.3.2) Alamofire/5.10.2"
