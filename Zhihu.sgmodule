@@ -30,7 +30,9 @@ http-response-jq ^https:\/\/api\.zhihu\.com\/bazaar\/vip_tab\/header\? 'delpaths
 http-response ^https:\/\/api\.zhihu\.com\/search\/recommend_query\/v2\? "recommend_queries":\{.+\} "recommend_queries":{}
 
 [Map Local]
-^https:\/\/api\.zhihu\.com\/commercial_api\/ data-type=text data="{}" status-code=200
+^https?:\/\/api\.zhihu\.com\/commercial_api\/launch_v2\? data-type=text data="{}" status-code=200
+
+^https?:\/\/api\.zhihu\.com\/commercial_api\/real_time_launch_v2\? data-type=text data="{}" status-code=200
 
 ^https:\/\/api\.zhihu\.com\/content-distribution-core\/bubble\/common\/settings data-type=text data="{}" status-code=200
 
