@@ -30,7 +30,6 @@ http-response-jq ^https:\/\/api\.zhihu\.com\/bazaar\/vip_tab\/header\? 'delpaths
 http-response ^https:\/\/api\.zhihu\.com\/search\/recommend_query\/v2\? "recommend_queries":\{.+\} "recommend_queries":{}
 http-response-jq ^https:\/\/api\.zhihu\.com\/questions\/\d+(?:\/answers|\/feeds|\?include=) 'del(.ad_info, .data.ad_info?, .query_info) | if (.data | type) == "array" then .data |= map(select((.target?.answer_type?// "") | contains("paid") | not)) else . end'
 
-
 [Map Local]
 ^https?:\/\/api\.zhihu\.com\/commercial_api\/ data-type=text data="{}" status-code=200
 
