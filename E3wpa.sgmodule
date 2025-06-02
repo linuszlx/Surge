@@ -1,0 +1,73 @@
+#!name=Emby分流
+#!desc=Emby分流规则
+#!author=enen
+#!category=Emby
+
+[Rule]
+# > Emby
+# 蘑菇
+DOMAIN-SUFFIX,mm.vo0.site,DIRECT
+# 琴鸟
+DOMAIN-SUFFIX,cdn.lyrebirdemby.com,Media
+DOMAIN-SUFFIX,188.172.228.65,DIRECT
+# 墨云
+DOMAIN-SUFFIX,myg.mobaiemby.site,Media
+DOMAIN-SUFFIX,ds4837.mobaiemby.site,Emby
+DOMAIN-SUFFIX,emby-myg-de.vfing.de,Emby
+DOMAIN-SUFFIX,mygcn.204cloud.com,Emby
+# 月饼
+DOMAIN-SUFFIX,a.emby.my,Media
+DOMAIN-SUFFIX,b.emby.my,Media
+DOMAIN-SUFFIX,c.emby.my,Media
+DOMAIN-SUFFIX,d.emby.my,Media
+DOMAIN-SUFFIX,e.emby.my,Media
+DOMAIN-SUFFIX,cf.emby.my,Media
+DOMAIN-SUFFIX,uhebs.emby.my,Media
+DOMAIN-SUFFIX,h6d45.emby.my,Media
+DOMAIN-SUFFIX,g67e4.emby.my,Media
+DOMAIN-SUFFIX,637567.xyz,Media
+# 入机
+DOMAIN-SUFFIX,010004.xyz,Media
+# 起点站
+DOMAIN-SUFFIX,free.28.al,Media
+# 鸢尾
+DOMAIN-SUFFIX,iris.niceduck.lol,Media
+# CineTrail
+DOMAIN-SUFFIX,emby1.123456789.lol,Media
+# 桃子
+DOMAIN-SUFFIX,embymv.link,Media
+# Misty
+DOMAIN-SUFFIX,misty.cx,Media
+# 天南
+DOMAIN-SUFFIX,us.nanflix.net,Media
+# 临境
+DOMAIN-SUFFIX,liminalnet.com,Media
+# Youno
+DOMAIN-SUFFIX,plus.younoyes.com,Media
+# 萝卜
+DOMAIN-SUFFIX,785858.xyz,Media
+DOMAIN-SUFFIX,alist.fffwm.cn,Media
+# Plumber
+DOMAIN-SUFFIX,plumber.nezhasu.com,Media
+# SDL
+DOMAIN-SUFFIX,lite.saturdayvideo.top,Media
+# lily
+DOMAIN-SUFFIX,cf.lilyemby.my,Media
+DOMAIN-SUFFIX,hk.lilyemby.my,DIRECT
+DOMAIN-SUFFIX,jp.lilyemby.my,DIRECT
+DOMAIN-SUFFIX,cdn.lilyemby.my,DIRECT
+# Youno
+DOMAIN-SUFFIX,emby.younoyes.com,Media
+DOMAIN-SUFFIX,jp.younoyes.com,Media
+DOMAIN-SUFFIX,us.younoyes.com,Media
+# 飞跃彩虹
+DOMAIN-SUFFIX,7777777.buzz,Media
+DOMAIN-SUFFIX,193.122.114.13,Media
+DOMAIN-SUFFIX,581658.best,Media
+# 特卡
+DOMAIN-SUFFIX,emby.carlos.trade,Media
+DOMAIN-SUFFIX,cf.carlos.trade,Media
+DOMAIN-SUFFIX,us.carlos.trade,Media
+# 叶子
+DOMAIN-SUFFIX,yezi.my,Media
+DOMAIN-SUFFIX,yezi.697758.best,Media
