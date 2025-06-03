@@ -54,9 +54,9 @@ DOMAIN-SUFFIX,shouer.910427.xyz,Media
 DOMAIN-SUFFIX,lite.saturdayvideo.top,Media
 # lily
 DOMAIN-SUFFIX,cf.lilyemby.my,Media
-DOMAIN-SUFFIX,hk.lilyemby.my,DIRECT
-DOMAIN-SUFFIX,jp.lilyemby.my,DIRECT
-DOMAIN-SUFFIX,cdn.lilyemby.my,DIRECT
+DOMAIN-SUFFIX,hk.lilyemby.my,Emby
+DOMAIN-SUFFIX,jp.lilyemby.my,Emby
+DOMAIN-SUFFIX,cdn.lilyemby.my,Emby
 # Youno
 DOMAIN-SUFFIX,emby.younoyes.com,Media
 DOMAIN-SUFFIX,jp.younoyes.com,Media
