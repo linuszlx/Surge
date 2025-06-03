@@ -22,9 +22,9 @@ DOMAIN-SUFFIX,c.emby.my,Media
 DOMAIN-SUFFIX,d.emby.my,Media
 DOMAIN-SUFFIX,e.emby.my,Media
 DOMAIN-SUFFIX,cf.emby.my,Media
-DOMAIN-SUFFIX,uhebs.emby.my,Media
-DOMAIN-SUFFIX,h6d45.emby.my,Media
-DOMAIN-SUFFIX,g67e4.emby.my,Media
+DOMAIN-SUFFIX,uhebs.emby.my,Emby
+DOMAIN-SUFFIX,h6d45.emby.my,Emby
+DOMAIN-SUFFIX,g67e4.emby.my,Emby
 DOMAIN-SUFFIX,637567.xyz,Media
 # 入机
 DOMAIN-SUFFIX,010004.xyz,Media
