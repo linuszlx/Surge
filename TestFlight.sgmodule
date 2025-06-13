@@ -4,7 +4,7 @@
 #!author = VirgilClyne[https://github.com/VirgilClyne]
 #!homepage = https://NSRingo.github.io/guide/test-flight
 #!icon = https://developer.apple.com/assets/elements/icons/testflight/testflight-128x128.png
-#!category =  iRingo
+#!category = 增强模块
 #!date = 2024-12-24 08:53:51
 #!version = 3.4.0
 #!arguments = CountryCode:"US",MultiAccount:false,Universal:true,AlwaysShowInstall:false,MergeNotifications:false,LogLevel:"WARN"
