@@ -11,9 +11,9 @@ DOMAIN-SUFFIX,mm.vo0.site,DIRECT
 DOMAIN-SUFFIX,cdn.lyrebirdemby.com,Media
 DOMAIN-SUFFIX,188.172.228.65,DIRECT
 # 墨云
-DOMAIN-SUFFIX,myg.mobaiemby.site,Media
-DOMAIN-SUFFIX,ds4837.mobaiemby.site,Emby
-DOMAIN-SUFFIX,emby-myg-de.vfing.de,Emby
+DOMAIN-SUFFIX,m.mobaiemby.site,Media
+DOMAIN-SUFFIX,mcdn.mobaiemby.site,Emby
+DOMAIN-SUFFIX,mcn.mobaiemby.site,Emby
 DOMAIN-SUFFIX,mygcn.204cloud.com,Emby
 # 月饼
 DOMAIN-SUFFIX,a.emby.my,Media
