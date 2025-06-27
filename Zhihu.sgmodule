@@ -98,4 +98,4 @@ http-response ^https:\/\/api\.zhihu\.com\/search\/recommend_query\/v2\? "recomme
 拦截服务器推送配置 config all = type=http-response, pattern=^https:\/\/m-cloud\.zhihu\.com\/api\/cloud\/zhihu\/config\/all\?, script-path=https://raw.githubusercontent.com/linuszlx/JS/main/Zhihu/Zhihu.js, requires-body=true
 
 [MITM]
-hostname = %APPEND% link.zhihu.com, api.zhihu.com, m-cloud.zhihu.com, page-info.zhihu.com, zhuanlan.zhihu.com, appcloud2.zhihu.com
+hostname = %APPEND% link.zhihu.com, api.zhihu.com, m-cloud.zhihu.com, page-info.zhihu.com, zhuanlan.zhihu.com, appcloud2.zhihu.com, www.zhihu.com
