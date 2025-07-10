@@ -1,3 +1,9 @@
-DOMAIN-SUFFIX,api.twitter.com
-DOMAIN-SUFFIX,probe.twitter.com
-DOMAIN-SUFFIX,api-stream.twitter.com
+DOMAIN-KEYWORD,twitter
+DOMAIN-SUFFIX,periscope.tv
+DOMAIN-SUFFIX,pscp.tv
+DOMAIN-SUFFIX,t.co
+DOMAIN-SUFFIX,twitpic.com
+DOMAIN-SUFFIX,twitter.com
+DOMAIN-SUFFIX,twitter.jp
+DOMAIN-SUFFIX,vine.co
+DOMAIN-SUFFIX,x.com
