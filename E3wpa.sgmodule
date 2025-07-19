@@ -31,7 +31,8 @@ DOMAIN-SUFFIX,tanhuatv.site,Media
 # SNTP
 DOMAIN-SUFFIX,lite.cn2gias.uk,Media
 STAR
-DOMAIN-SUFFIX,staryuki.me,Media
+DOMAIN-SUFFIX,us3.staryuki.me,Media
+DOMAIN-SUFFIX,us4.staryuki.me,Media
 # 桃子
 DOMAIN-SUFFIX,embymv.link,Media
 # Misty
