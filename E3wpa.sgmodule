@@ -27,11 +27,11 @@ DOMAIN-SUFFIX,h6d45.emby.my,Emby
 DOMAIN-SUFFIX,g67e4.emby.my,Emby
 DOMAIN-SUFFIX,637567.xyz,Media
 # 探花
-DOMAIN-SUFFIX,tanhuatv.site,Emby
+DOMAIN-SUFFIX,tanhuatv.site,Media
 # SNTP
-DOMAIN-SUFFIX,lite.cn2gias.uk,Emby
+DOMAIN-SUFFIX,lite.cn2gias.uk,Media
 STAR
-DOMAIN-SUFFIX,staryuki.me,Emby
+DOMAIN-SUFFIX,staryuki.me,Media
 # 桃子
 DOMAIN-SUFFIX,embymv.link,Media
 # Misty
