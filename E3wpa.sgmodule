@@ -27,9 +27,9 @@ DOMAIN-SUFFIX,h6d45.emby.my,Emby
 DOMAIN-SUFFIX,g67e4.emby.my,Emby
 DOMAIN-SUFFIX,637567.xyz,Media
 # 探花
-DOMAIN-SUFFIX,tanhuatv.site,Media
+DOMAIN-SUFFIX,tanhuatv.site,Emby
 # SNTP
-DOMAIN-SUFFIX,lite.cn2gias.uk,Media
+DOMAIN-SUFFIX,lite.cn2gias.uk,Emby
 STAR
 DOMAIN-SUFFIX,staryuki.me,Media
 # 桃子
