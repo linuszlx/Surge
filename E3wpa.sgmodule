@@ -28,8 +28,10 @@ DOMAIN-SUFFIX,g67e4.emby.my,Emby
 DOMAIN-SUFFIX,637567.xyz,Media
 # 探花
 DOMAIN-SUFFIX,tanhuatv.site,Media
-# CineTrail
-DOMAIN-SUFFIX,emby1.123456789.lol,Media
+# SNTP
+DOMAIN-SUFFIX,lite.cn2gias.uk,Media
+STAR
+DOMAIN-SUFFIX,staryuki.me,Media
 # 桃子
 DOMAIN-SUFFIX,embymv.link,Media
 # Misty
