@@ -3,7 +3,7 @@
 #!category = 去广告
 
 [MITM]
-hostname = %APPEND% e*.caixin.com, g*.caixin.com, m*.caixin.com
+hostname = %APPEND% entities.caixin.com, gateway.caixin.com, gg.caixin.com, mappsv5.caixin.com, msgapi.caixin.com
 
 [Map Local]
 # 财新数据通
