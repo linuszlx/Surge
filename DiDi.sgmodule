@@ -13,20 +13,28 @@ AND,((IP-ASN,45090,no-resolve),(DEST-PORT,25641),(PROTOCOL,TCP)),REJECT
 AND,((IP-ASN,55990,no-resolve),(DEST-PORT,25641),(PROTOCOL,TCP)),REJECT
 AND,((IP-ASN,63646,no-resolve),(DEST-PORT,25641),(PROTOCOL,TCP)),REJECT
 
+[Body Rewrite]
+http-response-jq ^https:\/\/conf\.diditaxi\.com\.cn\/homepage\/v1\/core\? '.data.disorder_cards.bottom_nav_list.data |= map(select(.id == "home_page" or .id == "user_center")) | .data.order_cards.nav_list_card.data |= map(select(.nav_id == "dache_anycar" or .nav_id == "carmate" or .nav_id == "driverservice" or .nav_id == "zhandianbashi" or .nav_id == "yuancheng" or .nav_id == "pincheche" or .nav_id == "bike" or .nav_id == "special_ride" or .nav_id == "nav_more_v3"))'
+http-response-jq ^https:\/\/conf\.diditaxi\.com\.cn\/homepage\/v1\/other\/fast\? 'delpaths([["data","disorder_cards","communicate_card"]])'
+http-response-jq ^https:\/\/conf\.diditaxi\.com\.cn\/homepage\/v1\/other\/fast\? 'delpaths([["data","disorder_cards","not_login_bottom_bar"]])'
+http-response-jq ^https:\/\/conf\.diditaxi\.com\.cn\/homepage\/v1\/other\/fast\? 'delpaths([["data","disorder_cards","riding_code_card"]])'
+http-response-jq ^https:\/\/conf\.diditaxi\.com\.cn\/homepage\/v1\/other\/fast\? 'delpaths([["data","order_cards","car_owner_widget_card"]])'
+http-response-jq ^https:\/\/conf\.diditaxi\.com\.cn\/homepage\/v1\/other\/fast\? 'delpaths([["data","order_cards","marketing_card"]])'
+http-response-jq ^https:\/\/conf\.diditaxi\.com\.cn\/homepage\/v1\/other\/fast\? 'delpaths([["data","order_cards","super_banner_card"]])'
+http-response-jq ^https:\/\/conf\.diditaxi\.com\.cn\/homepage\/v1\/other\/fast\? 'delpaths([["data","disorder_cards","car_icon","data","icon_info_new_agreement"]])'
+http-response-jq ^https:\/\/res\.xiaojukeji\.com\/resapi\/activity\/mget\? 'delpaths([["data","mult_home_banner"]])'
+http-response-jq ^https:\/\/common\.diditaxi\.com\.cn\/common\/v5\/usercenter\/layout$ 'delpaths([["data","instances","center_marketing_card"]])'
+http-response-jq ^https:\/\/common\.diditaxi\.com\.cn\/common\/v5\/usercenter\/layout$ 'delpaths([["data","instances","center_widget_list"]])'
+http-response-jq ^https:\/\/common\.diditaxi\.com\.cn\/common\/v5\/usercenter\/layout$ '.data.instances.center_wallet_finance_card.data.view_info |= map(select(.title == "优惠卡券" or .title == "余额" or .title == "福利金"))'
+http-response-jq ^https:\/\/api\.udache\.com\/gulfstream\/porsche\/v1\/dache_homepage_layout\? 'delpaths([["data","instances","car_icon_01","data","icon_info_new_agreement"]])'
+
 [Map Local]
-^https:\/\/res\.xiaojukeji\.com\/resapi\/activity\/xpget data-type=text data="{}" status-code=200
-^https:\/\/ct\.xiaojukeji\.com\/agent\/v3\/feeds data-type=text data="{}" status-code=200
-^https:\/\/freight\.xiaojukeji\.com\/gateway data-type=text data="{}" status-code=200
 ^https:\/\/res\.xiaojukeji\.com\/resapi\/activity\/mget data-type=text data="{}" status-code=200
-^https:\/\/conf\.diditaxi\.com\.cn\/homepage\/v\d\/other\/fast data-type=text data="{}" status-code=200
+
+^https:\/\/lion\.didialift\.com\/broker\/\? data-type=text data="{}" status-code=200
+
+^https:\/\/conf\.diditaxi\.com\.cn\/homepage\/v1\/other\/slow\? data-type=text data="{}" status-code=200
+
+^https:\/\/ct\.xiaojukeji\.com\/agent\/v3\/feeds\? data-type=text data="{}" status-code=200
+
 ^https:\/\/conf\.diditaxi\.com\.cn\/dynamic\/conf data-type=text data="{}" status-code=200
-^https:\/\/conf\.diditaxi\.com\.cn\/homepage\/v1\/other\/slow data-type=text data="{}" status-code=200
-
-
-[Script]
-滴滴去广告 = type=http-response,requires-body=1,max-size=0,pattern=^https?:\/\/conf\.diditaxi\.com\.cn\/dynamic\/,script-path=https://raw.githubusercontent.com/linuszlx/JS/main/DiDi/dynamic.js
-滴滴下栏优化 = type=http-response,requires-body=1,max-size=0,pattern=^https?:\/\/conf\.diditaxi\.com\.cn\/homepage\/v1\/core\?,script-path=https://raw.githubusercontent.com/linuszlx/JS/main/DiDi/page.js
-滴滴去广告 = type=http-response,requires-body=1,max-size=0,pattern=^https?:\/\/res\.xiaojukeji\.com\/resapi\/activity\/mget\?,script-path=https://raw.githubusercontent.com/linuszlx/JS/main/DiDi/dynamic.js
-滴滴去广告 = type=http-response,requires-body=1,max-size=0,pattern=^https?:\/\/conf\.diditaxi\.com\.cn\/nav\/widget\?,script-path=https://raw.githubusercontent.com/linuszlx/JS/main/DiDi/dynamic.js
-滴滴去广告 = type=http-response,requires-body=1,max-size=0,pattern=^https?:\/\/guard\.sec\.xiaojukeji\.com\/api\/guard\/psg\/v2\/getShieldStatus,script-path=https://raw.githubusercontent.com/linuszlx/JS/main/DiDi/dynamic.js
-滴滴个人页去广告 = type=http-response,requires-body=1,max-size=0,pattern=^https?:\/\/common\.diditaxi\.com\.cn\/common\/v5\/usercenter\/me\?,script-path=https://raw.githubusercontent.com/linuszlx/JS/main/DiDi/PersonPage.js
