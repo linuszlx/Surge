@@ -9,7 +9,7 @@
 
 [Rule]
 # 广告下发
-DOMAIN,adx-api.zdmimg.com,REJECT
+DOMAIN,adx-api.zdmimg.com,REJECT,extended-matching,pre-matching
 
 [URL Rewrite]
 # 好价 - 今日好券
