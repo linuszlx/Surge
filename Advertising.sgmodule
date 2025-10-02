@@ -15,8 +15,8 @@ DOMAIN-SUFFIX,wxs.qq.com,REJECT,extended-matching,pre-matching
 # >>>>>>>>>>>>>>> ✅ 1 ✅ <<<<<<<<<<<<<<
 # > 12123
 # hostname = gab.122.gov.cn
-#^https?:\/\/gab\.122\.gov\.cn\/eapp\/m\/sysquery -reject
-^https?:\/\/gab\.122\.gov\.cn\/eapp\/m\/sysquery\/adver$ -reject
+#^https?:\/\/gab\.122\.gov\.cn\/eapp\/m\/sysquery - reject
+^https?:\/\/gab\.122\.gov\.cn\/eapp\/m\/sysquery\/adver$ - reject
 
 # > 12306
 # hostname = ad.12306.cn
