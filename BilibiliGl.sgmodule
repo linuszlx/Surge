@@ -1,0 +1,36 @@
+#!name=BilibiliTW优化
+#!desc=哔哩哔哩优化
+#!author=linusz
+#!icon=https://github.com/BiliUniverse/ADBlock/raw/main/database/icon_rounded.png
+#!date=2024-05-04
+
+[Script]
+# 标签页处理
+标签页处理 = type=http-response, pattern=^https?:\/\/app\.(bilibili|biliapi)\.(com|net)\/x\/resource\/show\/tab, script-path=https://raw.githubusercontent.com/linuszlx/JS/main/Bilibili/Bili_HP.js, requires-body=true
+
+# 分区优化
+分区优化 = type=http-response, pattern=^https?:\/\/app\.bilibili\.com\/x\/v2\/channel\/region\/list\?, script-path=https://raw.githubusercontent.com/linuszlx/JS/main/Bilibili/Bili_FQ.js, requires-body=true
+
+# 去除皮肤
+去除皮肤 = type=http-response, pattern=^https?:\/\/app\.bilibili\.com\/x\/resource\/show\/skin, script-path=https://raw.githubusercontent.com/linuszlx/JS/main/Bilibili/Bili_PF.js, requires-body=true
+
+# 页面优化
+番剧页面优化 = type=http-response, pattern=^https?:\/\/api\.(bilibili|biliapi)\.(com|net)\/pgc\/page\/bangumi\?, script-path=https://raw.githubusercontent.com/linuszlx/JS/main/Bilibili/Bili_pgc_home.js, requires-body=true
+
+电影页面优化 = type=http-response, pattern=^https?:\/\/api\.(bilibili|biliapi)\.(com|net)\/pgc\/page\/cinema\/movie\?, script-path=https://raw.githubusercontent.com/linuszlx/JS/main/Bilibili/Bili_pgc_cinema.js, requires-body=true
+
+电影页面优化 = type=http-response, pattern=^https?:\/\/api\.(bilibili|biliapi)\.(com|net)\/pgc\/page\/cinema\/tab\?actionKey=appkey&ad_extra=, script-path=https://raw.githubusercontent.com/linuszlx/JS/main/Bilibili/Bili_pgc.js, requires-body=true
+
+电影页面优化 = type=http-response, pattern=^https?:\/\/api\.(bilibili|biliapi)\.(com|net)\/pgc\/page\/cinema\/tab\?access_key=, script-path=https://raw.githubusercontent.com/linuszlx/JS/main/Bilibili/Bili_pgc.js, requires-body=true
+
+番剧页面优化 = type=http-response, pattern=^https?:\/\/api\.(bilibili|biliapi)\.(com|net)\/pgc\/page\/\?actionKey=appkey&ad_extra=, script-path=https://raw.githubusercontent.com/linuszlx/JS/main/Bilibili/Bili_pgc_tab.js, requires-body=true
+
+番剧页面优化 = type=http-response, pattern=^https?:\/\/api\.(bilibili|biliapi)\.(com|net)\/pgc\/page\/\?access_key, script-path=https://raw.githubusercontent.com/linuszlx/JS/main/Bilibili/Bili_pgc_tab.js, requires-body=true
+
+# 修改页面繁体
+修改页面繁体 = type=http-response, pattern=^https?:\/\/app\.bilibili\.com\/x\/v2\/region\/index\?actionKey=appkey&appkey=, script-path=https://raw.githubusercontent.com/linuszlx/JS/main/Bilibili/Bili_YH.js, requires-body=true
+
+修改页面繁体 = type=http-response, pattern=^https?:\/\/app\.bilibili\.com\/x\/v2\/region\/index\?access_key=, script-path=https://raw.githubusercontent.com/linuszlx/JS/main/Bilibili/Bili_YH.js, requires-body=true
+
+[MITM]
+hostname = %APPEND% app.bilibili.com, app.biliapi.net, api.bilibili.com, api.biliapi.net, grpc.biliapi.net
