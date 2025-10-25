@@ -63,7 +63,10 @@ http-response-jq ^https:\/\/api\.live\.bilibili\.com\/xlive\/app-room\/v1\/index
 
 番剧页面优化 = type=http-response, pattern=^https?:\/\/api\.(bilibili|biliapi)\.(com|net)\/pgc\/page\/\?access_key, script-path=https://raw.githubusercontent.com/linuszlx/JS/main/Bilibili/Bili_pgc_tab.js, requires-body=true
 
-番剧页面优化 = type=http-response, pattern=^https?:\/\/api\.(bilibili|biliapi)\.(com|net)\/pgc\/page\/tab\?access_key, script-path=https://raw.githubusercontent.com/linuszlx/JS/main/Bilibili/Bili_PGCTAB.js, requires-body=true
+番剧页面优化 = type=http-response, pattern=^https?:\/\/api\.bilibili\.com\/pgc\/page\/tab\?.*parent_tab_name=bangumi-operation.*, script-path=https://raw.githubusercontent.com/linuszlx/JS/main/Bilibili/Bili_PGCTAB.js, requires-body=true
+
+parent_tab_name=bangumi-operation
+
 
 [MITM]
 hostname = %APPEND% ap?.bilibili.com, grpc.biliapi.net, www.bilibili.com, m.bilibili.com, *live.bilibili.com
