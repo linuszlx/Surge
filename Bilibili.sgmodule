@@ -23,15 +23,14 @@ URL-REGEX,"^http:\/\/[\d\.]+:8000\/v1\/resource\/\w{32}-1-SPLASH",REJECT-TINYGIF
 [Body Rewrite]
 # 移除开屏广告
 http-response-jq ^https:\/\/app\.bilibili\.com\/x\/v2\/splash\/(?:list|show|event\/list2)\? '.data |= with_entries(if .key | IN("show", "event_list") then .value = [] else . end)'
-
 # 移除皮肤推送
 http-response-jq ^https:\/\/app\.bilibili\.com\/x\/resource\/show\/skin\? 'delpaths([["data","common_equip"]])'
 # 播放页开通会员的横幅
 http-response-jq ^https:\/\/api\.bilibili\.com\/pgc\/view\/v2\/app\/season\? 'del(.data.payment)'
-# 直播间
-http-response-jq ^https:\/\/api\.live\.bilibili\.com\/xlive\/app-interface\/v2\/index\/feed\? 'if .data.card_list then .data.card_list |= map(select(.card_type != "banner_v2")) end'
-http-response-jq ^https:\/\/api\.live\.bilibili\.com\/xlive\/app-room\/v1\/index\/getInfoByRoom\? 'del(.data.activity_banner_info) | .data.shopping_info.is_show=0 | .data.show_reserve_status=false | .data.reserve_info.show_reserve_status=false | .data.function_card.wish_list_card=null | .data.function_card.follow_card=null | .data.new_tab_info.outer_list |= if . then map(select(.biz_id != 33)) end'
-http-response-jq ^https:\/\/api\.live\.bilibili\.com\/xlive\/app-room\/v1\/index\/getInfoByUser\? 'del(.data.play_together_info, .data.play_together_info_v2)'
+# 移除首页推荐广告
+http-response-jq ^https:\/\/app\.bilibili\.com\/x\/v2\/feed\/index\? 'if .data.items then .data.items |= map(select((.banner_item == null) and (.ad_info == null) and (.card_goto == "av") and (.card_type | IN("small_cover_v2", "large_cover_single_v9", "large_cover_v1")))) end'
+http-response-jq ^https:\/\/app\.bilibili\.com\/x\/v2\/feed\/index\/story\? 'if .data.items then .data.items |= map(select((.ad_info == null) and (.card_goto | IN("vertical_ad_av", "vertical_ad_live", "vertical_ad_picture") | not)) | del(.story_cart_icon, .free_flow_toast, .image_infos, .course_info, .game_info)) end'
+
 
 
 
@@ -67,8 +66,6 @@ http-response-jq ^https:\/\/api\.live\.bilibili\.com\/xlive\/app-room\/v1\/index
 
 [Script]
 bilibili.protobuf = type=http-response,pattern=^https:\/\/(grpc\.biliapi\.net|app\.bilibili\.com)\/bilibili\.(app\.(show\.v1\.Popular\/Index|dynamic\.v2\.Dynamic\/DynAll|view(unite)?\.v1\.View\/(View|ViewProgress|RelatesFeed)|playurl\.v1\.PlayURL\/PlayView|playerunite\.v1\.Player\/PlayViewUnite)|polymer\.app\.search\.v1\.Search\/SearchAll|community\.service\.dm\.v1\.DM\/DmView|main\.community\.reply\.v1\.Reply\/MainList|pgc\.gateway\.player\.v2\.PlayURL\/PlayView)$,argument="{"showUpList":"{{{动态最常访问}}}","purifyTopReplies":{{{过滤置顶评论广告}}},"airborne":"{{{空降助手}}}","logLevel":"{{{日志等级}}}"}",requires-body=1,binary-body-mode=1,max-size=-1,engine=webview,script-path=https://raw.githubusercontent.com/linuszlx/JS/main/Bilibili/kokoryh/bilibili.protobuf.response.js
-移除首页推荐广告 = type=http-response, pattern=^https:\/\/app\.bili(bili\.com|api\.net)\/x\/v2\/feed\/index, script-path=https://raw.githubusercontent.com/linuszlx/JS/main/Bilibili/json.js, requires-body=true
-
 
 [MITM]
 hostname = %APPEND% ap?.bilibili.com, grpc.biliapi.net, www.bilibili.com, m.bilibili.com, *live.bilibili.com
