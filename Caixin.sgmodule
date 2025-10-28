@@ -4,7 +4,6 @@
 
 
 [Rule]
-DOMAIN-SUFFIX,caixin.com,Caixin,extended-matching
 
 [MITM]
 hostname = %APPEND% entities.caixin.com, gateway.caixin.com, gg.caixin.com, mappsv5.caixin.com, msgapi.caixin.com
