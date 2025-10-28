@@ -2,6 +2,10 @@
 #!desc = 优化财新客户端，去除广告
 #!category = 去广告
 
+
+[Rule]
+DOMAIN-SUFFIX,caixin.com,Caixin
+
 [MITM]
 hostname = %APPEND% entities.caixin.com, gateway.caixin.com, gg.caixin.com, mappsv5.caixin.com, msgapi.caixin.com
 
