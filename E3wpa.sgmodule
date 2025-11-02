@@ -54,21 +54,6 @@ DOMAIN-SUFFIX,hk.lilyemby.my,Emby
 DOMAIN-SUFFIX,jp.lilyemby.my,Emby
 DOMAIN-SUFFIX,cdn.lilyemby.my,Emby
 # Youno
-DOMAIN-SUFFIX,emby.younoyes.com,Media
-DOMAIN-SUFFIX,jp.younoyes.com,Media
-DOMAIN-SUFFIX,us.younoyes.com,Media
+DOMAIN-SUFFIX,plus.younoyes.com,Media
 # 飞跃彩虹
 DOMAIN-SUFFIX,feiyue.lol,Media
-# 特卡
-DOMAIN-SUFFIX,emby.carlos.trade,Media
-DOMAIN-SUFFIX,cf.carlos.trade,Media
-DOMAIN-SUFFIX,us.carlos.trade,Media
-# 叶子
-DOMAIN-SUFFIX,yezi.my,Media
-DOMAIN-SUFFIX,yezi.697758.best,Media
-# 云海
-DOMAIN-SUFFIX,oceancloud.asia,Media
-# HXD
-DOMAIN-SUFFIX,as174.de,Media
-# 琉璃
-DOMAIN-SUFFIX,emby.kongcheng666.dpdns.org,Media
