@@ -10,7 +10,7 @@ DOMAIN,api.biliapi.com,REJECT,pre-matching,extended-matching
 DOMAIN,app.biliapi.com,REJECT,pre-matching,extended-matching
 DOMAIN,api.biliapi.net,REJECT,pre-matching,extended-matching
 DOMAIN,app.biliapi.net,REJECT,pre-matching,extended-matching
-AND,((DOMAIN-SUFFIX,chat.bilibili.com), (OR,((DOMAIN-KEYWORD,stun), (DOMAIN-KEYWORD,tracker)))),REJECT,pre-matching
+
 
 [Map Local]
 ^https:\/\/ap[ip]\.bilibili\.com\/x\/(resource\/(top\/activity|patch\/tab)|v2\/search\/square|vip\/ads\/materials)\? header="content-type: application/json" data-type=text data="{"code":-404,"message":"-404","ttl":1,"data":null}"
