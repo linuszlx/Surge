@@ -6,9 +6,8 @@
 [Rule]
 # > Emby
 # 蘑菇
-DOMAIN-SUFFIX,mm.vo0.site,DIRECT
+DOMAIN-SUFFIX,mm.ccppc.cn,DIRECT
 # 琴鸟
-DOMAIN-SUFFIX,cdn.lyrebirdemby.com,Media
 DOMAIN-SUFFIX,188.172.228.65,DIRECT
 # 墨云
 DOMAIN-SUFFIX,m.mobaiemby.site,Media
@@ -31,19 +30,8 @@ DOMAIN-SUFFIX,mjji.de,Media
 # 探花
 DOMAIN-SUFFIX,tanhuatv.site,Media
 DOMAIN-SUFFIX,heisi.org,Media
-# SNTP
-DOMAIN-SUFFIX,lite.cn2gias.uk,Media
-# STAR
-DOMAIN-SUFFIX,us3.staryuki.me,Media
-DOMAIN-SUFFIX,us4.staryuki.me,Media
-# 桃子
-DOMAIN-SUFFIX,embymv.link,Media
 # Misty
 DOMAIN-SUFFIX,misty.cx,Media
-# 天南
-DOMAIN-SUFFIX,us.nanflix.net,Media
-# 临境
-DOMAIN-SUFFIX,liminalnet.com,Media
 # Youno
 DOMAIN-SUFFIX,plus.younoyes.com,Media
 # SDL
@@ -53,7 +41,3 @@ DOMAIN-SUFFIX,cf.lilyemby.my,Media
 DOMAIN-SUFFIX,hk.lilyemby.my,Emby
 DOMAIN-SUFFIX,jp.lilyemby.my,Emby
 DOMAIN-SUFFIX,cdn.lilyemby.my,Emby
-# Youno
-DOMAIN-SUFFIX,plus.younoyes.com,Media
-# 飞跃彩虹
-DOMAIN-SUFFIX,feiyue.lol,Media
