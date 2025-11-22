@@ -4,21 +4,12 @@
 #!category=破解补丁
 
 [Script]
-有道云笔记 = type=http-response, pattern=https://note.youdao.com/yws/(mapi/payment|api/self), script-path=https://raw.githubusercontent.com/linuszlx/JS/main/Crack/ydybj.js, requires-body=true, timeout=10
-
 蜗牛读书 = type=http-response, pattern=^https?:\/\/p\.du\.163\.com\/gain\/readtime\/info\.json, script-path=https://raw.githubusercontent.com/linuszlx/JS/main/Crack/wnds.js, requires-body=true, timeout=10
 
-懒饭 = type=http-response, pattern=^https:\/\/lanfanapp.com\/api\/v1\/user\/(prime.json|page_detail.json), script-path=https://raw.githubusercontent.com/linuszlx/JS/main/Crack/lanfan.js, requires-body=true, timeout=10
-
-Noted = type=http-response, pattern=^https:\/\/subscription-api\.notedapp\.io\/api\/verifyReceipt, script-path=https://raw.githubusercontent.com/89996462/Quantumult-X/main/ycdz/noteb.js, requires-body=true, timeout=10
-
 Notability = type=http-response,pattern=^https?:\/\/notability\.com\/(global|subscriptions),requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/linuszlx/JS/main/Crack/Notability.js
-
-Theinitium = type=http-response, pattern=^https?:\/\/app\.theinitium\.com\/subs\/[a-zA-Z_]+\/verify_subscription, script-path=https://raw.githubusercontent.com/linuszlx/JS/main/Duan/Duan.js, requires-body=true, max-size=-1, timeout=60
-Theinitium2 = type=http-response, pattern=^https?:\/\/api\.wallkit\.net\/api\/v\d/user, script-path=https://raw.githubusercontent.com/linuszlx/JS/main/Duan/Duan.js, requires-body=true, max-size=-1, timeout=60
 
 DailyArt= type=http-response, pattern=^https?:\/\/api\.getdailyart\.com\/api\/(subscription\/verified|auth\/login|check-logged), script-path=https://raw.githubusercontent.com/linuszlx/JS/main/DailyArt/DailyArt.js, requires-body=true, max-size=-1, timeout=60
 
 
 [MITM]
-hostname = %APPEND% note.youdao.com, p.du.163.com, lanfanapp.com, subscription-api.notedapp.io, notability.com, app.theinitium.com, api.wallkit.net, api.getdailyart.com
+hostname = %APPEND% p.du.163.com, notability.com, api.getdailyart.com
