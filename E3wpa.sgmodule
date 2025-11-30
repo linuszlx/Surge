@@ -43,3 +43,5 @@ DOMAIN-SUFFIX,cf.lilyemby.my,Media
 DOMAIN-SUFFIX,hk.lilyemby.my,Emby
 DOMAIN-SUFFIX,jp.lilyemby.my,Emby
 DOMAIN-SUFFIX,cdn.lilyemby.my,Emby
+# XX
+DOMAIN-SUFFIX,oceancloud.asia,Emby
