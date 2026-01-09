@@ -13,6 +13,8 @@
 ^https:\/\/cn-acs\.m\.cainiao\.com\/gw\/mtop\.cainiao\.adkeyword\.get\.cn - reject
 ^https:\/\/cn-acs\.m\.cainiao\.com\/gw\/mtop\.cainiao\.guoguo\.nbnetflow\.ads\.m?show - reject
 ^https:\/\/guide-acs\.m\.taobao\.com\/gw\/mtop\.cainiao\.adx\.flyad\.getad - reject
+^https:\/\/guide-acs\.m\.taobao\.com\/gw\/mtop\.cainiao\.pubaccount\.daily\.task\.activity\.task\.query - reject
+
 
 
 [Body Rewrite]
