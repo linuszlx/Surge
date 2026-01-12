@@ -5,7 +5,7 @@
 
 
 [MITM]
-hostname = %APPEND% gab.122.gov.cn, ad.12306.cn, mobile.12306.cn, ump.sz.creditcard.ecitic.com, api.douban.com, dxy.com, www.flyert.com.cn, static.95508.com, static.95508.com, mps.95508.com, kano.guahao.cn, app.wy.guahao.com, gugongmini.dpm.org.cn, appapi.huazhu.com, games.mobileapi.hupu.com, du.hupucdn.com, i*.hoopchina.com.cn, goblin.hupu.com, api-ad-product.huxiu.com, bkclient.umetrip.com.cn, discardrp.umetrip.com, startup.umetrip.com, oss.umetrip.com, img.jiemian.com, m.360buyimg.com, abplatform.yumchina.com,res.kfc.com.cn, api-access.pangolin-sdk-toutiao.com, is.snssdk.com, apapia-sqk.manmanbuy.com, p0.pipi.cn, vod.pipi.cn, ox.da.mgtv.com, appapi.motianlun.cn, api.mcd.cn, v3.wufazhuce.com, app.api.d3yuiw4.com, api.21ec74.com, image.spdbccc.com.cn, adpai.thepaper.cn, app.thepaper.cn, gql.reddit.com, gql-fed.reddit.com, capi.lkcoffee.com, ecapi.lkcoffee.com, m.lkcoffee.com, img*.lkcoffee.com, mcs-mimp-web.sf-express.com, ucmp.sf-express.com, ios.sspai.com, api-sams.walmartmobile.cn, api.taptapdada.com, mkt-gateway.tuhu.cn, guide-acs.m.taobao.com, poplayer.template.alibaba.com, mp.weixin.qq.com, easyreadfs.nosdn.127.net, p.du.163.com, api.m.mi.com, api.jr.mi.com, shopapi.io.mi.com, api-miprint.hannto.com, api.indeedpower.com, home.mi.com, venus.yhd.com, xyst.yuanfudao.com, api-cslp-emt.amazon.cn, webappcfg.paas.cmbchina.com, mbasecc.bas.cmbchina.com, mbasecc.bcs.cmbchina.com, intellicc.bcs.cmbchina.com, mbs.boc.cn, mlife.jf365.boc.cn, wap.bank.ecitic.com, imcs.citicbank.com, m.client.10010.com, m1.ad.10010.com, res.mall.10010.cn
+hostname = %APPEND% gab.122.gov.cn, ad.12306.cn, mobile.12306.cn, ump.sz.creditcard.ecitic.com, api.douban.com, dxy.com, www.flyert.com.cn, static.95508.com, static.95508.com, mps.95508.com, kano.guahao.cn, app.wy.guahao.com, gugongmini.dpm.org.cn, appapi.huazhu.com, games.mobileapi.hupu.com, du.hupucdn.com, i*.hoopchina.com.cn, goblin.hupu.com, api-ad-product.huxiu.com, bkclient.umetrip.com.cn, discardrp.umetrip.com, startup.umetrip.com, oss.umetrip.com, img.jiemian.com, m.360buyimg.com, abplatform.yumchina.com,res.kfc.com.cn, api-access.pangolin-sdk-toutiao.com, is.snssdk.com, apapia-sqk.manmanbuy.com, p0.pipi.cn, vod.pipi.cn, ox.da.mgtv.com, appapi.motianlun.cn, api.mcd.cn, v3.wufazhuce.com, app.api.d3yuiw4.com, api.21ec74.com, image.spdbccc.com.cn, adpai.thepaper.cn, app.thepaper.cn, gql.reddit.com, gql-fed.reddit.com, capi.lkcoffee.com, ecapi.lkcoffee.com, m.lkcoffee.com, img*.lkcoffee.com, mcs-mimp-web.sf-express.com, ucmp.sf-express.com, ios.sspai.com, api-sams.walmartmobile.cn, api.taptapdada.com, mkt-gateway.tuhu.cn, guide-acs.m.taobao.com, poplayer.template.alibaba.com, mp.weixin.qq.com, easyreadfs.nosdn.127.net, p.du.163.com, api.m.mi.com, api.jr.mi.com, shopapi.io.mi.com, api-miprint.hannto.com, api.indeedpower.com, home.mi.com, venus.yhd.com, xyst.yuanfudao.com, api-cslp-emt.amazon.cn, webappcfg.paas.cmbchina.com, mbasecc.bas.cmbchina.com, mbasecc.bcs.cmbchina.com, intellicc.bcs.cmbchina.com, *.mbs.boc.cn, mlife.jf365.boc.cn, wap.bank.ecitic.com, imcs.citicbank.com, m.client.10010.com, m1.ad.10010.com, res.mall.10010.cn
 
 [Rule]
 DOMAIN-SUFFIX,wxs.qq.com,REJECT,extended-matching,pre-matching
@@ -404,8 +404,10 @@ http-response ^https?:\/\/mp\.weixin\.qq\.com\/mp\/getappmsgad$ body-replace /ad
 ^https?:\/\/intellicc\.bcs\.cmbchina\.com\/Edge\/api\/mlife\.intelli\.adrender\.api\.AdWork\/getAdsBySlotId data-type=text data="{}" status-code=200
 
 # > 中国银行
-# hostname = mbs.boc.cn
-^https?:\/\/mbs\.boc\.cn\/ubas-mgateway-static\/images\/advertType\/.+.jpg data-type=text data="{}" status-code=200
+# hostname = cdn1.mbs.boc.cn
+^https?:\/\/cdn1\.mbs\.boc\.cn\/ubas-mgateway-static\/images\/advertType\/.+.jpg data-type=text data="{}" status-code=200
+
+
 
 # > 中信银行
 # hostname = wap.bank.ecitic.com, imcs.citicbank.com
