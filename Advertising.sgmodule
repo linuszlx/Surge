@@ -406,6 +406,7 @@ http-response ^https?:\/\/mp\.weixin\.qq\.com\/mp\/getappmsgad$ body-replace /ad
 # > 中国银行
 # hostname = cdn1.mbs.boc.cn
 ^https?:\/\/cdn1\.mbs\.boc\.cn\/ubas-mgateway-static\/images\/advertType\/.+.jpg data-type=text data="{}" status-code=200
+^https?:\/\/cdn1\.mbs\.boc\.cn\/ubas-mgateway-static\/images\//theme\/ data-type=text data="{}" status-code=200
 
 
 
