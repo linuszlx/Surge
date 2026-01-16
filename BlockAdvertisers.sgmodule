@@ -2,7 +2,7 @@
 #!desc=此插件是所有去广告插件的基础，只针对广告平台处理。
 #!author=可莉🅥[https://github.com/luestr/ProxyResource/blob/main/README.md]
 #!category=通用去广告
-#!date=2025-11-14 22:25:12
+#!date=2026-01-02 04:31:12
 
 [Rule]
 AND,((DOMAIN-KEYWORD,tnc,extended-matching),(OR,((DOMAIN-SUFFIX,capcutapi.com,extended-matching),(DOMAIN-SUFFIX,zijieapi.com,extended-matching),(DOMAIN-SUFFIX,isnssdk.com,extended-matching),(DOMAIN-SUFFIX,toutiaoapi.com,extended-matching),(DOMAIN-SUFFIX,bytedance.com,extended-matching),(DOMAIN-SUFFIX,snssdk.com,extended-matching),(DOMAIN-SUFFIX,sgsnssdk.com,extended-matching)))),DIRECT
@@ -117,7 +117,24 @@ DOMAIN-SUFFIX,l.qq.com,REJECT,extended-matching,pre-matching
 DOMAIN-SUFFIX,imtmp.net,REJECT,extended-matching,pre-matching
 DOMAIN-SUFFIX,ugdtimg.com,REJECT,extended-matching,pre-matching
 IP-CIDR,47.110.187.87/32,REJECT,no-resolve,pre-matching
+DOMAIN-SUFFIX,opadlink.com,REJECT,extended-matching,pre-matching
+DOMAIN-SUFFIX,staevent.work,REJECT,extended-matching,pre-matching
+DOMAIN-SUFFIX,openinstall.online,REJECT,extended-matching,pre-matching
+DOMAIN-SUFFIX,statchannel.store,REJECT,extended-matching,pre-matching
+DOMAIN-SUFFIX,oplinking.com,REJECT,extended-matching,pre-matching
+DOMAIN-SUFFIX,deepinstall.com,REJECT,extended-matching,pre-matching
+DOMAIN-SUFFIX,openinstall.com,REJECT,extended-matching,pre-matching
+DOMAIN-SUFFIX,installtongji.top,REJECT,extended-matching,pre-matching
+DOMAIN-SUFFIX,openlink.cc,REJECT,extended-matching,pre-matching
+DOMAIN-SUFFIX,opstatistics.com,REJECT,extended-matching,pre-matching
+DOMAIN-SUFFIX,installtongji.online,REJECT,extended-matching,pre-matching
+DOMAIN-SUFFIX,statschannel.xyz,REJECT,extended-matching,pre-matching
+DOMAIN-SUFFIX,staevent.xyz,REJECT,extended-matching,pre-matching
+DOMAIN-SUFFIX,opstatistics.cn,REJECT,extended-matching,pre-matching
+DOMAIN-SUFFIX,openinstall.top,REJECT,extended-matching,pre-matching
 DOMAIN-SUFFIX,openinstall.io,REJECT,extended-matching,pre-matching
+DOMAIN-SUFFIX,statsinstall.xyz,REJECT,extended-matching,pre-matching
+DOMAIN-SUFFIX,statchannel.top,REJECT,extended-matching,pre-matching
 DOMAIN-SUFFIX,getui.com,REJECT,extended-matching,pre-matching
 DOMAIN-SUFFIX,getui.net,REJECT,extended-matching,pre-matching
 DOMAIN-SUFFIX,igexin.com,REJECT,extended-matching,pre-matching
@@ -180,7 +197,6 @@ DOMAIN,logrcv.aiclk.com,REJECT,extended-matching,pre-matching
 DOMAIN,acjs.aliyun.com,REJECT,extended-matching,pre-matching
 DOMAIN,retcode.alicdn.com,REJECT,extended-matching,pre-matching
 DOMAIN,arms-retcode.aliyuncs.com,REJECT,extended-matching,pre-matching
-DOMAIN,at.alicdn.com,REJECT,extended-matching,pre-matching
 DOMAIN,huichuan.sm.cn,REJECT,extended-matching,pre-matching
 DOMAIN,huichuan-mc.sm.cn,REJECT,extended-matching,pre-matching
 DOMAIN,api.sm.cn,REJECT,extended-matching,pre-matching
@@ -216,6 +232,20 @@ DOMAIN-SUFFIX,maplehaze.cn,REJECT,extended-matching,pre-matching
 DOMAIN-SUFFIX,lnk0.com,REJECT,extended-matching,pre-matching
 DOMAIN-SUFFIX,bridgeoos.com,REJECT,extended-matching,pre-matching
 DOMAIN-SUFFIX,anythinktech.com,REJECT,extended-matching,pre-matching
+DOMAIN-SUFFIX,birdgesdk.com,REJECT,extended-matching,pre-matching
+DOMAIN-SUFFIX,toponadss.com,REJECT,extended-matching,pre-matching
+DOMAIN-SUFFIX,bridgeoos.com,REJECT,extended-matching,pre-matching
+DOMAIN-SUFFIX,anyrtb.com,REJECT,extended-matching,pre-matching
+DOMAIN-SUFFIX,anythinktech.com,REJECT,extended-matching,pre-matching
+DOMAIN-SUFFIX,combocn.com,REJECT,extended-matching,pre-matching
+DOMAIN-SUFFIX,beanxin.com,REJECT,extended-matching,pre-matching
+DOMAIN-SUFFIX,letway.cn,REJECT,extended-matching,pre-matching
+DOMAIN-SUFFIX,newitai.com,REJECT,extended-matching,pre-matching
+DOMAIN-SUFFIX,fireluck.cn,REJECT,extended-matching,pre-matching
+DOMAIN-SUFFIX,setway.cn,REJECT,extended-matching,pre-matching
+DOMAIN-SUFFIX,artcto.com,REJECT,extended-matching,pre-matching
+DOMAIN-SUFFIX,wayio.cn,REJECT,extended-matching,pre-matching
+DOMAIN-SUFFIX,iaddata.com,REJECT,extended-matching,pre-matching
 DOMAIN,ad-evods.tianya.tv,REJECT,extended-matching,pre-matching
 DOMAIN-SUFFIX,tuia.cn,REJECT,extended-matching,pre-matching
 DOMAIN-SUFFIX,66mobi.com,REJECT,extended-matching,pre-matching
@@ -246,13 +276,18 @@ DOMAIN-SUFFIX,domob.cn,REJECT,extended-matching,pre-matching
 DOMAIN-SUFFIX,adwangmai.com,REJECT,extended-matching,pre-matching
 DOMAIN-SUFFIX,bxsnews.com,REJECT,extended-matching,pre-matching
 DOMAIN-SUFFIX,ranfenghd.com,REJECT,extended-matching,pre-matching
-DOMAIN-SUFFIX,mmstat.com,REJECT,extended-matching,pre-matching
 DOMAIN-SUFFIX,miaozhen.com,REJECT,extended-matching,pre-matching
 DOMAIN-SUFFIX,qchannel01.cn,REJECT,extended-matching,pre-matching
 DOMAIN-SUFFIX,ad.xelements.cn,REJECT,extended-matching,pre-matching
 DOMAIN-SUFFIX,adsrvr.cn,REJECT,extended-matching,pre-matching
 DOMAIN-SUFFIX,adsrvr.org,REJECT,extended-matching,pre-matching
 DOMAIN-SUFFIX,fancydsp.com,REJECT,extended-matching,pre-matching
+DOMAIN-SUFFIX,xcultur.com,REJECT,extended-matching,pre-matching
+DOMAIN-SUFFIX,bayescom.com,REJECT,extended-matching,pre-matching
+DOMAIN-SUFFIX,etoolads.cn,REJECT,extended-matching,pre-matching
+DOMAIN,ad.aggrxinc.com,REJECT,extended-matching,pre-matching
+DOMAIN-SUFFIX,mentamob.com,REJECT,extended-matching,pre-matching
+DOMAIN-SUFFIX,advlion.com,REJECT,extended-matching,pre-matching
 DOMAIN-SUFFIX,tradplusad.com,REJECT,extended-matching,pre-matching
 DOMAIN-SUFFIX,fancyapi.com,REJECT,extended-matching,pre-matching
 DOMAIN-SUFFIX,medproad.com,REJECT,extended-matching,pre-matching
