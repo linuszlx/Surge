@@ -17,8 +17,10 @@ http-response-jq ^https:\/\/acs\.m\.taobao\.com\/gw\/mtop\.damai\.mec\.aristotle
 
 [Map Local]
 ^https:\/\/acs\.m\.taobao\.com\/gw\/mtop\.damai\.wireless\.home\.welcome\/ data-type=text data="{}" status-code=200 header="Content-Type:application/json"
-
 ^https:\/\/acs\.m\.taobao\.com\/gw\/mtop\.damai\.mec\.popup\.get\/ data-type=text data="{}" status-code=200 header="Content-Type:application/json"
+^https?:\/\/amdc\.m\.taobao\.com\/amdc\/mobileDispatch\?appkey=23782110 data-type=text data="{}" status-code=200 header="Content-Type:application/json"
+
+
 
 [MITM]
 hostname = %APPEND% acs.m.taobao.com
