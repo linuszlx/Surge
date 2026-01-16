@@ -9,6 +9,11 @@ hostname = %APPEND% gab.122.gov.cn, ad.12306.cn, mobile.12306.cn, ump.sz.creditc
 
 [Rule]
 DOMAIN-SUFFIX,wxs.qq.com,REJECT,extended-matching,pre-matching
+DOMAIN-SUFFIX,api.maoyan.com,REJECT,extended-matching,pre-matching
+DOMAIN-SUFFIX,ad.maoyan.com,REJECT,extended-matching,pre-matching
+IP-CIDR,103.37.152.161/32,REJECT,no-resolve,pre-matching
+IP-CIDR,103.37.152.162/32,REJECT,no-resolve,pre-matching
+IP-CIDR,203.76.217.37/32,REJECT,no-resolve,pre-matching
 
 [URL Rewrite]
 # >>>>>>>>>>>>>>> ✅ 0 ✅ <<<<<<<<<<<<<<
