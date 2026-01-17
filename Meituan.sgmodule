@@ -8,6 +8,11 @@
 #!date = 2024-08-08 18:20:06
 #!tag = 去广告
 
+
+[General]
+# 强制该 IP 使用 HTTP 引擎处理，以便 Surge 识别其中的 HTTP 请求
+force-http-engine-hosts = %APPEND% 203.76.217.241, 103.63.160.64, 202.90.110.8, 202.90.110.45, 202.90.108.69
+
 [Rule]
 # > 大众点评
 DOMAIN, dpmtpush.dianping.com,REJECT,extended-matching,pre-matching
