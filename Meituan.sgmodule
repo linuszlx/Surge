@@ -37,9 +37,8 @@ IP-CIDR, 119.29.126.137/32, REJECT, no-resolve, pre-matching
 ^https?:\/\/s3plus\.meituan\.net\/ocean-blk-index\/index\/blk_conf - reject
 ^https?:\/\/ddplus\.meituan\.net\/v\d\/mss_\w+\/(?>ehc|titansx|ddblue|edfu)\/ - reject
 # > 猫眼
-^https?:\/\/p0\.pipi\.cn\/(adAdmin|mediaplus\/maoyantong_ads_fe)\/\w+\.jpg\?imageMogr2\/quality\/ - reject
-^https?:\/\/p0\.pipi\.cn\/(adAdmin|mediaplus\/maoyantong_ads_fe)\/\w+\.(jpg|png)\?imageMogr2\/thumbnail\/(?>860x0|!165x165|!1049x1169) - reject
-^https?:\/\/p0\.pipi\.cn\/(adAdmin|mediaplus\/maoyantong_ads_fe)\/\w+\.gif - reject
+^https?:\/\/p0\.pipi\.cn\/mediaplus\/maoyantong_ads_fe\/(0fa3345c|2erwqe2f)\w+.jpg\?imageMogr2\/quality\/85 -reject
+^https?:\/\/vod\.pipi\.cn\/\w+\/\w+\/f0\.mp4\?__reqTraceID=.*?optimus_code=10 -reject
 
 
 [Map Local]
