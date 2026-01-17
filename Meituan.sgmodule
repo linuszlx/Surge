@@ -11,7 +11,7 @@
 
 [General]
 # 强制该 IP 使用 HTTP 引擎处理，以便 Surge 识别其中的 HTTP 请求
-force-http-engine-hosts = %APPEND% 203.76.217.241, 103.63.160.64, 202.90.110.8, 202.90.110.45, 202.90.108.69
+force-http-engine-hosts = %APPEND% 203.76.217.241, 103.63.160.64, 202.90.110.8, 202.90.110.45, 202.90.108.69, 103.63.160.80, 202.90.110.8
 
 [Rule]
 # > 大众点评
@@ -27,6 +27,13 @@ DOMAIN-SUFFIX,ad.maoyan.com,REJECT,extended-matching,pre-matching
 IP-CIDR,103.37.152.161/32,REJECT,no-resolve,pre-matching
 IP-CIDR,103.37.152.162/32,REJECT,no-resolve,pre-matching
 IP-CIDR,203.76.217.37/32,REJECT,no-resolve,pre-matching
+IP-CIDR,203.76.217.241/32,REJECT,no-resolve,pre-matching
+IP-CIDR,103.63.160.64/32,REJECT,no-resolve,pre-matching
+IP-CIDR,202.90.110.8/32,REJECT,no-resolve,pre-matching
+IP-CIDR,202.90.110.45/32,REJECT,no-resolve,pre-matching
+IP-CIDR,202.90.108.69/32,REJECT,no-resolve,pre-matching
+IP-CIDR,103.63.160.80/32,REJECT,no-resolve,pre-matching
+
 # > 美团 - MEITUAN
 IP-CIDR, 103.37.155.60/32, REJECT,no-resolve,pre-matching
 DOMAIN, flowplus.meituan.net, REJECT,extended-matching,pre-matching
@@ -96,4 +103,4 @@ DOMAIN-KEYWORD, report.meituan, REJECT
 开屏处理 = type=http-response, pattern=^https?:\/\/img\.meituan\.net\/dpmobile\/, script-path =https://raw.githubusercontent.com/linuszlx/JS/main/Dianping/Dianping.js, requires-body = true
 
 [MITM]
-hostname = %APPEND%  103.37.155.60, *.dianping.com, img.meituan.net, p.meituan.com, rms.meituan.com, www.dpfile.com, awp-assets.meituan.net, s3plus.meituan.net, p*.meituan.net, ddplus.meituan.net, mars.meituan.com, apimobile.meituan.com, www.meituan.com, flowplus.meituan.net, portal-portm.meituan.com, sqt.meituan.com, 203.76.217.241, 103.63.160.64, 202.90.110.8, 202.90.110.45, 202.90.108.69
+hostname = %APPEND%  103.37.155.60, *.dianping.com, img.meituan.net, p.meituan.com, rms.meituan.com, www.dpfile.com, awp-assets.meituan.net, s3plus.meituan.net, p*.meituan.net, ddplus.meituan.net, mars.meituan.com, apimobile.meituan.com, www.meituan.com, flowplus.meituan.net, portal-portm.meituan.com, sqt.meituan.com, 203.76.217.241, 103.63.160.64, 202.90.110.8, 202.90.110.45, 202.90.108.69, 103.63.160.80, 202.90.110.8
