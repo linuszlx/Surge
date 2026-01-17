@@ -28,6 +28,7 @@ IP-CIDR, 119.29.48.215/32, REJECT, no-resolve, pre-matching
 IP-CIDR, 202.90.108.69/32, REJECT, no-resolve, pre-matching
 IP-CIDR,203.76.217.243/32, REJECT, no-resolve, pre-matching
 IP-CIDR,113.45.201.218/32, REJECT, no-resolve, pre-matching
+IP-CIDR,203.76.217.241/32, REJECT, no-resolve, pre-matching
 
 [URL Rewrite]
 # > 大众点评
