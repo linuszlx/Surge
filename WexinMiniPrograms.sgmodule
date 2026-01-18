@@ -8,29 +8,10 @@
 #!date = 2024-09-27 22:18:09
 
 [Rule]
-# 微信小程序通用规则
-DOMAIN, wxsnsdy.wxs.qq.com, REJECT,extended-matching,pre-matching
-DOMAIN, wxsmsdy.video.qq.com, REJECT,extended-matching,pre-matching
-DOMAIN, wxsnsdythumb.wxs.qq.com, REJECT,extended-matching,pre-matching
-# 猫眼电影
-DOMAIN, ad.maoyan.com, REJECT,extended-matching,pre-matching
 
 [URL Rewrite]
 
 [Map Local]
-# 丰巢 - 首页服务推广
-^https:\/\/webchatapp\.fcbox\.com\/fcboxactivityweb\/api\/v2\/clientPage\/modulesAggregated\? data-type=text data="{}" status-code=200
-# 丰巢 - 首页丰巢直播
-^https:\/\/webchatapp\.fcbox\.com\/fcboxactivityweb\/api\/v2\/clientPage\/getHomeLiveInfo$ data-type=text data="{}" status-code=200
-# 丰巢 - 横幅和广告配置
-^https:\/\/dsp\.fcbox\.com\/adSearch\/ data-type=text data="{}" status-code=200
-# 丰巢 - 订单页面 - 邀请开通会员横幅
-^https:\/\/webchatapp\.fcbox\.com\/post\/suggestion\/query$ data-type=text data="{}" status-code=200
-# 丰巢 - 订单页面 - 好友助力
-^https:\/\/webchatapp\.fcbox\.com\/fcboxactivityweb\/marketingEntrance\/v2\/infoWithItems$ data-type=text data="{}" status-code=200
-# 丰巢 - 订单页面 - 悬浮窗
-^https:\/\/webchatapp\.fcbox\.com\/fcboxactivityweb\/marketingEntrance\/info$ data-type=text data="{}" status-code=200
-
 # 必胜客 res.pizzahut.com.cn
 ^https:\/\/res\.pizzahut\.com\.cn\/CRM data-type=text data="{}" status-code=200
 
@@ -69,31 +50,6 @@ DOMAIN, ad.maoyan.com, REJECT,extended-matching,pre-matching
 # 一点点 cappapi.alittle-tea.com, alittle-tea.oss-cn-shanghai.aliyuncs.com
 ^https:\/\/alittle-tea\.oss-cn-shanghai\.aliyuncs\.com\/images\/platform\/alittle data-type=text data="{}" status-code=200
 
-# 携程旅行 m.ctrip.com
-^https:\/\/m\.ctrip\.com\/restapi\/soa2\/13916\/tripAds data-type=text data="{}" status-code=200
-^https:\/\/m\.ctrip\.com\/restapi\/soa2\/12673\/queryWeChatHotEvent data-type=text data="{}" status-code=200
-
-# 猫眼电影
-# 弹窗广告+横幅广告 # 主机名ad.maoyan.com
-^https:\/\/ad\.maoyan\.com\/api\/position\/detail data-type=text data="{}" status-code=200
-# 电竞赛事+热门赛事 # 主机名wx.maoyan.com
-^https:\/\/wx\.maoyan\.com\/maoyansh\/api\/mobile\/(hotMatchList|eSportsIps) data-type=text data="{}" status-code=200
-# 猫眼放映厅 # 主机名vod-movie.maoyan.com
-^https:\/\/vod-movie\.maoyan\.com\/vod\/video\/onlineMovies\.json data-type=text data="{}" status-code=200
-# 精彩演出
-^https:\/\/wx\.maoyan\.com\/maoyansh\/myshow\/ajax\/movie\/wonderShow data-type=text data="{}" status-code=200
-# 七日精选
-^https:\/\/wx\.maoyan\.com\/maoyansh\/myshow\/ajax\/performances\/calendar\/0 data-type=text data="{}" status-code=200
-# 今日必抢
-^https:\/\/wx\.maoyan\.com\/maoyansh\/myshow\/ajax\/performances\/rob\/main data-type=text data="{}" status-code=200
-# 大咖新动态
-^https:\/\/wx\.maoyan\.com\/maoyansh\/myshow\/ajax\/celebrityBasicList\/query data-type=text data="{}" status-code=200
-# 为你推荐
-^https:\/\/wx\.maoyan\.com\/maoyansh\/myshow\/ajax\/recommend\/performances data-type=text data="{}" status-code=200
-# 首页底部推荐 # 主机名api.maoyan.com
-^https:\/\/api\.maoyan\.com\/sns\/common\/feed\/channel\/v2\/list\.json data-type=text data="{}" status-code=200
-# 演出页面全部拦截
-^https:\/\/wx\.maoyan\.com\/maoyansh\/myshow\/ajax\/ad\/detail data-type=text data="{}" status-code=200
 
 # 途虎养车小程序 @张军
 ^https:\/\/mkt-gateway\.tuhu\.cn\/mkt-scene-marketing-service\/api\/scene\/queryScheme data-type=text data="{}" status-code=200
@@ -115,4 +71,4 @@ COCO点单去广告 = type=http-response, pattern=^https:\/\/coco-com\.e\.veryst
 古茗去广告 = type=http-response, pattern=^https:\/\/newton\.gumingnc\.com\/newton-buyer\/newton\/buyer\/(ump|touch|external\/front), script-path=https://raw.githubusercontent.com/linuszlx/JS/main/WexinMiniPrograms/ming/ming.js, requires-body=true
 
 [MITM]
-hostname = %APPEND% webchatapp.fcbox.com,dsp.fcbox.com,res.pizzahut.com.cn,api.mcd.cn,3pp.starbucks.com.cn,apiproxy.zuche.com,tm-api.pin-dao.cn,api-fouth-mem.huazhu.com,mxsa.mxbc.net,lawsonapi.yorentown.com,plt.yorentown.com,member.lxjchina.com.cn,cbd-gateway-service-applets.hualala.com,alittle-tea.oss-cn-shanghai.aliyuncs.com,cappapi.alittle-tea.com,m.ctrip.com,ad.maoyan.com,wx.maoyan.com,vod-movie.maoyan.com,api.maoyan.com,mkt-gateway.tuhu.cn,ucmp.sf-express.com,daijia.kuaidadi.com,as.xiaojukeji.com,minifm.maxxipoint.com,miniapp.sexytea2013.com,coco-com.e.verystar.net,newton.gumingnc.com
+hostname = %APPEND% res.pizzahut.com.cn,api.mcd.cn,3pp.starbucks.com.cn,apiproxy.zuche.com,tm-api.pin-dao.cn,api-fouth-mem.huazhu.com,mxsa.mxbc.net,lawsonapi.yorentown.com,plt.yorentown.com,member.lxjchina.com.cn,cbd-gateway-service-applets.hualala.com,alittle-tea.oss-cn-shanghai.aliyuncs.com,cappapi.alittle-tea.com,mkt-gateway.tuhu.cn,ucmp.sf-express.com,daijia.kuaidadi.com,as.xiaojukeji.com,minifm.maxxipoint.com,miniapp.sexytea2013.com,coco-com.e.verystar.net,newton.gumingnc.com
