@@ -1,6 +1,7 @@
 # 代理列表
 
 # MyList && Other
+DOMAIN-SUFFIX,linux.do
 DOMAIN-SUFFIX,1password.com
 DOMAIN-SUFFIX,adguard.org
 DOMAIN-SUFFIX,bit.no.com
