@@ -9,6 +9,7 @@ hostname = %APPEND% gab.122.gov.cn, ad.12306.cn, mobile.12306.cn, ump.sz.creditc
 
 [Rule]
 DOMAIN-SUFFIX,wxs.qq.com,REJECT,extended-matching,pre-matching
+DOMAIN-SUFFIX,msmp.abchina.com.cn,REJECT,extended-matching,pre-matching
 
 [URL Rewrite]
 # >>>>>>>>>>>>>>> ✅ 0 ✅ <<<<<<<<<<<<<<
