@@ -16,7 +16,7 @@ hostname = %APPEND% entities.caixin.com, gateway.caixin.com, gg.caixin.com, mapp
 # 首页弹出框
 ^https:\/\/msgapi\.caixin\.com\/msg_api\/annmsg\/annlist data-type=text data="{}" status-code=200
 # 图片广告
-^https:\/\/showimg\.caixin\.com\/ data-type=text data="{}" status-code=200
+#^https:\/\/showimg\.caixin\.com\/ data-type=text data="{}" status-code=200
 
 
 [Script]
