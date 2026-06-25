@@ -22,7 +22,7 @@ DOMAIN,app.biliapi.net,REJECT,pre-matching,extended-matching
 #屏蔽关键词
 ^https:\/\/grpc\.biliapi\.net\/bilibili\.app\.interface\.v1\.Search\/DefaultWords$ header="content-type: application/grpc" data-type=base64 data="AAAAACkaHeaQnOe0ouinhumikeOAgeeVquWJp+aIlnVw5Li7IgAoAToAQgBKAA=="
 #去掉流量卡体式
-^https:\/\/grpc\.biliapi\.net\/bilibili\.app\.view\.v1\.View\/TFInfo$ header="content-type: application/grpc" data-type=base64 data="AAAAAAIIAQ=="
+^https:\/\/grpc\.biliapi\.net\/bilibili\.app\.(?:view\.v1\.View\/TFInfo|viewunite\.v1\.View\/(?:PlayPause|ViewEndPage))$ header="content-type: application/grpc|grpc-status: 0" data-type=base64 data="AAAAAAA="
 #界面优化
 ^https:\/\/app\.bili(bili\.com|api\.net)\/x\/resource\/show\/tab\/v2\? data-type=file data="https://raw.githubusercontent.com/linuszlx/Surge/main/Mock/Tabresponse_body.json"
 
