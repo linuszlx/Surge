@@ -20,7 +20,7 @@ DOMAIN,app.biliapi.net,REJECT,pre-matching,extended-matching
 #屏蔽青少年模式
 ^https:\/\/grpc\.biliapi\.net\/bilibili\.app\.interface\.v1\.Teenagers\/ModeStatus$ header="content-type: application/grpc" data-type=base64 data="AAAAABMKEQgCEgl0ZWVuYWdlcnMgAioA"
 #屏蔽关键词
-^https:\/\/grpc\.biliapi\.net\/bilibili\.app\.interface\.v1\.Search\/DefaultWords$ header="content-type: application/grpc" data-type=base64 data="AAAAACkaHeaQnOe0ouinhumikeOAgeeVquWJp+aIlnVw5Li7IgAoAToAQgBKAA=="
+^https:\/\/grpc\.biliapi\.net\/bilibili\.app\.interface\.v1\.Search\/DefaultWords$ header="content-type: application/grpc|grpc-status: 0" data-type=base64 data="AAAAACEaHeaQnOe0ouinhumikeOAgeeVquWJp+aIlnVw5Li7KAE="
 #去掉流量卡体式
 ^https:\/\/grpc\.biliapi\.net\/bilibili\.app\.view\.v1\.View\/TFInfo$ header="content-type: application/grpc" data-type=base64 data="AAAAAAIIAQ=="
 #界面优化
@@ -41,8 +41,8 @@ http-response-jq ^https:\/\/app\.bilibili\.com\/x\/v2\/account\/mine(?:\/ipad)?\
 http-response-jq ^https:\/\/app\.bilibili\.com\/x\/v2\/account\/myinfo\? '.data.vip |= if . != null and .status == 0 then . + { status: 1, type: 2, due_date: 9005270400000, role: 15 } else . end'
 
 [Script]
-{{{空降助手}}} = type=http-request,pattern=^https:\/\/(grpc\.biliapi\.net|app\.bilibili\.com)\/bilibili\.community\.service\.dm\.v1\.DM\/DmSegMobile$,argument="{"logLevel":"{{{日志等级}}}"}",requires-body=1,binary-body-mode=1,max-size=-1,engine=webview,script-path=https://raw.githubusercontent.com/kokoryh/Sparkle/refs/heads/master/dist/bilibili.protobuf.request.js
-{{{优化评论区卡顿}}} = type=http-request,pattern=^https:\/\/(grpc\.biliapi\.net|app\.bilibili\.com)\/bilibili\.(app\.viewunite\.v1\.View\/View|main\.community\.reply\.v1\.Reply\/MainList)$,argument="{"purifyComment":{{{过滤置顶评论广告}}},"logLevel":"{{{日志等级}}}"}",requires-body=1,binary-body-mode=1,max-size=-1,engine=webview,timeout=10,script-path=https://raw.githubusercontent.com/kokoryh/Sparkle/refs/heads/master/dist/bilibili.protobuf.request.js
+{{{空降助手}}} = type=http-request,pattern=^https:\/\/(grpc\.biliapi\.net|app\.bilibili\.com)\/bilibili\.community\.service\.dm\.v1\.DM\/DmSegMobile$,argument="{"logLevel":"{{{日志等级}}}"}",requires-body=1,binary-body-mode=1,max-size=-1,engine=webview,script-path=https://raw.githubusercontent.com/linuszlx/JS/main/Bilibili/kokoryh/bilibili.protobuf.request.js
+{{{优化评论区卡顿}}} = type=http-request,pattern=^https:\/\/(grpc\.biliapi\.net|app\.bilibili\.com)\/bilibili\.(app\.viewunite\.v1\.View\/View|main\.community\.reply\.v1\.Reply\/MainList)$,argument="{"purifyComment":{{{过滤置顶评论广告}}},"logLevel":"{{{日志等级}}}"}",requires-body=1,binary-body-mode=1,max-size=-1,engine=webview,timeout=10,script-path=https://raw.githubusercontent.com/linuszlx/JS/main/Bilibili/kokoryh/bilibili.protobuf.request.js
 bilibili.protobuf = type=http-response,pattern=^https:\/\/(grpc\.biliapi\.net|app\.bilibili\.com)\/bilibili\.(app\.(show\.v1\.Popular\/Index|dynamic\.v2\.Dynamic\/DynAll|view(unite)?\.v1\.View\/(View|ViewProgress|RelatesFeed)|playurl\.v1\.PlayURL\/PlayView|playerunite\.v1\.Player\/PlayViewUnite)|polymer\.app\.search\.v1\.Search\/SearchAll|community\.service\.dm\.v1\.DM\/DmView|main\.community\.reply\.v1\.Reply\/MainList|pgc\.gateway\.player\.v2\.PlayURL\/PlayView)$,argument="{"showUpList":"{{{动态最常访问}}}","purifyTopReplies":{{{过滤置顶评论广告}}},"airborne":"{{{空降助手}}}","logLevel":"{{{日志等级}}}"}",requires-body=1,binary-body-mode=1,max-size=-1,engine=webview,script-path=https://raw.githubusercontent.com/linuszlx/JS/main/Bilibili/kokoryh/bilibili.protobuf.response.js
 移除首页推荐广告 = type=http-response, pattern=^https:\/\/app\.bili(bili\.com|api\.net)\/x\/v2\/feed\/index, script-path=https://raw.githubusercontent.com/linuszlx/JS/main/Bilibili/json.js, requires-body=true
 
