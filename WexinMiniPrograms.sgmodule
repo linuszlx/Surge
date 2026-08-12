@@ -14,6 +14,8 @@ DOMAIN, wxsmsdy.video.qq.com, REJECT,extended-matching,pre-matching
 DOMAIN, wxsnsdythumb.wxs.qq.com, REJECT,extended-matching,pre-matching
 # 猫眼电影
 DOMAIN, ad.maoyan.com, REJECT,extended-matching,pre-matching
+# 平台
+DOMAIN,api.zhishustar.com,REJECT
 
 [URL Rewrite]
 
