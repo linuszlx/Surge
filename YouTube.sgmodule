@@ -4,9 +4,11 @@
 #!desc=专为无广告节点定制：仅保留后台播放/画中画，剔除视频流拦截，消除首屏播放卡顿 1 秒问题。
 
 [Script]
-# 仅拦截 player 响应以注入后台播放权限，关闭所有冗余按钮屏蔽与翻译逻辑
-youtube.response.bg = type=http-response,pattern=^https:\/\/youtubei\.googleapis\.com\/youtubei\/v1\/player(\?(.*))?$,requires-body=1,max-size=-1,binary-body-mode=1,script-path=https://raw.githubusercontent.com/Maasea/sgmodule/master/Script/Youtube/youtube.response.js,argument="{"captionLang":"off","blockUpload":false,"blockImmersive":false,"blockShorts":false,"debug":false}"
+# 1. 恢复 API 请求改写，欺骗客户端身份
+youtube.request = type=http-request,pattern=^https:\/\/youtubei\.googleapis\.com\/youtubei\/v1\/(player|next|get_watch),requires-body=1,max-size=-1,binary-body-mode=1,script-path=https://raw.githubusercontent.com/Maasea/sgmodule/master/Script/Youtube/youtube.request.js
+
+# 2. 覆盖 player 和 next 等关键响应，注入后台与画中画权限
+youtube.response = type=http-response,pattern=^https:\/\/youtubei\.googleapis\.com\/youtubei\/v1\/(player|next|get_watch|config|account\/get_setting),requires-body=1,max-size=-1,binary-body-mode=1,script-path=https://raw.githubusercontent.com/Maasea/sgmodule/master/Script/Youtube/youtube.response.js,argument="{"captionLang":"off","blockUpload":false,"blockImmersive":false,"blockShorts":false,"debug":false}"
 
 [MITM]
-# 彻底移除 *.googlevideo.com，只保留 API 域名
 hostname = %APPEND% youtubei.googleapis.com
