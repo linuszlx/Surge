@@ -1,0 +1,100 @@
+{
+  "code" : 0,
+  "config" : {
+    "no_login_avatar_type" : 0,
+    "popup_style" : 1,
+    "tab_simplify" : false,
+    "no_login_avatar" : "https:\/\/i0.hdslb.com\/bfs\/archive\/689ed56f5b8b9bd26a90b20c52d464ebc0156185.png",
+    "search_entrance" : 5
+  },
+  "data" : {
+    "tab" : [
+      {
+        "id": 39,
+        "tab_id": "直播tab",
+        "name": "直播",
+        "uri": "bilibili://live/home",
+        "pos": 1
+      },
+      {
+        "id": 40,
+        "tab_id": "推荐tab",
+        "default_selected": 1,
+        "name": "推荐",
+        "uri": "bilibili://pegasus/promo",
+        "pos": 2
+      },
+      {
+        "id": 41,
+        "tab_id": "hottopic",
+        "name": "热门",
+        "uri": "bilibili://pegasus/hottopic",
+        "pos": 3
+      },
+      {
+        "id": 2894,
+        "tab_id": "bangumi",
+        "name": "动画",
+        "uri": "bilibili://pgc/bangumi_v2",
+        "pos": 4
+      },
+      {
+        "id": 2898,
+        "tab_id": "bilibili://pgc/cinema-tab",
+        "name": "影视",
+        "uri": "bilibili://pgc/cinema_v2",
+        "pos": 5
+      }
+    ],
+    "bottom" : [
+      {
+        "uri" : "bilibili:\/\/main\/home\/",
+        "tab_id" : "首页Bottom",
+        "pos" : 1,
+        "id" : 486,
+        "icon_selected" : "http:\/\/i0.hdslb.com\/bfs\/archive\/e5106aa688dc729e7f0eafcbb80317feb54a43bd.png",
+        "icon" : "http:\/\/i0.hdslb.com\/bfs\/archive\/63d7ee88d471786c1af45af86e8cb7f607edf91b.png",
+        "name" : "首页"
+      },
+      {
+        "uri" : "bilibili:\/\/following\/home\/",
+        "tab_id" : "dynamic",
+        "pos" : 2,
+        "id" : 488,
+        "icon_selected" : "http:\/\/i0.hdslb.com\/bfs\/archive\/25b658e1f6b6da57eecba328556101dbdcb4b53f.png",
+        "icon" : "http:\/\/i0.hdslb.com\/bfs\/archive\/86dfbe5fa32f11a8588b9ae0fccb77d3c27cedf6.png",
+        "name" : "关注"
+      },
+      {
+        "uri" : "bilibili:\/\/im\/home_tab",
+        "tab_id" : "imtest",
+        "pos" : 3,
+        "id" : 3969,
+        "icon_selected" : "https:\/\/i0.hdslb.com\/bfs\/legacy\/e1ab7c3c7a5b2beb79af328f95f19fc781aaa950.png",
+        "icon" : "https:\/\/i0.hdslb.com\/bfs\/legacy\/a6cb60a3369b85d72986233f6a8774751093aa4e.png",
+        "name" : "消息"
+      },
+      {
+        "uri" : "bilibili:\/\/user_center\/",
+        "tab_id" : "我的Bottom",
+        "pos" : 4,
+        "id" : 489,
+        "icon_selected" : "http:\/\/i0.hdslb.com\/bfs\/archive\/a54a8009116cb896e64ef14dcf50e5cade401e00.png",
+        "icon" : "http:\/\/i0.hdslb.com\/bfs\/archive\/4b0b2c49ffeb4f0c2e6a4cceebeef0aab1c53fe1.png",
+        "name" : "我的"
+      }
+    ],
+    "top_left" : {
+      "story_foreground_image" : "",
+      "story_background_image" : "",
+      "game_background_image" : "",
+      "goto" : 1,
+      "listen_foreground_image" : "",
+      "has_recent_tab" : 0,
+      "listen_background_image" : "",
+      "game_foreground_image" : "",
+      "url" : "bilibili:\/\/root?bottom_tab_id=我的Bottom"
+    }
+  },
+  "message" : "OK"
+}
