@@ -10,9 +10,9 @@
 
 [Script]
 # 拦截直播首页推荐流响应体并进行数据结构重塑
-#Bilibili_Live_Feed = type=http-response,pattern=^https?:\/\/api\.live\.bilibili\.com\/xlive\/app-interface\/v2\/index\/feed,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/linuszlx/JS/refs/heads/main/Bilibili/bilibili_feed.js
+Bilibili_Live_Feed = type=http-response,pattern=^https?:\/\/api\.live\.bilibili\.com\/xlive\/app-interface\/v2\/index\/feed,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/linuszlx/JS/refs/heads/main/Bilibili/bilibili_feed.js
 
 # 注意类型是 http-request，requires-body=0 即可（只改 URL 和 Headers，不读写请求体）
-Bilibili_Live_Req = type=http-request,pattern=^https?:\/\/api\.live\.bilibili\.com\/xlive\/app-interface\/v2\/index\/feed,requires-body=0,script-path=https://raw.githubusercontent.com/linuszlx/JS/refs/heads/main/Bilibili/bilibili_req.js
+#Bilibili_Live_Req = type=http-request,pattern=^https?:\/\/api\.live\.bilibili\.com\/xlive\/app-interface\/v2\/index\/feed,requires-body=0,script-path=https://raw.githubusercontent.com/linuszlx/JS/refs/heads/main/Bilibili/bilibili_req.js
 [MITM]
 hostname = %APPEND% app.bilibili.com, api.bilibili.com, api.live.bilibili.com
