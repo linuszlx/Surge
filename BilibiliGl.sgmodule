@@ -7,8 +7,7 @@
 [Map Local]
 #界面优化
 ^https:\/\/app\.bili(bili\.com|api\.net)\/x\/resource\/show\/tab\/v2\? data-type=file data="https://raw.githubusercontent.com/linuszlx/Surge/main/Mock/BGTabresponse_body.json"
-
-
+Bilibili_Live_Feed = type=http-response,pattern=^https?:\/\/api\.live\.bilibili\.com\/xlive\/app-interface\/v2\/index\/feed,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/linuszlx/JS/refs/heads/main/Bilibili/bilibili_feed.js
 
 [MITM]
-hostname = %APPEND% app.bilibili.com, api.bilibili.com
+hostname = %APPEND% app.bilibili.com, api.bilibili.com, api.live.bilibili.com
