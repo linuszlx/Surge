@@ -205,7 +205,6 @@ IP-CIDR,147.92.128.0/17,no-resolve
 IP-CIDR,203.104.128.0/19,no-resolve
 
 # Porn
-DOMAIN-KEYWORD,porn
 DOMAIN-SUFFIX,8teenxxx.com
 DOMAIN-SUFFIX,ahcdn.com
 DOMAIN-SUFFIX,bcvcdn.com
