@@ -2,19 +2,15 @@
 #!desc=优化哔哩哔哩国际版界面
 #!author=Linus Zhang
 #!category=去广告
-#!arguments-desc=空降助手策略: 访问第三方空降服务器的策略，默认 DIRECT\n日志等级: 4:ERROR, 5:OFF
-
-
+#!arguments=空降助手:bilibili.airborne,日志等级:4
+#!arguments-desc=空降助手: 默认开启(bilibili.airborne)，配置为"#"时关闭\n日志等级: 1:DEBUG, 2:INFO, 3:WARN, 4:ERROR, 5:OFF
 [Rule]
 DOMAIN,api.biliapi.com,REJECT,pre-matching,extended-matching
 DOMAIN,app.biliapi.com,REJECT,pre-matching,extended-matching
 DOMAIN,api.biliapi.net,REJECT,pre-matching,extended-matching
 DOMAIN,app.biliapi.net,REJECT,pre-matching,extended-matching
 AND,((DOMAIN-SUFFIX,chat.bilibili.com), (OR,((DOMAIN-KEYWORD,stun), (DOMAIN-KEYWORD,tracker), (DOMAIN-KEYWORD,p2p)))),REJECT,pre-matching
-DEST-PORT,4480,REJECT-NO-DROP,pre-matching
-DEST-PORT,4483,REJECT-NO-DROP,pre-matching
-DEST-PORT,8082,REJECT-NO-DROP,pre-matching
-DEST-PORT,9102,REJECT-NO-DROP,pre-matching
+
 
 [Map Local]
 #去掉流量卡体式
@@ -26,13 +22,10 @@ DEST-PORT,9102,REJECT-NO-DROP,pre-matching
 # 拦截直播首页推荐流响应体并进行数据结构重塑
 Bilibili_Live_Feed = type=http-response,pattern=^https?:\/\/api\.live\.bilibili\.com\/xlive\/app-interface\/v2\/index\/feed,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/linuszlx/JS/refs/heads/main/Bilibili/bilibili_feed.js
 
-# 空降助手-步骤1：仅拦截弹幕分段请求，获取视频信息
-bilibili.airborne = type=http-request,pattern=^https:\/\/(?:grpc\.biliapi\.net|app\.bilibili\.com)\/bilibili\.community\.service\.dm\.v1\.DM\/DmSegMobile$,argument="{"logLevel":"{{{日志等级}}}"}",requires-body=1,binary-body-mode=1,max-size=-1,engine=webview,timeout=10,script-path=https://raw.githubusercontent.com/kokoryh/Sparkle/refs/heads/master/dist/bilibili.protobuf.request.js
+{{{空降助手}}} = type=http-request,pattern=^https:\/\/(?:grpc\.biliapi\.net|app\.bilibili\.com)\/bilibili\.community\.service\.dm\.v1\.DM\/DmSegMobile$,argument="{"logLevel":"{{{日志等级}}}"}",requires-body=1,binary-body-mode=1,max-size=-1,engine=webview,timeout=10,script-path=https://raw.githubusercontent.com/kokoryh/Sparkle/refs/heads/master/dist/bilibili.protobuf.request.js
 
-# 空降助手-步骤2：仅拦截 DmView 注入空降数据（其他动态、评论、推荐全部不挂载该脚本）
-bilibili.protobuf = type=http-response,pattern=^https:\/\/(?:grpc\.biliapi\.net|app\.bilibili\.com)\/bilibili\.community\.service\.dm\.v1\.DM\/DmView$,argument="{"displayUpList":"show","purifyComment":0,"sponsorBlock":"bilibili.airborne","logLevel":"{{{日志等级}}}"}",requires-body=1,binary-body-mode=1,max-size=-1,engine=webview,script-path=https://raw.githubusercontent.com/kokoryh/Sparkle/refs/heads/master/dist/bilibili.protobuf.response.js
-
-
+# 弹幕视图与播放响应处理
+bilibili.protobuf = type=http-response,pattern=^https:\/\/(?:grpc\.biliapi\.net|app\.bilibili\.com)\/bilibili\.(?:community\.service\.dm\.v1\.DM\/DmView|app\.view(?:unite)?\.v1\.View\/View)$,argument="{"sponsorBlock":"{{{空降助手}}}","logLevel":"{{{日志等级}}}"}",requires-body=1,binary-body-mode=1,max-size=-1,engine=webview,script-path=https://raw.githubusercontent.com/kokoryh/Sparkle/refs/heads/master/dist/bilibili.protobuf.response.js
 
 [MITM]
 hostname = %APPEND% grpc.biliapi.net, app.bilibili.com, api.bilibili.com, api.live.bilibili.com
