@@ -2,18 +2,16 @@
 #!desc = 优化财新客户端，去除广告
 #!category = 去广告
 
-[MITM]
-hostname = %APPEND% gateway.caixin.com, msgapi.caixin.com, gg.caixin.com, dolphin.caixin.com, www.caixin.com
-
-[URL Rewrite]
+[Map Local]
 # > 文章页猜你想问
-^https:\/\/www\.caixin\.com\/ai\/question\/\d+\/\d+\.js - reject-200
+^https:\/\/www\.caixin\.com\/ai\/question\/\d+\/\d+\.js data="" status=200
 # > 原生广告 / 开屏 / 信息流 / Banner
-^https:\/\/gg\.caixin\.com\/s - reject-200
+^https:\/\/gg\.caixin\.com\/s data="" status=200
 # > 文章页广告
-^https:\/\/dolphin\.caixin\.com\/s - reject-200
+^https:\/\/dolphin\.caixin\.com\/s data="" status=200
 # > 数据统计上报
-^https:\/\/gateway\.caixin\.com\/api\/stat\/v\d\/client_data\/from_app - reject-200
+^https:\/\/gateway\.caixin\.com\/api\/stat\/v\d\/client_data\/from_app data="" status=200
+
 
 [Body Rewrite]
 # > 广告配置 / AI入口 / 商城 / 热选
@@ -33,4 +31,5 @@ http-response-jq ^https:\/\/gateway\.caixin\.com\/api\/app-api\/search\/getkeywo
 # > 热门
 http-response-jq ^https:\/\/gateway\.caixin\.com\/api\/app-api\/articlesHotRecommend\/getHotRecommendArticles jq='.data.hotRecommendArticleList=[]'
 
-
+[MITM]
+hostname = %APPEND% gateway.caixin.com, msgapi.caixin.com, gg.caixin.com, dolphin.caixin.com, www.caixin.com
