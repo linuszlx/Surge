@@ -91,6 +91,7 @@ URL-REGEX,^http://.*/squery,REJECT
 # > hostname = bkclient.umetrip.com.cn, discardrp.umetrip.com, startup.umetrip.com
 ^https?:\/\/(discardrp|startup)\.umetrip\.com\/gateway\/api\/umetrip\/native - reject
 ^https?:\/\/bkclient\.umetrip\.com\.cn\/gateway\/api\/umetrip\/native - reject
+^https?:\/\/oss\.umetrip\.com\/fs\/advert\/ - reject
 
 # >>>>>>>>>>>>>>> ✅ I ✅ <<<<<<<<<<<<<<
 # > 界面新闻
@@ -448,7 +449,7 @@ http-response ^https?:\/\/mp\.weixin\.qq\.com\/mp\/getappmsgad$ body-replace /ad
 # >>>>>>>>>>>>>>> ✅ H ✅ <<<<<<<<<<<<<<
 # > 航旅纵横
 # > hostname = sns.umetrip.com, appmsg.umetrip.com, umehome.umetrip.com, opactivity.umetrip.com, activity.umetrip.com, umerp.umetrip.com, umeflightstatus.umetrip.com, umestartup.umetrip.com, oss.umetrip.com
-航旅纵横去广告 = type=http-response,pattern=^https:\/\/(?:sns|appmsg|umehome|opactivity|activity|umerp|umeflightstatus|umestartup)\.umetrip\.com\/gateway\/api\/umetrip\/native$,requires-body=1,max-size=0,script-path=https://ddgksf2013.top/scripts/umetrip.ads.js
+航旅纵横净化 = type=http-response,pattern=^https:\/\/(?:sns|appmsg|home|umehome|opactivity|activity|umerp|flightstatus|umeflightstatus|startup|umestartup|user|umeuser|event)\.umetrip\.com\/gateway\/api\/umetrip\/native(?:\?.*)?$,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/linuszlx/JS/main/Hanglvzongheng/umetrip.ads.js
 
 # > 快手联盟,优量汇,穿山甲
 # hostname = api-access.pangolin-sdk-toutiao.com, is.snssdk.com
