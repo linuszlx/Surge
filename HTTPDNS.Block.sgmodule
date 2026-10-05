@@ -177,12 +177,11 @@ URL-REGEX,"^http:\/\/((25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.){3}(25[0-5]|2[0-4
 URL-REGEX,"^http:\/\/\[[0-9a-fA-F:]+\]:\d+\/httpdns\/",REJECT,extended-matching
 
 
-[URL Rewrite]
-# 喜马拉雅 LinkEye HTTPDNS 调度
-^https:\/\/gslbali\.ximalaya\.com\/linkeye-cloud\/httpdns\/ - reject-200
-
 
 [Map Local]
+# 喜马拉雅 LinkEye HTTPDNS 调度
+^https:\/\/gslbali\.ximalaya\.com\/linkeye-cloud\/httpdns\/ data-type=text data="{}" status-code=200 header="Content-Type:application/json"
+
 # 支付宝 AMDC 调度（防红字网络报错，返回空字典使其平滑降级走本地 DNS）
 ^https?:\/\/amdc\.alipay\.com\/query data-type=text data="{}" status-code=200 header="Content-Type:application/json"
 
