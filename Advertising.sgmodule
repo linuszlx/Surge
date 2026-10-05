@@ -87,12 +87,6 @@ URL-REGEX,^http://.*/squery,REJECT
 # hostname = api-ad-product.huxiu.com
 ^https?:\/\/api-ad-product\.huxiu\.com\/Api\/Product\/SDK\/Advert\/Query\/queryAdvertListInfo - reject
 
-# > 航旅纵横
-# > hostname = bkclient.umetrip.com.cn, discardrp.umetrip.com, startup.umetrip.com
-^https?:\/\/(discardrp|startup)\.umetrip\.com\/gateway\/api\/umetrip\/native - reject
-^https?:\/\/bkclient\.umetrip\.com\.cn\/gateway\/api\/umetrip\/native - reject
-^https?:\/\/oss\.umetrip\.com\/fs\/advert\/ - reject
-
 # >>>>>>>>>>>>>>> ✅ I ✅ <<<<<<<<<<<<<<
 # > 界面新闻
 # hostname = img.jiemian.com
@@ -278,7 +272,7 @@ http-response ^https?:\/\/mp\.weixin\.qq\.com\/mp\/getappmsgad$ body-replace /ad
 
 # > 航旅纵横
 # > hostname = bkclient.umetrip.com.cn, discardrp.umetrip.com, startup.umetrip.com, oss.umetrip.com
-^https?:\/\/oss\.umetrip\.com\/fs\/advert\/polite data-type=text data="{}" status-code=200
+^https?:\/\/oss\.umetrip\.com\/fs\/advert data-type=text data="{}" status-code=200
 
 # >>>>>>>>>>>>>>> ✅ I ✅ <<<<<<<<<<<<<<
 # >>>>>>>>>>>>>>> ✅ K ✅ <<<<<<<<<<<<<<
