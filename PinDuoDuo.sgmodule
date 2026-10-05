@@ -21,28 +21,27 @@ DOMAIN, ta-a.pinduoduo.com, REJECT
 DOMAIN, meta.pinduoduo.com, REJECT
 DOMAIN, apm-a.pinduoduo.com, REJECT
 
-[URL Rewrite]
-# Reject-dict 转换 (Surge 使用 reject-dict)
-^https:\/\/api\.pinduoduo\.com\/api\/aristotle\/unrated_order_for_unreceived_tab\? _ reject-dict
-^https:\/\/api\.pinduoduo\.com\/api\/aristotle\/query_order_list_tabs_element\? _ reject-dict
-^https:\/\/api\.pinduoduo\.com\/api\/aquarius\/hungary\/global\/homepage\? _ reject-dict
-^https:\/\/api\.pinduoduo\.com\/api\/caterham\/v3\/query\/order_express_group\? _ reject-dict
-^https:\/\/api\.pinduoduo\.com\/search_hotquery\? _ reject-dict
-^https:\/\/api\.pinduoduo\.com\/api\/zaire_biz\/chat\/resource\/get_list_data\? _ reject-dict
-^https:\/\/api\.pinduoduo\.com\/api\/caterham\/v3\/query\/new_chat_group\? _ reject-dict
-^https:\/\/api\.pinduoduo\.com\/api\/alexa\/goods\/back_up\? _ reject-dict
-^https:\/\/api\.pinduoduo\.com\/api\/caterham\/v3\/query\/personal\? _ reject-dict
-^https:\/\/api\.pinduoduo\.com\/api\/brand-olay\/goods_detail\/bybt_guide\? _ reject-dict
-^https:\/\/api\.pinduoduo\.com\/api\/engels\/reviews\/require\/append\? _ reject-dict
-^https:\/\/api\.pinduoduo\.com\/api\/caterham\/v3\/query\/my_order_group\? _ reject-dict
-^https:\/\/api\.pinduoduo\.com\/api\/caterham\/v3\/query\/likes\? _ reject-dict
-^https:\/\/api\.pinduoduo\.com\/api\/phantom\/gbdbpdv\/extra\? _ reject-dict
-^https:\/\/api\.pinduoduo\.com\/api\/manufacturer\/cross\/shortcut\/list\? _ reject-dict
-^https:\/\/api\.pinduoduo\.com\/api\/dunkirk\/liveactivity\/push\/create\/url\/report\? _ reject-dict
-^https:\/\/api\.pinduoduo\.com\/api\/growth\/nagato\/app\/index\/gather\? _ reject-dict
-^https:\/\/api\.pinduoduo\.com\/api\/engels\/wait\/receive\/review\? _ reject-dict
-^https:\/\/api\.pinduoduo\.com\/api\/buffon\/nasus\/recommend\? _ reject-dict
-^https:\/\/api\.pinduoduo\.com\/api\/caterham\/v2\/query\/goods_detail_with_tags\? _ reject-dict
+[Map Local]
+^https:\/\/api\.pinduoduo\.com\/api\/aristotle\/unrated_order_for_unreceived_tab\? data="{}" header="Content-Type: application/json; charset=utf-8"
+^https:\/\/api\.pinduoduo\.com\/api\/aristotle\/query_order_list_tabs_element\? data="{}" header="Content-Type: application/json; charset=utf-8"
+^https:\/\/api\.pinduoduo\.com\/api\/aquarius\/hungary\/global\/homepage\? data="{}" header="Content-Type: application/json; charset=utf-8"
+^https:\/\/api\.pinduoduo\.com\/api\/caterham\/v3\/query\/order_express_group\? data="{}" header="Content-Type: application/json; charset=utf-8"
+^https:\/\/api\.pinduoduo\.com\/search_hotquery\? data="{}" header="Content-Type: application/json; charset=utf-8"
+^https:\/\/api\.pinduoduo\.com\/api\/zaire_biz\/chat\/resource\/get_list_data\? data="{}" header="Content-Type: application/json; charset=utf-8"
+^https:\/\/api\.pinduoduo\.com\/api\/caterham\/v3\/query\/new_chat_group\? data="{}" header="Content-Type: application/json; charset=utf-8"
+^https:\/\/api\.pinduoduo\.com\/api\/alexa\/goods\/back_up\? data="{}" header="Content-Type: application/json; charset=utf-8"
+^https:\/\/api\.pinduoduo\.com\/api\/caterham\/v3\/query\/personal\? data="{}" header="Content-Type: application/json; charset=utf-8"
+^https:\/\/api\.pinduoduo\.com\/api\/brand-olay\/goods_detail\/bybt_guide\? data="{}" header="Content-Type: application/json; charset=utf-8"
+^https:\/\/api\.pinduoduo\.com\/api\/engels\/reviews\/require\/append\? data="{}" header="Content-Type: application/json; charset=utf-8"
+^https:\/\/api\.pinduoduo\.com\/api\/caterham\/v3\/query\/my_order_group\? data="{}" header="Content-Type: application/json; charset=utf-8"
+^https:\/\/api\.pinduoduo\.com\/api\/caterham\/v3\/query\/likes\? data="{}" header="Content-Type: application/json; charset=utf-8"
+^https:\/\/api\.pinduoduo\.com\/api\/phantom\/gbdbpdv\/extra\? data="{}" header="Content-Type: application/json; charset=utf-8"
+^https:\/\/api\.pinduoduo\.com\/api\/manufacturer\/cross\/shortcut\/list\? data="{}" header="Content-Type: application/json; charset=utf-8"
+^https:\/\/api\.pinduoduo\.com\/api\/dunkirk\/liveactivity\/push\/create\/url\/report\? data="{}" header="Content-Type: application/json; charset=utf-8"
+^https:\/\/api\.pinduoduo\.com\/api\/growth\/nagato\/app\/index\/gather\? data="{}" header="Content-Type: application/json; charset=utf-8"
+^https:\/\/api\.pinduoduo\.com\/api\/engels\/wait\/receive\/review\? data="{}" header="Content-Type: application/json; charset=utf-8"
+^https:\/\/api\.pinduoduo\.com\/api\/buffon\/nasus\/recommend\? data="{}" header="Content-Type: application/json; charset=utf-8"
+^https:\/\/api\.pinduoduo\.com\/api\/caterham\/v2\/query\/goods_detail_with_tags\? data="{}" header="Content-Type: application/json; charset=utf-8"
 
 [Script]
 # 扫码取件脚本
