@@ -1,0 +1,25 @@
+#!name=红果短剧去广告
+#!desc=红果短剧去广告分流规则
+#!category=去广告
+
+[Rule]
+# 红果内容直连（规则优先，确保正常加载）
+DOMAIN-SUFFIX,hongguo.com,DIRECT
+DOMAIN-SUFFIX,hongguo.douyin.com,DIRECT
+DOMAIN-SUFFIX,byteimg.com,DIRECT
+DOMAIN-SUFFIX,pstatp.com,DIRECT
+
+# 红果核心广告拦截
+DOMAIN-SUFFIX,hongguoapp.com,REJECT
+DOMAIN-SUFFIX,hongguosdk.com,REJECT
+DOMAIN-SUFFIX,pangolin-sdk-toutiao.com,REJECT
+DOMAIN-SUFFIX,pglstatp-toutiao.com,REJECT
+DOMAIN-KEYWORD,ad-union-sdk,REJECT
+DOMAIN-KEYWORD,be-pack,REJECT
+DOMAIN-KEYWORD,hongguo.ad,REJECT
+
+# 字节系广告兜底（红果隶属字节）
+DOMAIN-SUFFIX,ad.pangle.cn,REJECT
+DOMAIN-SUFFIX,ad.pangolin.cn,REJECT
+DOMAIN-SUFFIX,zijieapi.com,REJECT
+DOMAIN-KEYWORD,tnc.snssdk,REJECT
