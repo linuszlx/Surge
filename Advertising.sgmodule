@@ -11,6 +11,9 @@ hostname = %APPEND% gab.122.gov.cn, ad.12306.cn, mobile.12306.cn, ump.sz.creditc
 DOMAIN-SUFFIX,wxs.qq.com,REJECT,extended-matching,pre-matching
 DOMAIN-SUFFIX,msmp.abchina.com.cn,REJECT,extended-matching,pre-matching
 URL-REGEX,^http://.*/squery,REJECT
+# KFC广告
+DOMAIN,dynamicad.kfc.com.cn,REJECT
+URL-REGEX,^https?://res\.kfc\.com\.cn/CRM/kfcad/pop/(?:index\.json|pop_[^/?]+\.json)(?:\?.*)?$,REJECT
 
 [URL Rewrite]
 # >>>>>>>>>>>>>>> ✅ 0 ✅ <<<<<<<<<<<<<<
@@ -437,4 +440,8 @@ http-response ^https?:\/\/mp\.weixin\.qq\.com\/mp\/getappmsgad$ body-replace /ad
 # >>>>>>>>>>>>>>> ✅ K ✅ <<<<<<<<<<<<<<
 # KFC
 # hostname = abplatform.yumchina.com,res.kfc.com.cn
-KFC去广告= type=http-response, pattern=^https?:\/\/res\.kfc\.com\.cn\/CRM\/kfcad\/apphome6\/apphome , script-path=https://raw.githubusercontent.com/linuszlx/JS/main/KFC/KFC.js, requires-body = true
+# KFC广告底栏缓存绕过
+KFC广告底栏缓存绕过 = type=http-request,pattern=^https:\/\/res\.kfc\.com\.cn\/CRM\/kfcad\/(?:apphome6\/[^?]+\.json|bootStrap\/rn\/[^?]+\.json|notHomepage\/KFC\/rn\/[^?]+\.json),script-path=https://raw.githubusercontent.com/xingjiu29/KFC/refs/heads/main/kfc_home_request.js,timeout=20
+# KFC启动广告底栏处理
+KFC启动广告底栏处理 = type=http-response,pattern=^https:\/\/res\.kfc\.com\.cn\/CRM\/kfcad\/(?:apphome6\/[^?]+\.json|bootStrap\/rn\/[^?]+\.json|notHomepage\/KFC\/rn\/[^?]+\.json),script-path=https://raw.githubusercontent.com/xingjiu29/KFC/refs/heads/main/kfc_home_response.js,requires-body=true,timeout=20
+
