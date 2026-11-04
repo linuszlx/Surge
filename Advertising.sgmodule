@@ -441,7 +441,7 @@ http-response ^https?:\/\/mp\.weixin\.qq\.com\/mp\/getappmsgad$ body-replace /ad
 # KFC
 # hostname = abplatform.yumchina.com,res.kfc.com.cn
 # KFC广告底栏缓存绕过
-KFC广告底栏缓存绕过 = type=http-request,pattern=^https:\/\/res\.kfc\.com\.cn\/CRM\/kfcad\/(?:apphome6\/[^?]+\.json|bootStrap\/rn\/[^?]+\.json|notHomepage\/KFC\/rn\/[^?]+\.json),script-path=https://raw.githubusercontent.com/xingjiu29/KFC/refs/heads/main/kfc_home_request.js,timeout=20
+KFC广告底栏缓存绕过 = type=http-request,pattern=^https:\/\/res\.kfc\.com\.cn\/CRM\/kfcad\/(?:apphome6\/[^?]+\.json|bootStrap\/rn\/[^?]+\.json|notHomepage\/KFC\/rn\/[^?]+\.json),script-path=https://raw.githubusercontent.com/linuszlx/JS/main/KFC/kfc_home_request.js,timeout=20
 # KFC启动广告底栏处理
-KFC启动广告底栏处理 = type=http-response,pattern=^https:\/\/res\.kfc\.com\.cn\/CRM\/kfcad\/(?:apphome6\/[^?]+\.json|bootStrap\/rn\/[^?]+\.json|notHomepage\/KFC\/rn\/[^?]+\.json),script-path=https://raw.githubusercontent.com/xingjiu29/KFC/refs/heads/main/kfc_home_response.js,requires-body=true,timeout=20
+KFC启动广告底栏处理 = type=http-response,pattern=^https:\/\/res\.kfc\.com\.cn\/CRM\/kfcad\/(?:apphome6\/[^?]+\.json|bootStrap\/rn\/[^?]+\.json|notHomepage\/KFC\/rn\/[^?]+\.json),script-path=https://raw.githubusercontent.com/linuszlx/JS/main/KFC/kfc_home_response.js,requires-body=true,timeout=20
 
