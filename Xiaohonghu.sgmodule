@@ -13,7 +13,7 @@ AND, ((PROTOCOL, UDP), (DEST-PORT, 443), (OR, ((DOMAIN-SUFFIX, xiaohongshu.com),
 
 [URL Rewrite]
 # 评论区图片水印 (200 拦截图片)
-^https?:\/\/ci\.(?:xiaohongshu|rnote)\.com\/system_config\/watermark - reject-200
+#^https?:\/\/ci\.(?:xiaohongshu|rnote)\.com\/system_config\/watermark - reject-200
 
 [Map Local]
 # 惊喜弹窗 
