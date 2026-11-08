@@ -22,11 +22,11 @@ AND, ((PROTOCOL, UDP), (DEST-PORT, 443), (OR, ((DOMAIN-SUFFIX, xiaohongshu.com),
 # 信息流引导/广告
 ^https:\/\/edith\.(?:xiaohongshu|rnote)\.com\/api\/sns\/v\d+\/(?:guide\/user_banner|note\/guide) data="{}" status=200 header="Content-Type: application/json; charset=utf-8"
 ^https:\/\/www\.(?:xiaohongshu|rnote)\.com\/api\/sns\/v\d+\/(?:ads\/resource|hey\/\w+\/hey_gallery) data="{}" status=200 header="Content-Type: application/json; charset=utf-8"
-# 搜索页空数据替换
-^https:\/\/edith\.(?:xiaohongshu|rnote)\.com\/api\/sns\/v1\/search\/banner_list$ data="{}" status=200 header="Content-Type: application/json; charset=utf-8"
-^https:\/\/edith\.(?:xiaohongshu|rnote)\.com\/api\/sns\/v1\/search\/hot_list$ data="{\"data\":{\"items\":[]}}" status=200 header="Content-Type: application/json; charset=utf-8"
-^https:\/\/edith\.(?:xiaohongshu|rnote)\.com\/api\/sns\/v4\/search\/hint data="{\"data\":{\"hint_words\":[]}}" status=200 header="Content-Type: application/json; charset=utf-8"
-^https:\/\/edith\.(?:xiaohongshu|rnote)\.com\/api\/sns\/v4\/search\/trending\? data="{\"data\":{\"queries\":[],\"hint_word\":{}}}" status=200 header="Content-Type: application/json; charset=utf-8"
+# 简单空字典（Surge 标准语法）
+^https:\/\/edith\.(?:xiaohongshu|rnote)\.com\/api\/sns\/v1\/search\/banner_list$ data="{}" data-type=text
+^https:\/\/edith\.(?:xiaohongshu|rnote)\.com\/api\/sns\/v1\/search\/hot_list$ data="{\"data\":{\"items\":[]}}" data-type=text
+^https:\/\/edith\.(?:xiaohongshu|rnote)\.com\/api\/sns\/v4\/search\/hint data="{\"data\":{\"hint_words\":[]}}" data-type=text
+^https:\/\/edith\.(?:xiaohongshu|rnote)\.com\/api\/sns\/v4\/search\/trending\? data="{\"data\":{\"queries\":[],\"hint_word\":{}}}" data-type=text
 
 [Script]
 # 界面整体配置
