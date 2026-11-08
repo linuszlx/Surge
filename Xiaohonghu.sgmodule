@@ -12,7 +12,7 @@ AND, ((PROTOCOL, UDP), (DEST-PORT, 443), (DOMAIN-SUFFIX, xiaohongshu.com)), REJE
 
 [Map Local]
 # 惊喜弹窗与营销拦截
-^https:\/\/edith\.xiaohongshu\.com\/api\/sns\/v1\/surprisebox\/(?:get_style|open|submit_action) data="{}" data-type=text
+#^https:\/\/edith\.xiaohongshu\.com\/api\/sns\/v1\/surprisebox\/(?:get_style|open|submit_action) data="{}" data-type=text
 ^https:\/\/www\.xiaohongshu\.com\/api\/marketing\/box\/trigger\? data="{}" data-type=text
 ^https:\/\/edith\.xiaohongshu\.com\/api\/sns\/(?:v2\/guide\/user_banner|v3\/note\/guide) data="{}" data-type=text
 ^https:\/\/www\.xiaohongshu\.com\/api\/sns\/(?:v1\/ads\/resource|v2\/hey\/\w+\/hey_gallery) data="{}" data-type=text
@@ -47,4 +47,4 @@ AND, ((PROTOCOL, UDP), (DEST-PORT, 443), (DOMAIN-SUFFIX, xiaohongshu.com)), REJE
 #小红书_评论区水印 = type=http-response,pattern=^https:\/\/edith\.xiaohongshu\.com\/api\/sns\/(?:v1\/interaction\/comment\/video\/download|v5\/note\/comment\/list),requires-body=1,max-size=5242880,script-path=https://raw.githubusercontent.com/fkingikelee/fkikelee/main/Resource/kelee/JavaScript/RedPaper/RedPaper_remove_ads.js
 
 [MITM]
-hostname = %APPEND% ci.xiaohongshu.com, edith.xiaohongshu.com, rec.xiaohongshu.com, so.xiaohongshu.com, www.xiaohongshu.com
+hostname = %APPEND% ci.xiaohongshu.com, rec.xiaohongshu.com, so.xiaohongshu.com, www.xiaohongshu.com
