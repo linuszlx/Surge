@@ -4,41 +4,47 @@
 #!date=2026-11-08 00:00:00
 
 [Rule]
-DOMAIN, ads-img-al.xhscdn.com, REJECT
-DOMAIN, ads-img-qc.xhscdn.com, REJECT
-DOMAIN, ads-video-al.xhscdn.com, REJECT
-DOMAIN, ads-video-qc.xhscdn.com, REJECT
-DOMAIN, t-ads.xiaohongshu.com, REJECT
-AND, ((PROTOCOL, UDP), (DEST-PORT, 443), (OR, ((DOMAIN-SUFFIX, xiaohongshu.com), (DOMAIN-SUFFIX, rnote.com)))), REJECT-NO-DROP
+AND, ((PROTOCOL, UDP), (DEST-PORT, 443), (DOMAIN-SUFFIX, xiaohongshu.com)), REJECT-NO-DROP
 
-[Script]
-# 惊喜弹窗与营销引导拦截 (用 Mock 代替 Map Local，自带 200 状态码与合规 JSON 头)
-小红书_惊喜弹窗_1 = type=http-request,pattern=^https:\/\/edith\.(?:xiaohongshu|rnote)\.com\/api\/sns\/v1\/surprisebox\/(?:get_style|open|submit_action),script-inline-header=true,timeout=10,script-text="$done({response: {status: 200, headers: {'Content-Type': 'application/json; charset=utf-8'}, body: '{}'}});"
-小红书_惊喜弹窗_2 = type=http-request,pattern=^https:\/\/www\.(?:xiaohongshu|rnote)\.com\/api\/marketing\/box\/trigger\?,script-inline-header=true,timeout=10,script-text="$done({response: {status: 200, headers: {'Content-Type': 'application/json; charset=utf-8'}, body: '{}'}});"
-小红书_信息流引导 = type=http-request,pattern=^https:\/\/edith\.(?:xiaohongshu|rnote)\.com\/api\/sns\/v\d+\/(?:guide\/user_banner|note\/guide),script-inline-header=true,timeout=10,script-text="$done({response: {status: 200, headers: {'Content-Type': 'application/json; charset=utf-8'}, body: '{}'}});"
-小红书_营销资源 = type=http-request,pattern=^https:\/\/www\.(?:xiaohongshu|rnote)\.com\/api\/sns\/v\d+\/(?:ads\/resource|hey\/\w+\/hey_gallery),script-inline-header=true,timeout=10,script-text="$done({response: {status: 200, headers: {'Content-Type': 'application/json; charset=utf-8'}, body: '{}'}});"
+[URL Rewrite]
+# 拦截水印配置
+^https:\/\/ci\.xiaohongshu\.com\/system_config\/watermark - reject-200
+
+[Map Local]
+# 惊喜弹窗与营销拦截
+^https:\/\/edith\.xiaohongshu\.com\/api\/sns\/v1\/surprisebox\/(?:get_style|open|submit_action) data="{}" data-type=text
+^https:\/\/www\.xiaohongshu\.com\/api\/marketing\/box\/trigger\? data="{}" data-type=text
+^https:\/\/edith\.xiaohongshu\.com\/api\/sns\/(?:v2\/guide\/user_banner|v3\/note\/guide) data="{}" data-type=text
+^https:\/\/www\.xiaohongshu\.com\/api\/sns\/(?:v1\/ads\/resource|v2\/hey\/\w+\/hey_gallery) data="{}" data-type=text
 
 # 搜索页空数据替换
-小红书_搜索_banner = type=http-request,pattern=^https:\/\/edith\.(?:xiaohongshu|rnote)\.com\/api\/sns\/v1\/search\/banner_list$,script-inline-header=true,timeout=10,script-text="$done({response: {status: 200, headers: {'Content-Type': 'application/json; charset=utf-8'}, body: '{}'}});"
-小红书_搜索_hotlist = type=http-request,pattern=^https:\/\/edith\.(?:xiaohongshu|rnote)\.com\/api\/sns\/v1\/search\/hot_list$,script-inline-header=true,timeout=10,script-text="$done({response: {status: 200, headers: {'Content-Type': 'application/json; charset=utf-8'}, body: '{\"data\":{\"items\":[]}}'}});"
-小红书_搜索_hint = type=http-request,pattern=^https:\/\/edith\.(?:xiaohongshu|rnote)\.com\/api\/sns\/v4\/search\/hint,script-inline-header=true,timeout=10,script-text="$done({response: {status: 200, headers: {'Content-Type': 'application/json; charset=utf-8'}, body: '{\"data\":{\"hint_words\":[]}}'}});"
-小红书_搜索_trending = type=http-request,pattern=^https:\/\/edith\.(?:xiaohongshu|rnote)\.com\/api\/sns\/v4\/search\/trending\?,script-inline-header=true,timeout=10,script-text="$done({response: {status: 200, headers: {'Content-Type': 'application/json; charset=utf-8'}, body: '{\"data\":{\"queries\":[],\"hint_word\":{}}}'}});"
+^https:\/\/edith\.xiaohongshu\.com\/api\/sns\/v1\/search\/banner_list$ data="{}" data-type=text
+^https:\/\/edith\.xiaohongshu\.com\/api\/sns\/v1\/search\/hot_list$ data="{\"data\":{\"items\":[]}}" data-type=text
+^https:\/\/edith\.xiaohongshu\.com\/api\/sns\/v4\/search\/hint data="{\"data\":{\"hint_words\":[]}}" data-type=text
+^https:\/\/edith\.xiaohongshu\.com\/api\/sns\/v4\/search\/trending\? data="{\"data\":{\"queries\":[],\"hint_word\":{}}}" data-type=text
 
-# 界面整体配置与开屏广告 (注意：max-size 改为 5242880，严禁设为 0)
-小红书_移除整体配置 = type=http-response,pattern=^https:\/\/edith\.(?:xiaohongshu|rnote)\.com\/api\/sns\/v1\/system\/service\/ui\/config\?,requires-body=1,max-size=5242880,script-path=https://raw.githubusercontent.com/linuszlx/Loonx/main/Script/RedNote/xiaohongshu-2.js
-小红书_开屏配置 = type=http-response,pattern=^https:\/\/edith\.(?:xiaohongshu|rnote)\.com\/api\/sns\/v1\/system_service\/config\?,requires-body=1,max-size=5242880,script-path=https://raw.githubusercontent.com/linuszlx/Loonx/main/Script/RedNote/xiaohongshu-2.js
-小红书_开屏广告 = type=http-response,pattern=^https:\/\/edith\.(?:xiaohongshu|rnote)\.com\/api\/sns\/v2\/system_service\/splash_config,requires-body=1,max-size=5242880,script-path=https://raw.githubusercontent.com/linuszlx/Loonx/main/Script/RedNote/xiaohongshu-2.js
+[Script]
+# 开屏与全局配置
+小红书_整体配置 = type=http-response,pattern=^https:\/\/edith\.xiaohongshu\.com\/api\/sns\/v1\/system\/service\/ui\/config\?,requires-body=1,max-size=5242880,script-path=https://raw.githubusercontent.com/fkingikelee/fkikelee/main/Resource/kelee/JavaScript/RedPaper/RedPaper_remove_ads.js
+小红书_开屏配置 = type=http-response,pattern=^https:\/\/edith\.xiaohongshu\.com\/api\/sns\/v1\/system_service\/config\?,requires-body=1,max-size=5242880,script-path=https://raw.githubusercontent.com/fkingikelee/fkikelee/main/Resource/kelee/JavaScript/RedPaper/RedPaper_remove_ads.js
+小红书_开屏广告 = type=http-response,pattern=^https:\/\/edith\.xiaohongshu\.com\/api\/sns\/v2\/system_service\/splash_config,requires-body=1,max-size=5242880,script-path=https://raw.githubusercontent.com/fkingikelee/fkikelee/main/Resource/kelee/JavaScript/RedPaper/RedPaper_remove_ads.js
 
-# 详情页小部件、关注推荐
-小红书_详情页小部件 = type=http-response,pattern=^https:\/\/edith\.(?:xiaohongshu|rnote)\.com\/api\/sns\/v2\/(?:note\/widgets|user\/followings\/followfeed),requires-body=1,max-size=5242880,script-path=https://raw.githubusercontent.com/linuszlx/Loonx/main/Script/RedNote/xiaohongshu-2.js
-小红书_感兴趣的人 = type=http-response,pattern=^https:\/\/edith\.(?:xiaohongshu|rnote)\.com\/api\/sns\/v5\/recommend\/user\/follow_recommend\?,requires-body=1,max-size=5242880,script-path=https://raw.githubusercontent.com/linuszlx/Loonx/main/Script/RedNote/xiaohongshu-2.js
+# 详情页挂件与关注推荐
+小红书_详情部件 = type=http-response,pattern=^https:\/\/edith\.xiaohongshu\.com\/api\/sns\/v2\/(?:note\/widgets|user\/followings\/followfeed),requires-body=1,max-size=5242880,script-path=https://raw.githubusercontent.com/fkingikelee/fkikelee/main/Resource/kelee/JavaScript/RedPaper/RedPaper_remove_ads.js
+小红书_关注推荐 = type=http-response,pattern=^https:\/\/edith\.xiaohongshu\.com\/api\/sns\/v5\/recommend\/user\/follow_recommend\?,requires-body=1,max-size=5242880,script-path=https://raw.githubusercontent.com/fkingikelee/fkikelee/main/Resource/kelee/JavaScript/RedPaper/RedPaper_remove_ads.js
 
-# 信息流去广告
-小红书_关注流广告 = type=http-response,pattern=^https:\/\/(?:edith|rec|www)\.(?:xiaohongshu|rnote)\.com\/api\/sns\/v4\/followfeed\?,requires-body=1,max-size=5242880,script-path=https://raw.githubusercontent.com/linuszlx/Loonx/main/Script/RedNote/xiaohongshu-2.js
-小红书_推荐流广告 = type=http-response,pattern=^https:\/\/(?:edith|rec|www)\.(?:xiaohongshu|rnote)\.com\/api\/sns\/v6\/homefeed\?,requires-body=1,max-size=5242880,script-path=https://raw.githubusercontent.com/linuszlx/Loonx/main/Script/RedNote/xiaohongshu-2.js
+# 信息流与搜索
+小红书_关注流 = type=http-response,pattern=^https:\/\/edith\.xiaohongshu\.com\/api\/sns\/v4\/followfeed\?,requires-body=1,max-size=5242880,script-path=https://raw.githubusercontent.com/fkingikelee/fkikelee/main/Resource/kelee/JavaScript/RedPaper/RedPaper_remove_ads.js
+小红书_推荐流 = type=http-response,pattern=^https:\/\/(?:edith|rec)\.xiaohongshu\.com\/api\/sns\/v6\/homefeed\?,requires-body=1,max-size=5242880,script-path=https://raw.githubusercontent.com/fkingikelee/fkikelee/main/Resource/kelee/JavaScript/RedPaper/RedPaper_remove_ads.js
+小红书_搜索广告 = type=http-response,pattern=^https:\/\/(?:edith|so)\.xiaohongshu\.com\/api\/sns\/v10\/search\/notes\?,requires-body=1,max-size=5242880,script-path=https://raw.githubusercontent.com/fkingikelee/fkikelee/main/Resource/kelee/JavaScript/RedPaper/RedPaper_remove_ads.js
 
-# 搜索页去广告
-小红书_搜索页广告 = type=http-response,pattern=^https:\/\/(?:edith|so)\.(?:xiaohongshu|rnote)\.com\/api\/sns\/v10\/search\/notes\?,requires-body=1,max-size=5242880,script-path=https://raw.githubusercontent.com/linuszlx/Loonx/main/Script/RedNote/xiaohongshu-2.js
+# 图片、视频去水印
+小红书_水印_实况图 = type=http-response,pattern=^https:\/\/edith\.xiaohongshu\.com\/api\/sns\/v1\/note\/(?:imagefeed|live_photo\/save),requires-body=1,max-size=5242880,script-path=https://raw.githubusercontent.com/fkingikelee/fkikelee/main/Resource/kelee/JavaScript/RedPaper/RedPaper_remove_ads.js
+小红书_水印_Feed = type=http-response,pattern=^https:\/\/edith\.xiaohongshu\.com\/api\/sns\/(?:v2\/note\/feed|v3\/note\/videofeed),requires-body=1,max-size=5242880,script-path=https://raw.githubusercontent.com/fkingikelee/fkikelee/main/Resource/kelee/JavaScript/RedPaper/RedPaper_remove_ads.js
+小红书_水印_视频保存 = type=http-response,pattern=^https:\/\/(?:edith|rec|www)\.xiaohongshu\.com\/api\/sns\/(?:v4\/note\/videofeed|v10\/note\/video\/save),requires-body=1,max-size=5242880,script-path=https://raw.githubusercontent.com/fkingikelee/fkikelee/main/Resource/kelee/JavaScript/RedPaper/RedPaper_remove_ads.js
+
+# 评论区实况照片去水印
+小红书_评论区水印 = type=http-response,pattern=^https:\/\/edith\.xiaohongshu\.com\/api\/sns\/(?:v1\/interaction\/comment\/video\/download|v5\/note\/comment\/list),requires-body=1,max-size=5242880,script-path=https://raw.githubusercontent.com/fkingikelee/fkikelee/main/Resource/kelee/JavaScript/RedPaper/RedPaper_remove_ads.js
 
 [MITM]
-hostname = %APPEND% ci.xiaohongshu.com, edith.xiaohongshu.com, rec.xiaohongshu.com, www.xiaohongshu.com, so.xiaohongshu.com, ci.rnote.com, edith.rnote.com, rec.rnote.com, www.rnote.com, so.rnote.com
+hostname = %APPEND% ci.xiaohongshu.com, edith.xiaohongshu.com, rec.xiaohongshu.com, so.xiaohongshu.com, www.xiaohongshu.com
