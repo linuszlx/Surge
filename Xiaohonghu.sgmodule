@@ -1,35 +1,54 @@
 #!name=小红书
 #!desc=小红书去广告
 #!category = 去广告
-#!date=2024-11-28 00:00:00
+#!date=2026-11-08 00:00:00
 
 [Rule]
-AND,((PROTOCOL,QUIC),(DOMAIN-SUFFIX,xiaohongshu.com,extended-matching)),REJECT
+DOMAIN, ads-img-al.xhscdn.com, REJECT
+DOMAIN, ads-img-qc.xhscdn.com, REJECT
+DOMAIN, ads-video-al.xhscdn.com, REJECT
+DOMAIN, ads-video-qc.xhscdn.com, REJECT
+DOMAIN, t-ads.xiaohongshu.com, REJECT
+AND, ((PROTOCOL, UDP), (DEST-PORT, 443), (OR, ((DOMAIN-SUFFIX, xiaohongshu.com), (DOMAIN-SUFFIX, rnote.com)))), REJECT-NO-DROP
 
-[Body Rewrite]
-http-response-jq ^https:\/\/edith\.xiaohongshu\.com\/api\/sns\/v1\/search\/banner_list$ 'if (getpath([]) | has("data")) then (setpath(["data"]; {})) else . end'
-http-response-jq ^https:\/\/edith\.xiaohongshu\.com\/api\/sns\/v1\/search\/hot_list$ 'if (getpath(["data"]) | has("items")) then (setpath(["data","items"]; [])) else . end'
-http-response-jq ^https:\/\/edith\.xiaohongshu\.com\/api\/sns\/v4\/search\/hint 'if (getpath(["data"]) | has("hint_words")) then (setpath(["data","hint_words"]; [])) else . end'
-http-response-jq ^https:\/\/edith\.xiaohongshu\.com\/api\/sns\/v4\/search\/trending\? 'if (getpath(["data"]) | has("queries")) then (setpath(["data","queries"]; [])) else . end'
-http-response-jq ^https:\/\/edith\.xiaohongshu\.com\/api\/sns\/v4\/search\/trending\? 'if (getpath(["data"]) | has("hint_word")) then (setpath(["data","hint_word"]; {})) else . end'
+[URL Rewrite]
+# 评论区图片水印 (200 拦截图片)
+^https?:\/\/ci\.(?:xiaohongshu|rnote)\.com\/system_config\/watermark - reject-200
 
 [Map Local]
-^https:\/\/edith\.xiaohongshu\.com\/api\/sns\/v1\/surprisebox\/(?:get_style|open|submit_action) data-type=text data="{}" status-code=200
-^https:\/\/www\.xiaohongshu\.com\/api\/marketing\/box\/trigger\? data-type=text data="{}" status-code=200
-^https:\/\/edith\.xiaohongshu\.com\/api\/sns\/(?:v2\/guide\/user_banner|v3\/note\/guide) data-type=text data="{}" status-code=200
-^https:\/\/www\.xiaohongshu\.com\/api\/sns\/(?:v1\/ads\/resource|v2\/hey\/\w+\/hey_gallery) data-type=text data="{}" status-code=200
+# 惊喜弹窗 
+^https:\/\/edith\.(?:xiaohongshu|rnote)\.com\/api\/sns\/v1\/surprisebox\/(?:get_style|open|submit_action) data="{}" status=200 header="Content-Type: application/json; charset=utf-8"
+^https:\/\/www\.(?:xiaohongshu|rnote)\.com\/api\/marketing\/box\/trigger\? data="{}" status=200 header="Content-Type: application/json; charset=utf-8"
+# 信息流引导/广告
+^https:\/\/edith\.(?:xiaohongshu|rnote)\.com\/api\/sns\/v\d+\/(?:guide\/user_banner|note\/guide) data="{}" status=200 header="Content-Type: application/json; charset=utf-8"
+^https:\/\/www\.(?:xiaohongshu|rnote)\.com\/api\/sns\/v\d+\/(?:ads\/resource|hey\/\w+\/hey_gallery) data="{}" status=200 header="Content-Type: application/json; charset=utf-8"
+# 搜索页空数据替换
+^https:\/\/edith\.(?:xiaohongshu|rnote)\.com\/api\/sns\/v1\/search\/banner_list$ data="{}" status=200 header="Content-Type: application/json; charset=utf-8"
+^https:\/\/edith\.(?:xiaohongshu|rnote)\.com\/api\/sns\/v1\/search\/hot_list$ data="{\"data\":{\"items\":[]}}" status=200 header="Content-Type: application/json; charset=utf-8"
+^https:\/\/edith\.(?:xiaohongshu|rnote)\.com\/api\/sns\/v4\/search\/hint data="{\"data\":{\"hint_words\":[]}}" status=200 header="Content-Type: application/json; charset=utf-8"
+^https:\/\/edith\.(?:xiaohongshu|rnote)\.com\/api\/sns\/v4\/search\/trending\? data="{\"data\":{\"queries\":[],\"hint_word\":{}}}" status=200 header="Content-Type: application/json; charset=utf-8"
 
 [Script]
-移除图片和实况照片水印 = type=http-response, pattern=^https:\/\/edith\.xiaohongshu\.com\/api\/sns\/v1\/note\/(?:imagefeed|live_photo\/save), script-path=https://raw.githubusercontent.com/linuszlx/JS/main/xiaohongshu/redbook_json.js, requires-body=true
-移除开屏广告 config = type=http-response, pattern=^https:\/\/edith\.xiaohongshu\.com\/api\/sns\/v1\/system_service\/config\?, script-path=https://raw.githubusercontent.com/linuszlx/JS/main/xiaohongshu/redbook_json.js, requires-body=true
-移除开屏广告 splash_config = type=http-response, pattern=^https:\/\/edith\.xiaohongshu\.com\/api\/sns\/v2\/system_service\/splash_config, script-path=https://raw.githubusercontent.com/linuszlx/JS/main/xiaohongshu/redbook_json.js, requires-body=true
-移除详情页小部件、关注页感兴趣的人 = type=http-response, pattern=^https:\/\/edith\.xiaohongshu\.com\/api\/sns\/v2\/(?:note\/widgets|user\/followings\/followfeed), script-path=https://raw.githubusercontent.com/linuszlx/JS/main/xiaohongshu/redbook_json.js, requires-body=true
-移除信息流广告 = type=http-response, pattern=^https:\/\/edith\.xiaohongshu\.com\/api\/sns\/v4\/followfeed\?, script-path=https://raw.githubusercontent.com/linuszlx/JS/main/xiaohongshu/redbook_json.js, requires-body=true
-移除详情页感兴趣的人 = type=http-response, pattern=^https:\/\/edith\.xiaohongshu\.com\/api\/sns\/v5\/recommend\/user\/follow_recommend\?, script-path=https://raw.githubusercontent.com/linuszlx/JS/main/xiaohongshu/redbook_json.js, requires-body=true
-移除信息流广告 = type=http-response, pattern=^https:\/\/(?:edith|rec)\.xiaohongshu\.com\/api\/sns\/v6\/homefeed\?, script-path=https://raw.githubusercontent.com/linuszlx/JS/main/xiaohongshu/redbook_json.js, requires-body=true
-移除搜索页广告 = type=http-response, pattern=^https:\/\/edith\.xiaohongshu\.com\/api\/sns\/v10\/search\/notes\?, script-path=https://raw.githubusercontent.com/linuszlx/JS/main/xiaohongshu/redbook_json.js, requires-body=true
-移除图片和视频水印 = type=http-response, pattern=^https:\/\/edith\.xiaohongshu\.com\/api\/sns\/(?:v2\/note\/feed|v3\/note\/videofeed), script-path=https://raw.githubusercontent.com/linuszlx/JS/main/xiaohongshu/redbook_json.js, requires-body=true
-移除视频水印 = type=http-response, pattern=^https:\/\/(?:edith|rec|www)\.xiaohongshu\.com\/api\/sns\/(?:v4\/note\/videofeed|v10\/note\/video\/save), script-path=https://raw.githubusercontent.com/linuszlx/JS/main/xiaohongshu/redbook_json.js, requires-body=true
+# 界面整体配置
+小红书_移除整体配置 = type=http-response,pattern=^https:\/\/edith\.(?:xiaohongshu|rnote)\.com\/api\/sns\/v1\/system\/service\/ui\/config\?,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/linuszlx/Loonx/main/Script/RedNote/xiaohongshu-2.js
+# 开屏广告
+小红书_开屏配置 = type=http-response,pattern=^https:\/\/edith\.(?:xiaohongshu|rnote)\.com\/api\/sns\/v1\/system_service\/config\?,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/linuszlx/Loonx/main/Script/RedNote/xiaohongshu-2.js
+小红书_开屏广告 = type=http-response,pattern=^https:\/\/edith\.(?:xiaohongshu|rnote)\.com\/api\/sns\/v2\/system_service\/splash_config,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/linuszlx/Loonx/main/Script/RedNote/xiaohongshu-2.js
+# 详情页、关注页
+小红书_详情页小部件 = type=http-response,pattern=^https:\/\/edith\.(?:xiaohongshu|rnote)\.com\/api\/sns\/v2\/(?:note\/widgets|user\/followings\/followfeed),requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/linuszlx/Loonx/main/Script/RedNote/xiaohongshu-2.js
+小红书_感兴趣的人 = type=http-response,pattern=^https:\/\/edith\.(?:xiaohongshu|rnote)\.com\/api\/sns\/v5\/recommend\/user\/follow_recommend\?,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/linuszlx/Loonx/main/Script/RedNote/xiaohongshu-2.js
+# 信息流
+# 小红书_显示时间 = type=http-response,pattern=^https:\/\/(?:edith|rec|www)\.(?:xiaohongshu|rnote)\.com\/api\/sns\/v6\/homefeed\?,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/linuszlx/Loonx/main/Script/RedNote/RedNote.feedtime.js
+小红书_关注流广告 = type=http-response,pattern=^https:\/\/(?:edith|rec|www)\.(?:xiaohongshu|rnote)\.com\/api\/sns\/v4\/followfeed\?,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/linuszlx/Loonx/main/Script/RedNote/xiaohongshu-2.js
+小红书_推荐流广告 = type=http-response,pattern=^https:\/\/(?:edith|rec|www)\.(?:xiaohongshu|rnote)\.com\/api\/sns\/v6\/homefeed\?,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/linuszlx/Loonx/main/Script/RedNote/xiaohongshu-2.js
+# 搜索页
+小红书_搜索页广告 = type=http-response,pattern=^https:\/\/(?:edith|so)\.(?:xiaohongshu|rnote)\.com\/api\/sns\/v10\/search\/notes\?,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/linuszlx/Loonx/main/Script/RedNote/xiaohongshu-2.js
+# 实况、图片、视频水印
+小红书_水印_LivePhoto = type=http-response,pattern=^https:\/\/(?:edith|rec|www)\.(?:xiaohongshu|rnote)\.com\/api\/sns\/v1\/note\/(?:imagefeed|live_photo\/save),requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/linuszlx/Loonx/main/Script/RedNote/xiaohongshu-2.js
+小红书_水印_Feed = type=http-response,pattern=^https:\/\/(?:edith|rec|www)\.(?:xiaohongshu|rnote)\.com\/api\/sns\/(?:v2\/note\/feed|v3\/note\/videofeed),requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/linuszlx/Loonx/main/Script/RedNote/xiaohongshu-2.js
+小红书_水印_VideoSave = type=http-response,pattern=^https:\/\/(?:edith|rec|www)\.(?:xiaohongshu|rnote)\.com\/api\/sns\/(?:v4\/note\/videofeed|v10\/note\/video\/save),requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/linuszlx/Loonx/main/Script/RedNote/xiaohongshu-2.js
+# 评论区图片、Live图水印、表情包下载
+小红书_评论区水印 = type=http-response,pattern=^https:\/\/edith\.(?:xiaohongshu|rnote)\.com\/api\/sns\/(?:v1\/interaction\/comment\/video\/download|v5\/note\/comment\/list|v3\/note\/comment\/sub_comments),requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/linuszlx/Loonx/main/Script/RedNote/xiaohongshu.js
 
 [MITM]
-hostname = %APPEND% edith.xiaohongshu.com, rec.xiaohongshu.com, www.xiaohongshu.com
+hostname = %APPEND% ci.xiaohongshu.com, edith.xiaohongshu.com, rec.xiaohongshu.com, www.xiaohongshu.com, so.xiaohongshu.com, ci.rnote.com, edith.rnote.com, rec.rnote.com, www.rnote.com, so.rnote.com
